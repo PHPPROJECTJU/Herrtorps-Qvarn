@@ -161,7 +161,7 @@
           * labels do not cover post updated, error, and related messages.  You'll need to filter the
           * 'post_updated_messages' hook to customize those.
           */
-        /*'taxonomies'            => array( 'activity_skill', 'activity_type' ),
+        'taxonomies'            => array( 'activity_skill', 'activity_type' ),
          'labels' => array(
              'name'               => __( 'Activities',                   'activity-textdomain' ),
              'singular_name'      => __( 'Activity',                    'activity-textdomain' ),
@@ -177,7 +177,7 @@
              'not_found_in_trash' => __( 'No activities found in trash', 'activity-textdomain' ),
              'all_items'          => __( 'All Activities',               'activity-textdomain' ),
          )
-     );*/
+     );
 
      /* Register the post type. */
      register_post_type(
