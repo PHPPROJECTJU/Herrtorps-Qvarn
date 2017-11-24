@@ -3,3 +3,31 @@ Theme Name: Herrtorps qvarn
 Author: Ellen Albin Julia
 Description: Wordpress theme for Herrtorps Qvarn!!!
 */
+body {
+  margin: 0;
+  padding: 0;
+}
+header{
+  margin: 0;
+  padding: 0;
+}
+#headwrap {
+  width: 100%;
+  background-color: darkgreen;
+  height: 40px;
+  padding: 40px;
+}
+.menu {
+  list-style-type: none;
+  margin: 0;
+}
+
+.menu li{
+  display: inline;
+
+}
+.menu li a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}

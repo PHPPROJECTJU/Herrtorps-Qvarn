@@ -2,8 +2,8 @@
 
 require('includes/post_types.php');
 /*require('includes/taxonomies.php');
-require('includes/add_widgets.php');
-require('includes/add_menu.php');*/
+require('includes/add_widgets.php');*/
+require('includes/reg_menu.php');
 
 
 function addthemesupport(){

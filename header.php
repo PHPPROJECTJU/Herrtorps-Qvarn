@@ -1,14 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
-		<title>Herrtorps Qvarn</title>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="initial-scale=1, width=device-width"/>
-		<?php wp_head(); ?>
-    <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url') ?>">
-</head>
-
-<?php // require('partials/sitehead.php');?>
-
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--  No title tag at all -->
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,800,800i" rel="stylesheet">
+    <script type="text/javascript" src="Javascript/menu.js"></script>
+    <?php wp_head(); ?>
+  </head>
+  <body>
+    <?php require("partials/sitehead.php"); ?>
