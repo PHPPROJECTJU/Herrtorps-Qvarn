@@ -3,23 +3,60 @@ Theme Name: Herrtorps qvarn
 Author: Ellen Albin Julia
 Description: Wordpress theme for Herrtorps Qvarn!!!
 */
+
+/*--resets/basic - margins and such---------------*/
+
+p {
+  margin: 0;
+  line-height: 1.8em;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  padding: 0;
+  margin: 0;
+}
+
+/*--header---------------*/
+
 header{
   margin: 0;
   padding: 0;
+  z-index: 50;
+  position: relative;
+  height: 75px;
 }
-#headwrap {
-  width: 100%;
-  background-color: darkgreen;
-  height: 40px;
-  padding: 40px;
+header nav {
+  overflow: hidden;
+  height: inherit;
+  background-color: #234013;
 }
+
 .menu {
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 60%;
+  height: inherit;
+  padding: 28px 0;
+  box-sizing: border-box;
+}
+
+.menuleft {
+  float: left;
+}
+
+.menuright {
+  float: right;
 }
 
 .menu li{
@@ -29,5 +66,40 @@ header{
 .menu li a{
   text-decoration: none;
   color: white;
-  padding: 10px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+}
+#logo {
+  width: 200px;
+  height: 120px;
+  background-image: url(img/logga_herrtorps_oval.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 15px;
+  left: calc(50% - 100px);
+}
+#headerimage {
+  height: 700px;
+  background-image: url(img/lilypad.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: -100px;
+}
+
+/*--Content: all content between header image and footer--*/
+
+#content {
+  width: 60%;
+  margin: 50px auto;
+}
+
+/*--footer-----------------*/
+
+footer {
+  background-color: #234013;
+  padding: 15px 50px;
 }
