@@ -5,24 +5,24 @@
             <div class="menu">
                   <ul class='menuleft'>
                       <li>
-                          <a href="boende">Boende</a>
+                          <a href="#">Boende</a>
                       </li>
                       <li>
-                          <a href="konferens">Konferens</a>
+                          <a href="#">Konferens</a>
                       </li>
                       <li>
-                          <a href="kok-cafe">Kök &amp; Café</a>
+                          <a href="#">Kök &amp; Café</a>
                       </li>
                   </ul>
                   <ul class='menuright'>
                       <li>
-                          <a href="se-gora">Se &amp; Göra</a>
+                          <a href="#">Se &amp; Göra</a>
                       </li>
                       <li>
-                          <a href="qvarnen">Qvarnen</a>
+                          <a href="#">Qvarnen</a>
                       </li>
                       <li>
-                          <a href="kontakt">Kontakt</a>
+                          <a href="#">Kontakt</a>
                       </li>
                   </ul>
             </div>
