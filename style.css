@@ -33,7 +33,7 @@ header{
   padding: 0;
   z-index: 50;
   position: relative;
-  height: 75px;
+  height: 55px;
 }
 header nav {
   overflow: hidden;
@@ -45,7 +45,7 @@ header nav {
   list-style-type: none;
   margin: 0 auto;
   overflow: hidden;
-  width: 60%;
+  width: 70%;
   height: inherit;
   padding: 28px 0;
   box-sizing: border-box;
@@ -53,10 +53,12 @@ header nav {
 
 .menuleft {
   float: left;
+  display: none;
 }
 
 .menuright {
   float: right;
+  display: none;
 }
 
 .menu li{
@@ -70,17 +72,17 @@ header nav {
   text-transform: uppercase;
   font-family: sans-serif;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 11px;
 }
 #logo {
-  width: 200px;
+  width: 80px;
   height: 120px;
   background-image: url(img/logga_herrtorps_oval.png);
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
-  top: 15px;
-  left: calc(50% - 100px);
+  top: 3px;
+  left: 20px;
 }
 #headerimage {
   height: 700px;
@@ -109,6 +111,30 @@ footer {
 @media (min-width: 640px) {
 
 
+  #logo {
+    width: 130px;
+    top: 15px;
+    left: calc(50% - 65px);
+  }
+
+  .menu {
+    list-style-type: none;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 95%;
+    max-width: 700px;
+    height: inherit;
+    padding: 18px 0;
+    box-sizing: border-box;
+  }
+
+  .menuleft {
+    display: block;
+  }
+
+  .menuright {
+    display: block;
+  }
 
 }
 
@@ -116,6 +142,29 @@ footer {
 /*=====================================960PX========================================*/
 @media (min-width: 960px) {
 
+  header {
+    height: 75px;
+  }
 
+  #logo {
+    width: 200px;
+    height: 120px;
+    background-image: url(img/logga_herrtorps_oval.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 15px;
+    left: calc(50% - 100px);
+  }
+
+  .menu {
+    padding: 28px 0;
+    max-width: 900px;
+    width: 80%;
+  }
+
+  .menu li a{
+    font-size: 12px;
+  }
 
 }
