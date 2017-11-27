@@ -39,6 +39,11 @@
                 <a href="<?php echo home_url();?>"><div id='logo'></div></a>
 
             <?php wp_nav_menu( array('menu' => 'Secondary', 'container' => '', 'items_wrap' => '<ul class="menuright">%3$s</ul>' )); ?>
+            <div class="opening-icon">
+                <a href="opening-hours"></a>
+            </div>
         </div>
+
     </nav>
+
 </header>
