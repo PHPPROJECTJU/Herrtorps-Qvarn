@@ -199,12 +199,9 @@ a way to sort things out
 
 hierarchical
 non-hierarchical-->*/
-  ?>
 
+  //------------------------NEXT POST TYPE
 
-  <!--NEXT POST TYPE------------------------------------------------>
-
-  <?php
    function rum_post_type() {
 
        /* Set up the arguments for the post type. */
