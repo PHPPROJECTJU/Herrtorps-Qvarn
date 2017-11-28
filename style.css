@@ -7,7 +7,29 @@ Template Version: 1.0.3
 GitHub Theme URI: https://github.com/PHPPROJECTJU/Herrtorps-Qvarn
 */
 
-/*--resets/basic - margins and such---------------*/
+@font-face {
+    font-family: 'Korinna';
+    src: url(fonts/KorinnaStd-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Korinna';
+    src: url(fonts/KorinnaStd-Bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Korinna';
+    src: url(fonts/KorinnaStd-BoldKursiv.otf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*--resets/basic---------------*/
+
+* {
+  font-family: sans-serif;
+}
 
 p {
   margin: 0;
@@ -29,6 +51,19 @@ ul li {
   margin: 0;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Korinna';
+  font-weight: bold;
+  font-style: italic;
+  margin: 0;
+}
+
+/*applied where the content should be less than 100%*/
+.contentwidth {
+  width: 60%;
+  margin: 0 auto;
+}
+
 /*--header---------------*/
 
 header{
@@ -41,7 +76,7 @@ header{
 header nav {
   overflow: hidden;
   height: inherit;
-  background-color: #000;
+  background-color: #234013;
 }
 
 .menu {
@@ -87,12 +122,22 @@ header nav {
   top: 3px;
   left: 20px;
 }
-#headerimage {
-  height: 700px;
-  background-image: url(img/lilypad.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  margin-top: -100px;
+.headerimage img {
+  width: 100%;
+  height: 100%;
+  margin-top: -260px;
+  margin-bottom: -5px;
+}
+
+.lightsection {
+  background: radial-gradient(rgba(210,209,216,0.35) 40%, rgba(227,210,200,1));
+  padding: 50px 0;
+}
+
+.topheading {
+  color: #234013;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .time-wrap {
@@ -112,8 +157,44 @@ header nav {
 /*--Content: all content between header image and footer--*/
 
 #content {
-  width: 60%;
-  margin: 50px auto;
+
+}
+
+/*--news boxes--*/
+
+.boxsection {
+  overflow: hidden;
+  height: 320px;
+  margin-bottom: 50px;
+}
+
+.boxsection img {
+  width: 100%;
+}
+
+.leftbox {
+  height: 100%;
+  float: left;
+  width: 50%;
+  background-color: #234013;
+  padding: 50px;
+  box-sizing: border-box;
+  color: #ccc0b9;
+}
+
+.leftbox h2 {
+  font-style: normal;
+  margin-bottom: 15px;
+}
+
+.leftbox p {
+  font-weight: 300;
+}
+
+.rightbox {
+  height: 100%;
+  float: left;
+  width: 50%;
 }
 
 /*--footer-----------------*/
