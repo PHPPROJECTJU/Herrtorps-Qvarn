@@ -46,17 +46,24 @@ elseif (is_page('Hem')) {
                     ?>
 
                         <h1 class='topheading'><?php the_field('rubrik'); ?></h1>
-                        <p><?php the_field('beskrivning'); ?></p>
-                    <?php
+                        <p class='introtext'><?php the_field('beskrivning'); ?></p>
 
-                    echo "</div>";
-                    echo "</div>";
+                        <div class='btncontainer'>
+                            <a href='/boende'><button class='outlinebtn_green'>Boka boende</button></a>
+                        </div>
 
-                    echo "<div class='boxsection'>";
-                    ?>
+                    </div>
+                    </div>
+
+                    <div class='boxsection'>
                       <div class='leftbox'>
                         <h2><?php the_field('nyhetsrubrik'); ?></h2>
                         <p><?php the_field('nyhetstext'); ?></p>
+
+                        <div class='btncontainer'>
+                            <a href='/se-gora'><button class='outlinebtn_beige'>Se upplevelser</button></a>
+                        </div>
+
                       </div>
                       <div class='rightbox'>
 
@@ -77,6 +84,7 @@ elseif (is_page('Hem')) {
 
 
                       </div>
+
                   <?php echo "</div>";
               }
           }
