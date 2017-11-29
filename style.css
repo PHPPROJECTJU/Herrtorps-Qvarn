@@ -293,7 +293,7 @@ footer {
 .boxsection {
   overflow: hidden;
   margin-bottom: 50px;
-  max-height: 375px;
+  height: 375px;
 }
 
 .leftbox {
@@ -310,7 +310,7 @@ footer {
 .rightbox {
   float: left;
   width: 50%;
-  max-height: 375px;
+  height: 375px;
 }
 
 .rightbox img {
