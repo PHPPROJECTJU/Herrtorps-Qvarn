@@ -1,7 +1,5 @@
 <?php
-/*
-Template Name: kok-cafe
-*/
+/* Template Name: kokcafe */
 ?>
 
 <?php get_header(); ?>
