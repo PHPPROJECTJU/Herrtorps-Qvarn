@@ -8,9 +8,10 @@
 
             <?php wp_nav_menu( array('menu' => 'Menu right', 'container' => '', 'items_wrap' => '<ul class="menuright">%3$s</ul>' )); ?>
             <div class="extras">
-                <div class="opening-icon">
-                    <a href="opening-hours"></a>
-                </div>
+                <a href="/opening-hours">
+                    <div class="opening-icon">
+                    </div>
+                </a>
                 <div class="language-icon">
                     <a href="language-hours"></a>
                 </div>
