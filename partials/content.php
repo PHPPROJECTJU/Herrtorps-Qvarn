@@ -66,20 +66,20 @@ elseif (is_page('Hem')) {
                               </div>
                           </div>
                         </div>
-                        <div class='rightbox'>
 
                         <?php
-                        $size = 'large';
+                        $large = 'large';
+                        $mediumlarge = 'mediumlarge';
+
                         $nyhetsbild = get_field('nyhetsbild');
-                        // $nyhetsbild = $nyhetsbild['sizes'][ $size ];
-                        $mediumlarge = $nyhetsbild['sizes'][ $size ];
-                      	$width = $nyhetsbild['sizes'][ $size . '-width' ];
-                      	$height = $nyhetsbild['sizes'][ $size . '-height' ];
 
-                        if ($nyhetsbild) { ?>
+                        $mlbild = $nyhetsbild['sizes'][ $large ];
+                      	$width = $nyhetsbild['sizes'][ $large . '-width' ];
+                      	$height = $nyhetsbild['sizes'][ $large . '-height' ];
 
-                          <img src="<?php echo $mediumlarge;?>" />
-
+                        if ($nyhetsbild) {
+                          ?>
+<div class='rightbox' style='background-image: url("<?php echo  $mlbild;?>");'>
                         <?php }
                         ?>
 
