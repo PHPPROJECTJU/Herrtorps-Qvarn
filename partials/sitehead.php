@@ -34,11 +34,11 @@
     <!-- 27 nov 2017 https://css-tricks.com/forums/topic/menu-split-by-logo/ -->
     <nav>
         <div class="menu">
-            <?php wp_nav_menu( array('menu' => 'Menu right', 'container' => '', 'items_wrap' => '<ul class="menuleft">%3$s</ul>' )); ?>
+            <?php wp_nav_menu( array('menu' => 'Menu left', 'container' => '', 'items_wrap' => '<ul class="menuleft">%3$s</ul>' )); ?>
 
                 <a href="<?php echo home_url();?>"><div id='logo'></div></a>
 
-            <?php wp_nav_menu( array('menu' => 'Menu left', 'container' => '', 'items_wrap' => '<ul class="menuright">%3$s</ul>' )); ?>
+            <?php wp_nav_menu( array('menu' => 'Menu right', 'container' => '', 'items_wrap' => '<ul class="menuright">%3$s</ul>' )); ?>
             <div class="opening-icon">
                 <a href="opening-hours"></a>
             </div>
