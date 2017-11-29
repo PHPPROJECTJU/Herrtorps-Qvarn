@@ -30,6 +30,7 @@
       </div>
 
   </div>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/javascript/menu.js"></script>
 </footer>
 <div id='blackfooter'>
     <p>©The golden shower trio <?php echo date(Y); ?></p>
