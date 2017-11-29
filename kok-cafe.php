@@ -1,5 +1,7 @@
 <?php
-/* Template Name: kokcafe */
+/*
+ * Template Name: Kök och café
+ */
 ?>
 
 <?php get_header(); ?>
