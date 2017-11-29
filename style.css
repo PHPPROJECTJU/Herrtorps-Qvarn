@@ -142,11 +142,13 @@ header nav {
 
 .opening-icon {
   background-image: url(img/time.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 1px;
-  right: 0;
+  top: 20px;
+  right: 60px;
 }
 /*--header end---------------*/
 
