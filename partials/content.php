@@ -61,15 +61,15 @@ elseif (is_page('Hem')) {
                             <h2><?php the_field('nyhetsrubrik'); ?></h2>
                             <p><?php the_field('nyhetstext'); ?></p>
 
-                        <div class='btncontainer'>
-                            <a href='/se-gora'><button class='outlinebtn_beige'>Se upplevelser</button></a>
+                              <div class='btncontainer'>
+                                <a href='/se-gora'><button class='outlinebtn_beige'>Se upplevelser</button></a>
+                              </div>
                           </div>
                         </div>
-                      </section>
-                      <div class='rightbox'>
+                        <div class='rightbox'>
 
                         <?php
-                        $size = 'medium_large';
+                        $size = 'large';
                         $nyhetsbild = get_field('nyhetsbild');
                         // $nyhetsbild = $nyhetsbild['sizes'][ $size ];
                         $mediumlarge = $nyhetsbild['sizes'][ $size ];
@@ -86,7 +86,7 @@ elseif (is_page('Hem')) {
 
                       </div>
 
-                  <?php echo "</div>";
+                  <?php echo "</section>";
               }
           }
 }

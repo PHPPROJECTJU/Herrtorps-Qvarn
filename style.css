@@ -189,7 +189,7 @@ header nav {
 }
 
 .boxwidth {
-  margin: 0 auto;
+  margin: 20px auto;
   width: 85%;
 }
 
@@ -293,13 +293,14 @@ footer {
 .boxsection {
   overflow: hidden;
   margin-bottom: 50px;
-  height: 390px;
+  max-height: 375px;
 }
 
 .leftbox {
-  height: 100%;
+  max-height: 375px;
   float: left;
   width: 50%;
+  padding: 30px;
 }
 
 .boxwidth {
@@ -307,9 +308,13 @@ footer {
 }
 
 .rightbox {
-  height: 100%;
   float: left;
   width: 50%;
+  max-height: 375px;
+}
+
+.rightbox img {
+  height: inherit;
 }
 
 .leftbox p {
@@ -364,7 +369,7 @@ footer {
 /*news boxes*/
 
 .leftbox {
-
+  padding: 40px;
 }
 
 .boxwidth {
@@ -383,7 +388,6 @@ footer {
 /*news boxes*/
 
 .leftbox {
- height: 375px;
 }
 
 .boxwidth {
