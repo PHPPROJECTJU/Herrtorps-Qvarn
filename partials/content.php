@@ -41,7 +41,7 @@ elseif (is_page('Hem')) {
                 the_post();
 
                     // Section 1: light area with intro text
-                    echo "<div class='lightsection'>";
+                    echo "<section class='lightsection'>";
                     echo "<div class='contentwidth'>"
                     ?>
 
@@ -53,18 +53,19 @@ elseif (is_page('Hem')) {
                         </div>
 
                     </div>
-                    </div>
+                    </section>
 
-                    <div class='boxsection'>
+                    <section class='boxsection'>
                       <div class='leftbox'>
-                        <h2><?php the_field('nyhetsrubrik'); ?></h2>
-                        <p><?php the_field('nyhetstext'); ?></p>
+                          <div class='boxwidth'> <!--constrains box content width-->
+                            <h2><?php the_field('nyhetsrubrik'); ?></h2>
+                            <p><?php the_field('nyhetstext'); ?></p>
 
                         <div class='btncontainer'>
                             <a href='/se-gora'><button class='outlinebtn_beige'>Se upplevelser</button></a>
+                          </div>
                         </div>
-
-                      </div>
+                      </section>
                       <div class='rightbox'>
 
                         <?php

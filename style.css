@@ -183,9 +183,14 @@ header nav {
 .leftbox {
   width: 100%;
   background-color: #234013;
+  color: #ccc0b9;
   padding: 40px;
   box-sizing: border-box;
-  color: #ccc0b9;
+}
+
+.boxwidth {
+  margin: 0 auto;
+  width: 85%;
 }
 
 .leftbox h2 {
@@ -214,7 +219,7 @@ header nav {
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  padding: 18px 20px 10px 20px;
+  padding: 10px 20px 10px 20px;
   cursor: pointer;
   margin: 0 auto;
 }
@@ -295,7 +300,10 @@ footer {
   height: 100%;
   float: left;
   width: 50%;
-  padding: 40px 25px;
+}
+
+.boxwidth {
+  width: 100%;
 }
 
 .rightbox {
@@ -356,10 +364,30 @@ footer {
 /*news boxes*/
 
 .leftbox {
-  padding: 60px 80px;
+
+}
+
+.boxwidth {
+  width: 75%;
 }
 
 
 
+
+}
+
+
+/*=====================================960PX========================================*/
+@media (min-width: 1200px) {
+
+/*news boxes*/
+
+.leftbox {
+ height: 375px;
+}
+
+.boxwidth {
+  width: 60%;
+}
 
 }
