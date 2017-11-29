@@ -69,17 +69,17 @@ elseif (is_page('Hem')) {
 
                         <?php
                         $large = 'large';
-                        $mediumlarge = 'mediumlarge';
+                        $mediumlarge = 'medium_large';
 
                         $nyhetsbild = get_field('nyhetsbild');
 
-                        $mlbild = $nyhetsbild['sizes'][ $large ];
+                        $lbild = $nyhetsbild['sizes'][ $large ];
                       	$width = $nyhetsbild['sizes'][ $large . '-width' ];
                       	$height = $nyhetsbild['sizes'][ $large . '-height' ];
 
                         if ($nyhetsbild) {
                           ?>
-<div class='rightbox' style='background-image: url("<?php echo  $mlbild;?>");'>
+                          <div class='rightbox' style='background-image: url("<?php echo  $lbild;?>");'>
                         <?php }
                         ?>
 
