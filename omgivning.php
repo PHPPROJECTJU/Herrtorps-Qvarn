@@ -61,7 +61,7 @@ if( have_posts() ) {
             <div class='omgivning_bild' style='background-image: url("<?php echo $mlbild;?>");'></div>
             <?php } ?>
           </div>
-          <div class="omgivningright" style="width: 40%; float: left;">
+          <div class="omgivningright">
 
               <h2><?php the_field('hornborgarubrik'); ?></h2>
               <p><?php the_field('hornborgatext'); ?></p>
