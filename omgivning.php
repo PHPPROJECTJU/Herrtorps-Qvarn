@@ -16,7 +16,6 @@ if( have_posts() ) {
 
       <section class="omgivning">
         <div class="contentwidth">
-          <h2><?php the_field('skararubrik'); ?></h2>
 
             <?php
             $mediumlarge = 'medium_large';
@@ -24,16 +23,21 @@ if( have_posts() ) {
             $mlbild = $skarabild['sizes'][ $mediumlarge ];
             $width = $skarabild['sizes'][ $mediumlarge . '-width' ];
             $height = $skarabild['sizes'][ $mediumlarge . '-height' ];
-
+          ?>
+          <div class="omgivningleft">
+          <?php
              if ($skarabild) { ?>
             <div class='omgivning_bild' style='background-image: url("<?php echo $mlbild;?>");'></div>
             <?php } ?>
 
-          <div class="omgivning_text">
+          </div>
+          <div class="omgivningright" style="width: 40%; float: left;">
+
+              <h2><?php the_field('skararubrik'); ?></h2>
               <p><?php the_field('skaratext'); ?></p>
 
               <div class='btncontainer'>
-                <a target="_blank" href=<?php the_field('skaralank');?>><button class='outlinebtn_beige'>Läs mer</button></a>
+                <a target="_blank" href="<?php the_field('skaralank');?>"><button class='outlinebtn_beige'>Läs mer</button></a>
               </div>
           </div>
 
@@ -43,7 +47,6 @@ if( have_posts() ) {
 
       <section class="omgivning">
         <div class="contentwidth">
-          <h2><?php the_field('hornborgarubrik'); ?></h2>
 
             <?php
             $mediumlarge = 'medium_large';
@@ -51,12 +54,16 @@ if( have_posts() ) {
             $mlbild = $hornbild['sizes'][ $mediumlarge ];
             $width = $hornbild['sizes'][ $mediumlarge . '-width' ];
             $height = $hornbild['sizes'][ $mediumlarge . '-height' ];
-
+            ?>
+          <div class="omgivningleft">
+            <?php
             if ($hornbild) { ?>
             <div class='omgivning_bild' style='background-image: url("<?php echo $mlbild;?>");'></div>
             <?php } ?>
+          </div>
+          <div class="omgivningright" style="width: 40%; float: left;">
 
-          <div class="omgivning_text">
+              <h2><?php the_field('hornborgarubrik'); ?></h2>
               <p><?php the_field('hornborgatext'); ?></p>
 
               <div class='btncontainer'>
