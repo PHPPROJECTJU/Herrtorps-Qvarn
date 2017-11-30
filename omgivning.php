@@ -25,7 +25,7 @@ if( have_posts() ) {
             $height = $skarabild['sizes'][ $mediumlarge . '-height' ];
             //
              if ($skarabild) { ?>
-            <div class="skarabild" style='background-image: url("<?php echo $mlbild;?>");'></div>
+            <div class='omgivning_bild' style='background-image: url("<?php echo $mlbild;?>");'> 
             <?php } ?>
 
 
