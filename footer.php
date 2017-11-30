@@ -6,7 +6,10 @@
       <div class='footerobject'><p>ipsum dolor sit amet, consectetur adipiscing elit. Nulla in magna molestie, lobortis risus et.</p></div>
 
       <div class='footerobject'>
-        <form method="POST" name="contactform" action="" class="footerform">
+
+         <?php dynamic_sidebar( 'footer-1' ); ?>
+
+        <!-- <form method="POST" name="contactform" action="" class="footerform">
 
                 <table>
                   <tr>
@@ -26,7 +29,7 @@
                   </tr>
                 </table>
 
-        </form>
+        </form> -->
       </div>
 
   </div>
