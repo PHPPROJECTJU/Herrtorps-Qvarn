@@ -175,6 +175,9 @@ header nav {
   top: -5px;
   right: 15px;
 }
+#hamburger:hover {
+cursor: pointer;
+}
 /*--header end---------------*/
 
 /*--all content between header image and footer--*/
@@ -340,8 +343,7 @@ footer {
   overflow: hidden;
 }
 .footerobject {
-  float: left;
-  width: 33.33%;
+  width: 100%;
   padding: 30px;
   box-sizing: border-box;
   color: #ccc0b9;
@@ -427,6 +429,15 @@ footer {
 .leftbox p {
   margin-bottom: 25px;
 }
+/*---footer-----*/
+.footerobject {
+  float: left;
+  width: 33.33%;
+  padding: 30px;
+  box-sizing: border-box;
+  color: #ccc0b9;
+  font-weight: 300;
+}
 
 }
 
@@ -473,6 +484,22 @@ footer {
 
   .menu li a{
     font-size: 12px;
+  }
+
+  .menu li a:hover + .sub-menu{
+    display: block;
+  }
+
+  .sub-menu{
+    display: none;
+    position: absolute;
+  }
+  .sub-menu li{
+    float: left;
+    position: absolute;
+  }
+  .sub-menu li + li {
+    clear:left;
   }
 
   .headerimage img {
