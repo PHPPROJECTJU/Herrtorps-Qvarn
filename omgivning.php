@@ -18,17 +18,17 @@ if( have_posts() ) {
           <h2><?php the_field('skararubrik'); ?></h2>
 
             <?php
-            // $mediumlarge = 'medium_large';
-            // $skarabild = get_field('skarabild');
-            // $mlbild = $skarabild['sizes'][ $mediumlarge ];
-            // $width = $skarabild['sizes'][ $mediumlarge . '-width' ];
-            // $height = $skarabild['sizes'][ $mediumlarge . '-height' ];
+            $mediumlarge = 'medium_large';
+            $skarabild = get_field('skarabild');
+            $mlbild = $skarabild['sizes'][ $mediumlarge ];
+            $width = $skarabild['sizes'][ $mediumlarge . '-width' ];
+            $height = $skarabild['sizes'][ $mediumlarge . '-height' ];
             //
-            // if ($skarabild) { ?>
-            <!--<div class="skarabild" style='background-image: url("<?php //echo $skarabild;?>");'></div>-->
-            <?php //} ?>
+             if ($skarabild) { ?>
+            <div class="skarabild" style='background-image: url("<?php echo $mlbild;?>");'></div>
+            <?php } ?>
 
-          <?php the_field('skarabild'); ?>
+
           <p><?php the_field('skaratext'); ?></p>
           <p><?php the_field('skaralank'); ?></p>
       </div>
