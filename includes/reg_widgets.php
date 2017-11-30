@@ -3,36 +3,22 @@
 
  function add_widgets() {
 
-    $args1 = array(
-      'id'            => 'page-sidebar',
+    $args = array(
+      'id'            => 'footer-1',
       //Visible name in the Admin Dashboard Widget page
-      'name'          => __( 'Page Sidebar', 'portfolio_theme' ),
+      'name'          => __( 'Footer 1', 'herrtorps-qvarn' ),
       //Visible description in the Admin Dashboard Widget page
-      'description'   => __( 'Show my skills and social links', 'portfolio_theme' ),
+      'description'   => __( 'Footer widget', 'herrtorps-qvarn' ),
       //HTML to wrap widget title in
-      'before_title'  => '<p class="widget-title">',
-      'after_title'   => '</p>',
+      'before_title'  => '<div class="footerwidget">',
+      'after_title'   => '</div>',
       // HTML to wrap each widget
       'before_widget' => '<section>',
       'after_widget'  => '</section>',
     );
 
-    $args2 = array(
-      'id'            => 'project-sidebar',
-      //Visible name in the Admin Dashboard Widget page
-      'name'          => __( 'Project Sidebar', 'portfolio_theme' ),
-      //Visible description in the Admin Dashboard Widget page
-      'description'   => __( 'Show my skills and social links', 'portfolio_theme' ),
-      //HTML to wrap widget title in
-      'before_title'  => '<p class="widget-title">',
-      'after_title'   => '</p>',
-      // HTML to wrap each widget
-      'before_widget' => '<section>',
-      'after_widget'  => '</section>',
-    );
 
-  register_sidebar( $args1 );
-  register_sidebar( $args2 );
+  register_sidebar( $args );
 
  }
 
