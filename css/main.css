@@ -72,7 +72,6 @@ header{
   height: 60px;
 }
 header nav {
-  overflow: hidden;
   height: inherit;
   background-color: #234013;
   box-shadow: 0 0 30px rgba(0,0,0,0.5);
@@ -81,26 +80,35 @@ header nav {
 .menu {
   list-style-type: none;
   margin: 0 auto;
-  overflow: hidden;
-  width: 70%;
+  width: 100%;
   height: inherit;
   padding: 28px 0;
   box-sizing: border-box;
 }
 
-.menuleft {
-  float: left;
+.menuleft{
+  float:none;
   display: none;
+  list-style-type: none;
+  background-color: grey;
 }
 
-.menuright {
-  float: right;
+.menuright{
+  float: none;
   display: none;
+  list-style-type: none;
+  background-color: grey;
 }
 
-.menu li{
-  display: inline;
+.menuleft .sub-menu{
+  list-style-type: none;
 }
+
+.menuright .sub-menu{
+  list-style-type: none;
+}
+
+
 
 .menu li a{
   text-decoration: none;
@@ -368,7 +376,6 @@ footer {
   .menu {
     list-style-type: none;
     margin: 0 auto;
-    overflow: hidden;
     width: 95%;
     max-width: 700px;
     height: inherit;
@@ -466,27 +473,51 @@ footer {
 
   .menuleft {
     display: block;
+    float: left;
+    background-color: #234013;
   }
 
   .menuright {
     display: block;
+    float: right;
+    background-color: #234013;
   }
+
+  .menu li{
+    position:relative;
+    padding-bottom: 40px;
+    display: inline;
+  }
+
 
   .menu li a{
     font-size: 12px;
   }
 
-  .menu li:hover + .sub-menu{
+  .menu li:hover .sub-menu{
     display: block;
+    margin-top: 15px;
   }
 
   .sub-menu{
     display: none;
     position: absolute;
+    left: 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   }
   .sub-menu li{
-    float: left;
-    position: absolute;
+    background: white;
+    color: #234013;
+    display: block;
+    width: 110px;
+    padding: 10px;
+  }
+
+  .sub-menu li:hover {
+    background-color: #eaeaea;
+  }
+  .sub-menu li a{
+    color: #234013;
   }
   .sub-menu li + li {
     clear:left;

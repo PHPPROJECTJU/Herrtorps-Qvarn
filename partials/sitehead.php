@@ -16,7 +16,7 @@
                     <a href="language-hours"></a>
                 </div>
             </div>
-            <div id="hamburger" onclick="openNav()" title="Menu">&#9776;</div>
+            <div id="hamburger" onclick="openNav(this)" title="Menu">&#9776;</div>
         </div>
 
     </nav>
