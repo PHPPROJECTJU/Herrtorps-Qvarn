@@ -99,10 +99,15 @@ header nav {
   display: none;
   list-style-type: none;
   background-color: #282828;
+  box-shadow: -10px 50px 90px rgba(0,0,0,0.5);
 }
 
 .menuleft li, .menuright li{
   padding: 15px;
+}
+
+.menuleft li:hover, .menuright li:hover{
+  background-color: #303030;
 }
 
 .menuleft .sub-menu{
@@ -493,10 +498,15 @@ footer {
     display: block;
     float: right;
     background-color: #234013;
+    box-shadow: none;
   }
 
   .menuleft li, .menuright li  {
     padding: 0px;
+  }
+
+  .menuleft li:hover, .menuright li:hover{
+    background-color: #234013;
   }
 
   .menu li{
