@@ -91,6 +91,11 @@ header nav {
   display: none;
   list-style-type: none;
   background-color: grey;
+  margin-top: 32px;
+}
+
+.menuleft li, .menuright li  {
+  
 }
 
 .menuright{
@@ -175,6 +180,10 @@ header nav {
 }
 #hamburger:hover {
 cursor: pointer;
+}
+/*---https://stackoverflow.com/questions/15603950/wordpress-highlight-the-parent-menu-item-when-child-menu-item-page-is-selected 1 dec 2017---*/
+li.current_page_item  a, li.current_page_ancestor  a{
+  color: #FCDD7A;
 }
 /*--header end---------------*/
 
@@ -376,10 +385,8 @@ footer {
   .menu {
     list-style-type: none;
     margin: 0 auto;
-    width: 95%;
-    max-width: 700px;
+    width: 100%;
     height: inherit;
-    padding: 18px 0;
     box-sizing: border-box;
   }
 
@@ -475,6 +482,7 @@ footer {
     display: block;
     float: left;
     background-color: #234013;
+    margin-top: 0px;
   }
 
   .menuright {
@@ -485,7 +493,7 @@ footer {
 
   .menu li{
     position:relative;
-    padding-bottom: 40px;
+    padding-bottom: 15px;
     display: inline;
   }
 
