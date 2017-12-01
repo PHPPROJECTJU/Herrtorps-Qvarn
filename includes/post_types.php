@@ -333,7 +333,7 @@ non-hierarchical-->*/
 
            'menu_position'       => 5, // int (defaults to 25 - below comments)
 
-           'menu_icon'           => 'dashicons-building', // string (defaults to use the post icon)
+           'menu_icon'           => 'dashicons-location-alt', // string (defaults to use the post icon)
 
            'can_export'          => true, // bool (defaults to TRUE)
 
@@ -419,5 +419,334 @@ non-hierarchical-->*/
 
    /* Register custom post types on the 'init' hook. */
    add_action( 'init', 'omgivningspost_post_type' );
+
+
+
+   //------------------------NEXT POST TYPE
+
+    function historiepost_post_type() {
+
+        $args = array(
+
+            'public'              => true, // bool (default is FALSE)
+
+            'publicly_queryable'  => true, // bool (defaults to 'public').
+
+            'exclude_from_search' => false, // bool (defaults to 'public')
+
+            'show_in_nav_menus'   => true, // bool (defaults to 'public')
+
+            'show_ui'             => true, // bool (defaults to 'public')
+
+            'show_in_menu'        => true, // bool (defaults to 'show_ui')
+
+            'show_in_admin_bar'   => true, // bool (defaults to 'show_in_menu')
+
+            'menu_position'       => 5, // int (defaults to 25 - below comments)
+
+            'menu_icon'           => 'dashicons-book-alt', // string (defaults to use the post icon)
+
+            'can_export'          => true, // bool (defaults to TRUE)
+
+            'delete_with_user'    => false, // bool (defaults to TRUE if the post type supports 'author')
+
+            'hierarchical'        => false, // bool (defaults to FALSE)
+
+            'has_archive'         => 'historiepost', // bool|string (defaults to FALSE)
+
+            'query_var'           => 'historiepost', // bool|string (defaults to TRUE - post type name)
+
+            'capability_type'     => 'post', // string|array (defaults to 'post')
+
+            'map_meta_cap'        => true, // bool (defaults to FALSE)
+
+            'rewrite' => array(
+          		'slug'                  => 'historiepost',
+          		'with_front'            => false,
+          		'pages'                 => true,
+          		'feeds'                 => false,
+          	),
+
+            'supports' => array(
+
+                /* Post titles ($post->post_title). */
+                'title',
+
+                /* Post content ($post->post_content). */
+                'editor',
+
+                /* Post excerpt ($post->post_excerpt). */
+                //'excerpt',
+
+                /* Post author ($post->post_author). */
+                'author',
+
+                /* Featured images (the user's theme must support 'post-thumbnails'). */
+                'thumbnail',
+
+                /* Displays comments meta box.  If set, comments (any type) are allowed for the post. */
+                //'comments',
+
+                /* Displays meta box to send trackbacks from the edit post screen. */
+                //'trackbacks',
+
+                /* Displays the Custom Fields meta box. Post meta is supported regardless. */
+                //'custom-fields',
+
+                /* Displays the Revisions meta box. If set, stores post revisions in the database. */
+                //'revisions',
+
+                /* Displays the Attributes meta box with a parent selector and menu_order input box. */
+                /*'page-attributes',*/
+
+                /* Displays the Format meta box and allows post formats to be used with the posts. */
+                //'post-formats',
+            ),
+
+           /*'taxonomies'            => array( 'boende_skill', 'boende_type' ),*/
+            'labels' => array(
+                'name'               => __( 'Historieposter',                   'historiepost-textdomain' ),
+                'singular_name'      => __( 'Historiepost',                    'historiepost-textdomain' ),
+                'menu_name'          => __( 'Historieposter',                   'historiepost-textdomain' ),
+                'name_admin_bar'     => __( 'Historieposter',                   'historiepost-textdomain' ),
+                'add_new'            => __( 'Lägg till ny',                    'historiepost-textdomain' ),
+                'add_new_item'       => __( 'Lägg till ny historiepost',            'historiepost-textdomain' ),
+                'edit_item'          => __( 'Redigera historiepost',               'historiepost-textdomain' ),
+                'new_item'           => __( 'Ny historiepost',                'historiepost-textdomain' ),
+                'view_item'          => __( 'Se historiepost',               'historiepost-textdomain' ),
+                'search_items'       => __( 'Sök historiepost',            'historiepost-textdomain' ),
+                'not_found'          => __( 'Hittade inga historieposter',          'historiepost-textdomain' ),
+                'not_found_in_trash' => __( 'Hittade inga historieposter i papperskorgen', 'historiepost-textdomain' ),
+                'all_items'          => __( 'Alla historieposter',               'historiepost-textdomain' ),
+            )
+        );
+
+        /* Register the post type. */
+        register_post_type(
+            'historiepost', // Post type name. Max of 20 characters. Uppercase and spaces not allowed.
+            $args      // Arguments for post type.
+        );
+    }
+
+    /* Register custom post types on the 'init' hook. */
+    add_action( 'init', 'historiepost_post_type' );
+
+    //------------------------NEXT POST TYPE
+
+     function ompost_post_type() {
+
+         $args = array(
+
+             'public'              => true, // bool (default is FALSE)
+
+             'publicly_queryable'  => true, // bool (defaults to 'public').
+
+             'exclude_from_search' => false, // bool (defaults to 'public')
+
+             'show_in_nav_menus'   => true, // bool (defaults to 'public')
+
+             'show_ui'             => true, // bool (defaults to 'public')
+
+             'show_in_menu'        => true, // bool (defaults to 'show_ui')
+
+             'show_in_admin_bar'   => true, // bool (defaults to 'show_in_menu')
+
+             'menu_position'       => 5, // int (defaults to 25 - below comments)
+
+             'menu_icon'           => 'dashicons-info', // string (defaults to use the post icon)
+
+             'can_export'          => true, // bool (defaults to TRUE)
+
+             'delete_with_user'    => false, // bool (defaults to TRUE if the post type supports 'author')
+
+             'hierarchical'        => false, // bool (defaults to FALSE)
+
+             'has_archive'         => 'ompost', // bool|string (defaults to FALSE)
+
+             'query_var'           => 'ompost', // bool|string (defaults to TRUE - post type name)
+
+             'capability_type'     => 'post', // string|array (defaults to 'post')
+
+             'map_meta_cap'        => true, // bool (defaults to FALSE)
+
+             'rewrite' => array(
+               'slug'                  => 'ompost',
+               'with_front'            => false,
+               'pages'                 => true,
+               'feeds'                 => false,
+             ),
+
+             'supports' => array(
+
+                 /* Post titles ($post->post_title). */
+                 'title',
+
+                 /* Post content ($post->post_content). */
+                 'editor',
+
+                 /* Post excerpt ($post->post_excerpt). */
+                 //'excerpt',
+
+                 /* Post author ($post->post_author). */
+                 'author',
+
+                 /* Featured images (the user's theme must support 'post-thumbnails'). */
+                 'thumbnail',
+
+                 /* Displays comments meta box.  If set, comments (any type) are allowed for the post. */
+                 //'comments',
+
+                 /* Displays meta box to send trackbacks from the edit post screen. */
+                 //'trackbacks',
+
+                 /* Displays the Custom Fields meta box. Post meta is supported regardless. */
+                 //'custom-fields',
+
+                 /* Displays the Revisions meta box. If set, stores post revisions in the database. */
+                 //'revisions',
+
+                 /* Displays the Attributes meta box with a parent selector and menu_order input box. */
+                 /*'page-attributes',*/
+
+                 /* Displays the Format meta box and allows post formats to be used with the posts. */
+                 //'post-formats',
+             ),
+
+            /*'taxonomies'            => array( 'boende_skill', 'boende_type' ),*/
+             'labels' => array(
+                 'name'               => __( 'Omposter',                   'ompost-textdomain' ),
+                 'singular_name'      => __( 'Ompost',                    'ompost-textdomain' ),
+                 'menu_name'          => __( 'Omposter',                   'ompost-textdomain' ),
+                 'name_admin_bar'     => __( 'Omposter',                   'ompost-textdomain' ),
+                 'add_new'            => __( 'Lägg till ny',                    'ompost-textdomain' ),
+                 'add_new_item'       => __( 'Lägg till ny ompost',            'ompost-textdomain' ),
+                 'edit_item'          => __( 'Redigera ompost',               'ompost-textdomain' ),
+                 'new_item'           => __( 'Ny ompost',                'ompost-textdomain' ),
+                 'view_item'          => __( 'Se ompost',               'ompost-textdomain' ),
+                 'search_items'       => __( 'Sök ompost',            'ompost-textdomain' ),
+                 'not_found'          => __( 'Hittade inga omposter',          'ompost-textdomain' ),
+                 'not_found_in_trash' => __( 'Hittade inga omposter i papperskorgen', 'ompost-textdomain' ),
+                 'all_items'          => __( 'Alla omposter',               'ompost-textdomain' ),
+             )
+         );
+
+         /* Register the post type. */
+         register_post_type(
+             'ompost', // Post type name. Max of 20 characters. Uppercase and spaces not allowed.
+             $args      // Arguments for post type.
+         );
+     }
+
+     /* Register custom post types on the 'init' hook. */
+     add_action( 'init', 'ompost_post_type' );
+
+     //------------------------NEXT POST TYPE
+
+      function oppettider_post_type() {
+
+          $args = array(
+
+              'public'              => true, // bool (default is FALSE)
+
+              'publicly_queryable'  => true, // bool (defaults to 'public').
+
+              'exclude_from_search' => false, // bool (defaults to 'public')
+
+              'show_in_nav_menus'   => true, // bool (defaults to 'public')
+
+              'show_ui'             => true, // bool (defaults to 'public')
+
+              'show_in_menu'        => true, // bool (defaults to 'show_ui')
+
+              'show_in_admin_bar'   => true, // bool (defaults to 'show_in_menu')
+
+              'menu_position'       => 5, // int (defaults to 25 - below comments)
+
+              'menu_icon'           => 'dashicons-clock', // string (defaults to use the post icon)
+
+              'can_export'          => true, // bool (defaults to TRUE)
+
+              'delete_with_user'    => false, // bool (defaults to TRUE if the post type supports 'author')
+
+              'hierarchical'        => false, // bool (defaults to FALSE)
+
+              'has_archive'         => 'ompost', // bool|string (defaults to FALSE)
+
+              'query_var'           => 'ompost', // bool|string (defaults to TRUE - post type name)
+
+              'capability_type'     => 'post', // string|array (defaults to 'post')
+
+              'map_meta_cap'        => true, // bool (defaults to FALSE)
+
+              'rewrite' => array(
+                'slug'                  => 'oppettider',
+                'with_front'            => false,
+                'pages'                 => true,
+                'feeds'                 => false,
+              ),
+
+              'supports' => array(
+
+                  /* Post titles ($post->post_title). */
+                  'title',
+
+                  /* Post content ($post->post_content). */
+                  'editor',
+
+                  /* Post excerpt ($post->post_excerpt). */
+                  //'excerpt',
+
+                  /* Post author ($post->post_author). */
+                  'author',
+
+                  /* Featured images (the user's theme must support 'post-thumbnails'). */
+                  'thumbnail',
+
+                  /* Displays comments meta box.  If set, comments (any type) are allowed for the post. */
+                  //'comments',
+
+                  /* Displays meta box to send trackbacks from the edit post screen. */
+                  //'trackbacks',
+
+                  /* Displays the Custom Fields meta box. Post meta is supported regardless. */
+                  //'custom-fields',
+
+                  /* Displays the Revisions meta box. If set, stores post revisions in the database. */
+                  //'revisions',
+
+                  /* Displays the Attributes meta box with a parent selector and menu_order input box. */
+                  /*'page-attributes',*/
+
+                  /* Displays the Format meta box and allows post formats to be used with the posts. */
+                  //'post-formats',
+              ),
+
+             /*'taxonomies'            => array( 'boende_skill', 'boende_type' ),*/
+              'labels' => array(
+                  'name'               => __( 'Öppettider',                   'oppettider-textdomain' ),
+                  'singular_name'      => __( 'Öppettid',                    'oppettider-textdomain' ),
+                  'menu_name'          => __( 'Öppettider',                   'oppettider-textdomain' ),
+                  'name_admin_bar'     => __( 'Öppettider',                   'oppettider-textdomain' ),
+                  'add_new'            => __( 'Lägg till ny',                    'oppettider-textdomain' ),
+                  'add_new_item'       => __( 'Lägg till ny öppettid',            'oppettider-textdomain' ),
+                  'edit_item'          => __( 'Redigera öppettid',               'oppettider-textdomain' ),
+                  'new_item'           => __( 'Ny öppettid',                'oppettider-textdomain' ),
+                  'view_item'          => __( 'Se öppettid',               'oppettider-textdomain' ),
+                  'search_items'       => __( 'Sök öppettid',            'ompost-textdomain' ),
+                  'not_found'          => __( 'Hittade inga öppettider',          'oppettider-textdomain' ),
+                  'not_found_in_trash' => __( 'Hittade inga öppettider i papperskorgen', 'oppettider-textdomain' ),
+                  'all_items'          => __( 'Alla öppettider',               'oppettider-textdomain' ),
+              )
+          );
+
+          /* Register the post type. */
+          register_post_type(
+              'öppettider', // Post type name. Max of 20 characters. Uppercase and spaces not allowed.
+              $args      // Arguments for post type.
+          );
+      }
+
+      /* Register custom post types on the 'init' hook. */
+      add_action( 'init', 'oppettider_post_type' );
 
     ?>
