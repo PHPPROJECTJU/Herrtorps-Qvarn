@@ -92,6 +92,7 @@ header nav {
   list-style-type: none;
   background-color: #282828;
   margin-top: 32px;
+
 }
 
 .menuright{
@@ -99,7 +100,7 @@ header nav {
   display: none;
   list-style-type: none;
   background-color: #282828;
-  box-shadow: -10px 50px 90px rgba(0,0,0,0.5);
+  box-shadow: 0px 30px 30px rgba(0,0,0,0.5);
 }
 
 .menuleft li, .menuright li{
@@ -119,8 +120,9 @@ header nav {
   display: none;
 }
 
-
-
+.menuright li li {
+    margin-left: 25px;
+}
 .menu li a{
   text-decoration: none;
   color: white;
@@ -128,7 +130,7 @@ header nav {
   text-transform: uppercase;
   font-family: sans-serif;
   font-weight: 300;
-  font-size: 11px;
+  font-size: 14px;
   display: block;
 }
 #logo {
@@ -182,7 +184,7 @@ header nav {
   font-size: 45px;
   color: white;
   position: absolute;
-  top: -5px;
+  top: -3px;
   right: 15px;
 }
 #hamburger:hover {
