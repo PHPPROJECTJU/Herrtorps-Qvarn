@@ -116,6 +116,7 @@ header nav {
 
 .menuright .sub-menu{
   list-style-type: none;
+  display: none;
 }
 
 
@@ -518,6 +519,8 @@ footer {
 
   .menu li a{
     font-size: 12px;
+    font-family: 'lato';
+    font-size: 14px;
   }
 
   .menu li:hover .sub-menu{
