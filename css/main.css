@@ -90,19 +90,19 @@ header nav {
   float:none;
   display: none;
   list-style-type: none;
-  background-color: grey;
+  background-color: #282828;
   margin-top: 32px;
-}
-
-.menuleft li, .menuright li  {
-  
 }
 
 .menuright{
   float: none;
   display: none;
   list-style-type: none;
-  background-color: grey;
+  background-color: #282828;
+}
+
+.menuleft li, .menuright li{
+  padding: 15px;
 }
 
 .menuleft .sub-menu{
@@ -390,6 +390,10 @@ footer {
     box-sizing: border-box;
   }
 
+  .menuleft li, .menuright li  {
+    padding: 15px;
+  }
+
   .headerimage img {
     margin-top: -130px;
   }
@@ -489,6 +493,10 @@ footer {
     display: block;
     float: right;
     background-color: #234013;
+  }
+
+  .menuleft li, .menuright li  {
+    padding: 0px;
   }
 
   .menu li{

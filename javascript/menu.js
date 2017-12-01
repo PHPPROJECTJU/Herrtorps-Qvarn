@@ -1,6 +1,6 @@
 var menuleft = document.querySelector(".menuleft");
 var menuright = document.querySelector(".menuright");
-
+var hamburger = document.getElementById("hamburger");
 // function openNav() {
 // 		menuleft.style.display = "block";
 //     menuright.style.display = "block";
