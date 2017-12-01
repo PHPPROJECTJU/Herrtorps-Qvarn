@@ -31,7 +31,7 @@ if( have_posts() ) {
             <?php } ?>
 
           </div>
-          <div class="omgivningright" style="width: 40%; float: left;">
+          <div class="omgivning-right">
 
               <h2><?php the_field('skararubrik'); ?></h2>
               <p><?php the_field('skaratext'); ?></p>
