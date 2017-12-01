@@ -103,7 +103,7 @@ header nav {
 }
 
 .menuleft li, .menuright li{
-  padding: 15px;
+  padding: 0px;
 }
 
 .menuleft li:hover, .menuright li:hover{
@@ -124,11 +124,12 @@ header nav {
 .menu li a{
   text-decoration: none;
   color: white;
-  padding: 0 10px;
+  padding: 15px 25px;
   text-transform: uppercase;
   font-family: sans-serif;
   font-weight: 300;
   font-size: 11px;
+  display: block;
 }
 #logo {
   width: 80px;
@@ -383,8 +384,8 @@ footer {
 /*--header---------------*/
   #logo {
     width: 130px;
-    top: 15px;
-    left: 55px;
+    top: 20px;
+    left: calc(50% - 50px);
     height: 120px
   }
 
@@ -397,7 +398,7 @@ footer {
   }
 
   .menuleft li, .menuright li  {
-    padding: 15px;
+    padding: 0px;
   }
 
   .headerimage img {
@@ -513,7 +514,7 @@ footer {
   .menu li{
     position:relative;
     padding-bottom: 15px;
-    display: inline;
+    display: inline-block;
   }
 
 
@@ -521,6 +522,8 @@ footer {
     font-size: 12px;
     font-family: 'lato';
     font-size: 14px;
+    padding: 0 10px;
+    display: block;
   }
 
   .menu li:hover .sub-menu{
@@ -547,6 +550,7 @@ footer {
   }
   .sub-menu li a{
     color: #234013;
+    padding: 10px;
   }
   .sub-menu li + li {
     clear:left;

@@ -5,6 +5,16 @@ var hamburger = document.getElementById("hamburger");
 // 		menuleft.style.display = "block";
 //     menuright.style.display = "block";
 // }
+var subitem = document.querySelector(".sub-menu");
+
+document.querySelector(".menu-item-460").addEventListener("click", function(){
+  if(subitem.style.display == "block"){
+      subitem.style.display = "none";
+  } else {
+    subitem.style.display = "block";
+  }
+});
+
 
 function openNav(x) {
     x.classList.toggle("change");
