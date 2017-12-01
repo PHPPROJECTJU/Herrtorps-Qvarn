@@ -518,7 +518,9 @@ footer {
     padding-bottom: 15px;
     display: inline-block;
   }
-
+  .menuright li li {
+    margin-left: 0px;
+  }
 
   .menu li a{
     font-size: 12px;
