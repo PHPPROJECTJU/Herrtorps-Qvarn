@@ -46,6 +46,7 @@ ul {
 ul li {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 h1, h2, h3, h4 {
@@ -301,7 +302,55 @@ li.current_page_item  a, li.current_page_ancestor  a{
 /*--page: boende--*/
 
 .boende {
-  
+  overflow: hidden;
+  padding-top: 120px;
+}
+
+.boende h2 {
+  margin-bottom: 20px;
+}
+
+.boendebild {
+  width: 60%;
+  float: left;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.boendetext {
+  width: 40%;
+  float: left;
+}
+
+.boende_img {
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/*--icons-----*/
+
+.icons {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.icons li {
+  float: left;
+  padding-right: 5px;
+}
+
+.icons li p {
+  float: left;
+  margin-right: 20px;
+}
+
+.boendeicon {
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
 }
 
 

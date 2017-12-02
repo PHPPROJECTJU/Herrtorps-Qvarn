@@ -35,32 +35,44 @@ if( $query->have_posts() ) {
             $width = $bild['sizes'][ $mediumlarge . '-width' ];
             $height = $bild['sizes'][ $mediumlarge . '-height' ];
           ?>
-          <div class="omgivningbild">
+          <div class="boendebild">
           <?php
              if ($bild) { ?>
-            <div class='omgivning_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
+            <div class='boende_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
             <?php } ?>
 
           </div>
-          <div class="omgivningtext">
+          <div class="boendetext">
 
-              <h2><?php the_field('rubrik'); ?></h2>
+
+              <h2><?php the_field('rumstyp'); ?></h2>
+              <ul class="icons">
+                  <li>
+                    <img src="<?php echo  get_template_directory_uri();?>/img/bed-32.png" class='boendeicon' /><p><?php the_field('baddar'); ?></p>
+                  </li>
+                  <li>
+                    <img src="<?php echo  get_template_directory_uri();?>/img/window-layout-32.png" class='boendeicon' /><p><?php the_field('utsikt'); ?></p>
+                  </li>
+              </ul>
               <p><?php the_field('beskrivning'); ?></p>
 
-              <br />
-              <br />
+              <p>Pris: <?php the_field('pris'); ?>kr/natt</p>
 
-              <div class='btncontainer'>
-                <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_beige'>Gå till hemsida</button></a>
-              </div>
           </div>
 
 
         </div>
       </section>
 
-    <?php }
-}
+    <?php }?>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class='btncontainer'>
+      <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_green'>Boka rum</button></a>
+    </div>
+<?php }
 ?>
 
 <?php get_footer(); ?>
