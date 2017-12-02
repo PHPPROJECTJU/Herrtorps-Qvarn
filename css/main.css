@@ -79,7 +79,7 @@ header{
 }
 header nav {
   height: inherit;
-  background-color: #234013;
+  background-color: #1c2b19;
   box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
@@ -212,7 +212,7 @@ li.current_page_item  a, li.current_page_ancestor  a{
 }
 
 .topheading {
-  color: #234013;
+  color: #1c2b19;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -234,7 +234,7 @@ li.current_page_item  a, li.current_page_ancestor  a{
 
 .leftbox {
   width: 100%;
-  background-color: #234013;
+  background-color: #1c2b19;
   color: #ccc0b9;
   padding: 40px;
   box-sizing: border-box;
@@ -430,8 +430,8 @@ li.current_page_item  a, li.current_page_ancestor  a{
 }
 
 .outlinebtn_green {
-  border: 1.5px solid #234013;
-  color: #234013;
+  border: 1.5px solid #1c2b19;
+  color: #1c2b19;
 }
 
 .btncontainer {
@@ -466,7 +466,7 @@ li.current_page_item  a, li.current_page_ancestor  a{
 /*--footer-----------------*/
 
 footer {
-  background-color: #234013;
+  background-color: #1c2b19;
   padding: 15px 50px;
   overflow: hidden;
   margin-top: 100px;
@@ -607,14 +607,14 @@ footer {
   .menuleft {
     display: block;
     float: left;
-    background-color: #234013;
+    background-color: #1c2b19;
     margin-top: 0px;
   }
 
   .menuright {
     display: block;
     float: right;
-    background-color: #234013;
+    background-color: #1c2b19;
     box-shadow: none;
   }
 
@@ -623,7 +623,7 @@ footer {
   }
 
   .menuleft li:hover, .menuright li:hover{
-    background-color: #234013;
+    background-color: #1c2b19;
   }
 
   .menu li{
@@ -656,7 +656,7 @@ footer {
   }
   .sub-menu li{
     background: white;
-    color: #234013;
+    color: #1c2b19;
     display: block;
     width: 110px;
     padding: 10px;
@@ -666,7 +666,7 @@ footer {
     background-color: #eaeaea;
   }
   .sub-menu li a{
-    color: #234013;
+    color: #1c2b19;
     padding: 10px;
   }
   .sub-menu li + li {
