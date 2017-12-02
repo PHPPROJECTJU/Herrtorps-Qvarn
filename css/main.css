@@ -92,6 +92,7 @@ header nav {
   list-style-type: none;
   background-color: #282828;
   margin-top: 32px;
+
 }
 
 .menuright{
@@ -99,11 +100,11 @@ header nav {
   display: none;
   list-style-type: none;
   background-color: #282828;
-  box-shadow: -10px 50px 90px rgba(0,0,0,0.5);
+  box-shadow: 0px 30px 30px rgba(0,0,0,0.5);
 }
 
 .menuleft li, .menuright li{
-  padding: 15px;
+  padding: 0px;
 }
 
 .menuleft li:hover, .menuright li:hover{
@@ -119,16 +120,18 @@ header nav {
   display: none;
 }
 
-
-
+.menuright li li {
+    margin-left: 25px;
+}
 .menu li a{
   text-decoration: none;
   color: white;
-  padding: 0 10px;
+  padding: 15px 25px;
   text-transform: uppercase;
   font-family: sans-serif;
   font-weight: 300;
-  font-size: 11px;
+  font-size: 14px;
+  display: block;
 }
 #logo {
   width: 80px;
@@ -181,7 +184,7 @@ header nav {
   font-size: 45px;
   color: white;
   position: absolute;
-  top: -5px;
+  top: -3px;
   right: 15px;
 }
 #hamburger:hover {
@@ -383,8 +386,8 @@ footer {
 /*--header---------------*/
   #logo {
     width: 130px;
-    top: 15px;
-    left: 55px;
+    top: 20px;
+    left: calc(50% - 50px);
     height: 120px
   }
 
@@ -397,7 +400,7 @@ footer {
   }
 
   .menuleft li, .menuright li  {
-    padding: 15px;
+    padding: 0px;
   }
 
   .headerimage img {
@@ -513,14 +516,18 @@ footer {
   .menu li{
     position:relative;
     padding-bottom: 15px;
-    display: inline;
+    display: inline-block;
   }
-
+  .menuright li li {
+    margin-left: 0px;
+  }
 
   .menu li a{
     font-size: 12px;
     font-family: 'lato';
     font-size: 14px;
+    padding: 0 10px;
+    display: block;
   }
 
   .menu li:hover .sub-menu{
@@ -547,6 +554,7 @@ footer {
   }
   .sub-menu li a{
     color: #234013;
+    padding: 10px;
   }
   .sub-menu li + li {
     clear:left;
