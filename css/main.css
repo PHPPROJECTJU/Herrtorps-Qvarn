@@ -328,6 +328,52 @@ li.current_page_item  a, li.current_page_ancestor  a{
   background-size: 100%;
 }
 
+/*--page: aktiviteter--*/
+
+.aktiviteter {
+  overflow: hidden;
+}
+
+.akt_grid_item {
+  float: left;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  padding: 20px;
+}
+
+.akt_thumbnail {
+  width: inherit;
+  height: inherit;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: calc(100% - 40px);
+  width: calc(100% - 40px);
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.akt_grid_item:hover .overlay {
+  opacity: 1;
+}
+
+.akt_grid_item:hover h3 {
+  text-align: center;
+  padding: 45% 25%;
+  width: auto;
+  height: auto;
+  color: #fff;
+  font-family: 'Lato';
+  letter-spacing: 0.8px;
+}
+
 /*--icons-----*/
 
 .icons {
