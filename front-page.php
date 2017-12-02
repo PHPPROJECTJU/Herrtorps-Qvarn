@@ -36,7 +36,7 @@
                               <p><?php the_field('nyhetstext'); ?></p>
 
                                 <div class='btncontainer'>
-                                  <a href='/se-gora'><button class='outlinebtn_beige'>Se upplevelser</button></a>
+                                  <a href='/aktiviteter'><button class='outlinebtn_beige'>Se upplevelser</button></a>
                                 </div>
                             </div>
                           </div>

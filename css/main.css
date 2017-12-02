@@ -63,6 +63,11 @@ h1, h2, h3, h4 {
   overflow: hidden;
 }
 
+/*heading used on many pages*/
+.page_rubrik {
+  margin-bottom: 20px;
+}
+
 /*--header---------------*/
 
 header{
@@ -242,7 +247,6 @@ li.current_page_item  a, li.current_page_ancestor  a{
 
 .leftbox h2 {
   font-style: normal;
-  margin-bottom: 20px;
   font-weight: 400;
 }
 
@@ -289,10 +293,6 @@ li.current_page_item  a, li.current_page_ancestor  a{
   float: right;
 }
 
-.omgivning h2 {
-  margin-bottom: 20px;
-}
-
 .omgivning_img {
   height: 300px;
   background-repeat: no-repeat;
@@ -304,10 +304,6 @@ li.current_page_item  a, li.current_page_ancestor  a{
 .boende {
   overflow: hidden;
   padding-top: 120px;
-}
-
-.boende h2 {
-  margin-bottom: 20px;
 }
 
 .boendebild {
@@ -330,8 +326,9 @@ li.current_page_item  a, li.current_page_ancestor  a{
 
 /*--page: aktiviteter--*/
 
-.aktiviteter {
+.akt_grid {
   overflow: hidden;
+  margin-top: 60px;
 }
 
 .akt_grid_item {
@@ -356,22 +353,34 @@ li.current_page_item  a, li.current_page_ancestor  a{
   height: calc(100% - 40px);
   width: calc(100% - 40px);
   opacity: 0;
-  transition: .5s ease;
-  background-color: rgba(0,0,0,0.6);
+  transition: .3s ease;
+  background-color: rgba(58,56,55,0.6);
 }
 
 .akt_grid_item:hover .overlay {
   opacity: 1;
 }
 
+.akt_grid_item h3 {
+  display: none;
+}
+
 .akt_grid_item:hover h3 {
   text-align: center;
-  padding: 45% 25%;
-  width: auto;
-  height: auto;
+  width: 100%;
+  padding-top: calc(50% - 11px);
   color: #fff;
   font-family: 'Lato';
+  font-style: normal;
   letter-spacing: 0.8px;
+  display: inline;
+  position: absolute;
+}
+
+/*--single: aktivitet---*/
+
+.aktivitet {
+  margin-top: 60px;
 }
 
 /*--icons-----*/
@@ -514,10 +523,6 @@ footer {
   .headerimage img {
     margin-top: -130px;
   }
-
-
-
-
 
 
 /*--header end---------------*/

@@ -44,7 +44,7 @@ if( $query->have_posts() ) {
           </div>
           <div class="omgivningtext">
 
-              <h2><?php the_field('rubrik'); ?></h2>
+              <h2 class='page_rubrik'><?php the_field('rubrik'); ?></h2>
               <p><?php the_field('beskrivning'); ?></p>
 
               <br />
