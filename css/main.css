@@ -255,41 +255,54 @@ li.current_page_item  a, li.current_page_ancestor  a{
 }
 
 /*--page: se & göra - omgivning--*/
-div.omgivning-right{
-  float: left !important;
-  width: 40%;
-}
 
 .omgivning {
   overflow: hidden;
-  padding-top: 80px;
+  padding-top: 120px;
+}
+
+.omgivningbild {
+  width: 60%;
+  box-sizing: border-box;
+}
+
+.omgivning:nth-child(even) .omgivningbild {
+  float: left;
+  padding-right: 30px;
+}
+
+.omgivning:nth-child(odd) .omgivningbild {
+  float: right;
+  padding-left: 30px;
+}
+
+.omgivningtext{
+  width: 40%;
+}
+
+.omgivning:nth-child(even) .omgivningtext {
+  float: left;
+}
+
+.omgivning:nth-child(odd) .omgivningtext {
+  float: right;
 }
 
 .omgivning h2 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-.omgivning_bild {
+.omgivning_img {
   height: 300px;
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-.omgivningleft:nth-child(odd) {
-  float: left;
-  width: 60%;
-  padding-right: 30px;
-  box-sizing: border-box;
+/*--page: boende--*/
+
+.boende {
+  
 }
-
-.omgivningleft:nth-child(even) {
-  float: right;
-  width: 60%;
-  padding-right: 30px;
-  box-sizing: border-box;
-}
-
-
 
 
 /*--button standards-----------------*/

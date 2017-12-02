@@ -35,20 +35,23 @@ if( $query->have_posts() ) {
             $width = $bild['sizes'][ $mediumlarge . '-width' ];
             $height = $bild['sizes'][ $mediumlarge . '-height' ];
           ?>
-          <div class="omgivningleft">
+          <div class="omgivningbild">
           <?php
              if ($bild) { ?>
-            <div class='omgivning_bild' style='background-image: url("<?php echo $mlbild;?>");'></div>
+            <div class='omgivning_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
             <?php } ?>
 
           </div>
-          <div class="omgivning-right">
+          <div class="omgivningtext">
 
               <h2><?php the_field('rubrik'); ?></h2>
               <p><?php the_field('beskrivning'); ?></p>
 
+              <br />
+              <br />
+
               <div class='btncontainer'>
-                <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_beige'>Läs mer</button></a>
+                <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_beige'>Gå till hemsida</button></a>
               </div>
           </div>
 
