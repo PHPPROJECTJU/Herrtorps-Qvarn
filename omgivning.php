@@ -30,14 +30,14 @@ if( $query->have_posts() ) {
 
             <?php
             $mediumlarge = 'medium_large';
-            $skarabild = get_field('bild');
-            $mlbild = $skarabild['sizes'][ $mediumlarge ];
-            $width = $skarabild['sizes'][ $mediumlarge . '-width' ];
-            $height = $skarabild['sizes'][ $mediumlarge . '-height' ];
+            $bild = get_field('bild');
+            $mlbild = $bild['sizes'][ $mediumlarge ];
+            $width = $bild['sizes'][ $mediumlarge . '-width' ];
+            $height = $bild['sizes'][ $mediumlarge . '-height' ];
           ?>
           <div class="omgivningleft">
           <?php
-             if ($skarabild) { ?>
+             if ($bild) { ?>
             <div class='omgivning_bild' style='background-image: url("<?php echo $mlbild;?>");'></div>
             <?php } ?>
 
