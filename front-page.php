@@ -22,6 +22,8 @@
                           <h1 class='topheading'><?php the_field('rubrik'); ?></h1>
                           <p class='introtext'><?php the_field('beskrivning'); ?></p>
 
+                          <div class="line1_green"></div>
+
                           <div class='btncontainer'>
                               <a href='/boende'><button class='outlinebtn_green'>Boka boende</button></a>
                           </div>
@@ -31,6 +33,9 @@
 
                       <section class='boxsection'>
                         <div class='leftbox'>
+
+                            <!-- <div class="corner1_beige"></div> -->
+
                             <div class='boxwidth'> <!--constrains box content width-->
                               <h2><?php the_field('nyhetsrubrik'); ?></h2>
                               <p><?php the_field('nyhetstext'); ?></p>

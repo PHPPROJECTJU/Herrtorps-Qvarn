@@ -68,6 +68,17 @@ h1, h2, h3, h4 {
   margin-bottom: 20px;
 }
 
+/*--ornaments-------------*/
+
+.line1_green {
+  width: 465px;
+  height: 25px;
+  background-image: url(../img/1x/ornament-line-1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0 auto 35px auto;
+}
+
 /*--header---------------*/
 
 header{
@@ -238,6 +249,10 @@ li.current_page_item  a, li.current_page_ancestor  a{
   color: #ccc0b9;
   padding: 40px;
   box-sizing: border-box;
+  background-image: url(../img/1x/ornament-corner-7.png), url(../img/1x/ornament-corner-8.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 16%;
+  background-position: left 25px bottom 25px, right 25px top 25px;
 }
 
 .boxwidth {
