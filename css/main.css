@@ -551,7 +551,7 @@ footer {
 }
 
 .leftbox {
-  max-height: 375px;
+  height: 375px;
   float: left;
   width: 50%;
   padding: 30px;
