@@ -653,7 +653,8 @@ footer {
     display: inline-block;
   }
 
-  #menu-item-552 {
+  #menu-item-552,
+  #menu-item-528 {
     position: absolute;
     top: 28px;
     right: 60px;
