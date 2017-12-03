@@ -41,7 +41,9 @@
                               <p><?php the_field('nyhetstext'); ?></p>
 
                                 <div class='btncontainer'>
-                                  <a href='/aktiviteter'><button class='outlinebtn_beige'>Se upplevelser</button></a>
+                                  <div class='btncontainer'>
+                                    <a href="<?php the_field('nyhetslank');?>"><button class='outlinebtn_beige'>Se aktiviteter</button></a>
+                                  </div>
                                 </div>
                             </div>
                           </div>
