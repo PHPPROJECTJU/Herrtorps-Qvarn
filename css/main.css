@@ -141,6 +141,10 @@ header nav {
   font-size: 14px;
   display: block;
 }
+
+.rightmenu {
+  float: none;
+}
 #logo {
   width: 80px;
   height: 50px;
@@ -653,8 +657,7 @@ footer {
     display: inline-block;
   }
 
-  #menu-item-552,
-  #menu-item-528 {
+  .menu li:nth-child(7){
     position: absolute;
     top: 28px;
     right: 60px;
