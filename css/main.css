@@ -615,28 +615,28 @@ footer {
   }
 
   #logo {
-    width: 200px;
-    height: 120px;
+    width: 220px;
+    height: 123px;
     background-image: url(../img/logga_herrtorps_oval.png);
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
-    top: 15px;
+    top: 10px;
     left: calc(50% - 100px);
   }
 
   .menu {
     padding: 28px 0;
     max-width: 900px;
-    width: 100%;
+    width: 76%;
   }
 
   .menuleft {
     display: block;
-    float: left;
     background-color: #1c2b19;
-    margin-top: 0px;
+    margin: 0 auto;
     box-shadow: none;
+    width: 100%;
   }
 
   .menuleft li {
@@ -649,13 +649,31 @@ footer {
 
   .menu li{
     position:relative;
-    padding-bottom: 15px;
+    padding: 0 1.5% 15px 1.5%;
     display: inline-block;
   }
 
-  .menu li:nth-child(3){
-  margin-right: 200px;
+  #menu-item-552 {
+    position: absolute;
+    top: 28px;
+    right: 60px;
   }
+
+  /*.menu li:nth-child(3){
+  padding-right: 10%;
+  }
+  .menu li:nth-child(4){
+  padding-left: 10%;
+  }*/
+
+  .rightmenu {
+    float: right;
+  }
+
+  .leftmenu {
+    float: left;
+  }
+
   .menuleft li li {
     margin-left: 0px;
   }
@@ -664,7 +682,7 @@ footer {
     font-size: 12px;
     font-family: 'lato';
     font-size: 14px;
-    padding: 0 10px;
+    padding: 0;
     display: block;
   }
 
@@ -746,6 +764,12 @@ footer {
 
 /*=====================================1200PX========================================*/
 @media (min-width: 1200px) {
+
+/*menu*/
+
+.menu {
+  width: 60%;
+}
 
 /*news boxes*/
 
