@@ -746,6 +746,21 @@ div.tab button.active {
     height: 75px;
   }
 
+header{
+transition: all 0.1s;
+-moz-transition: all 0.1s; /* Firefox 4 */
+-webkit-transition: all 0.1s; /* Safari and Chrome */
+-o-transition: all 0.1s; /* Opera */
+}
+
+.menu {
+  transition: all 1s;
+  -moz-transition: all 1s; /* Firefox 4 */
+  -webkit-transition: all 1s; /* Safari and Chrome */
+  -o-transition: all 1s; /* Opera */
+}
+
+
   #logo {
     width: 220px;
     height: 123px;

@@ -33,17 +33,6 @@ $(window).resize(function() {
         }
 });
 
-
-
-
-
-
-
-
-
-
-
-
 function openNav(x) {
     x.classList.toggle("change");
 
