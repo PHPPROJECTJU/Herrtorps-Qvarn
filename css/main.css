@@ -452,6 +452,20 @@ hr {
   margin-top: 60px;
 }
 
+/*-- page: kök & café --*/
+
+.matmeny h1 {
+  margin-top: 40px;
+}
+
+.matmeny {
+  font-style: italic;
+}
+
+.pubkvall {
+  margin-top: 20px;
+}
+
 /*--icons-----*/
 
 .icons {
