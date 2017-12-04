@@ -4,7 +4,7 @@
         <div class="menu">
             <?php wp_nav_menu( array('menu' => 'Menu', 'container' => '', 'items_wrap' => '<ul class="menuleft">%3$s</ul>' )); ?>
 
-                <a href="<?php echo home_url();?>"><div id='logo'></div></a>
+                <a href="<?php echo home_url();?>"><div id='logo' class='logofull'></div></a>
             <div class="extras">
                 <a href="">
                     <div class="opening-icon">

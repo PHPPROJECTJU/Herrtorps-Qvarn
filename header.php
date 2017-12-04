@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- <script type="text/javascript" src="Javascript/menu.js"></script> -->
+    <script type="text/javascript">
+        var templateUrl = '<?= get_bloginfo("template_url"); ?>';
+    </script>
     <?php wp_head(); ?>
   </head>
   <body>

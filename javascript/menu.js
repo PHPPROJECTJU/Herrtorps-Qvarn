@@ -11,8 +11,10 @@ $(window).resize(function() {
     var subitem2 = document.querySelectorAll(".sub-menu")[1];
 
         if ($(this).width() >= 960) {
+
           subitem1.style.display == "none";
           subitem2.style.display == "none";
+
         } else if($(this).width() < 960){
 
             document.querySelector(".sub-menu-1").addEventListener("click", function(){
@@ -44,4 +46,28 @@ function openNav(x) {
       menuright.style.display = "block";
     }
 
+}
+
+/*slimming the logo when scrolling*/
+
+window.onscroll = function() {
+
+  if ($(this).width() >= 640) {
+
+    var header = document.querySelector('header');
+    var logo = document.getElementById('logo');
+
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400){
+
+        $("#logo").removeClass("logofull");
+        $("#logo").addClass("logoslim");
+
+      } else if (document.body.scrollTop < 400 || document.documentElement.scrollTop < 400) {
+
+        $("#logo").removeClass("logoslim");
+        $("#logo").addClass("logofull");
+
+      }
+
+  }
 }
