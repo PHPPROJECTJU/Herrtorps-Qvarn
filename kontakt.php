@@ -22,6 +22,7 @@ if( have_posts() ) {
 ?>
 
   <h1 class='kontaktheading'><?php the_field('rubrik'); ?></h1>
+  <div class="line1_green"></div>
 <?php
   }
 }
@@ -55,10 +56,20 @@ foreach($categories as $category) {
   $query = new WP_Query($args);
      if( $query->have_posts() ) {
 
-      echo "<h3 class='page_rubrik'>" . $category->name . "</h3>";
+      echo "<h3>" . $category->name . "</h3>";
+      echo "<hr>";
       echo "<table id='oppet_tabell'>";
       echo "<tr>";
-          echo "<th>Säsong</th>";
+
+      if ($category->name == 'Pubkvällar') {
+        echo "<th>Titel</th>";
+      } elseif($category->name == 'Säsongsöppettider') {
+        echo "<th>Säsong</th>";
+      } else {
+        echo "<th>Tillfälle</th>";
+      }
+
+
           echo "<th>Datum</th>";
           echo "<th>Öppet</th>";
       echo "</tr>";

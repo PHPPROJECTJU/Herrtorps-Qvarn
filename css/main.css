@@ -349,25 +349,38 @@ li.current_page_item  a, li.current_page_ancestor  a{
 /*--Page: Kontakt----*/
 
 .kontaktheading {
-  margin-bottom: 60px;
-  font-size: 45px;
+  margin-bottom: 30px;
+  font-size: 36px;
   text-align: center;
 }
 
 .oppettider {
   float: left;
   width: 65%;
-  padding: 20px;
+  padding-right: 80px;
   box-sizing: border-box;
 }
 
+hr {
+  width: 50%;
+  margin: 15px 0 20px 0;
+}
+
 #oppet_tabell {
+  width: 100%;
   margin-bottom: 60px;
-  border: 1px solid #000;
 }
 
 #oppet_tabell th {
-  width:
+  width: 30%;
+  text-align: left;
+  font-size: 18px;
+  padding-bottom: 20px;
+  font-weight: normal;
+}
+
+#oppet_tabell td {
+  font-weight: 300;
 }
 
 .kontaktformular {
