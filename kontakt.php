@@ -119,13 +119,16 @@ getTider();
 </div>
 
 
+
 <?php
 if( have_posts() ) {
 
     while ( have_posts() ) {
       the_post();
           ?>
+
 <div class='vagbeskrivning'>
+  <div class="line1_green"></div>
     <h2 class='page_rubrik'><?php the_field('vagbeskrivningrubrik'); ?></h2>
     <p><?php the_field('vagbeskrivningtext'); ?></p>
 

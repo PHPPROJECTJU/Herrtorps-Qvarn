@@ -356,14 +356,11 @@ li.current_page_item  a, li.current_page_ancestor  a{
 }
 
 .oppettider {
-  float: left;
-  width: 65%;
-  padding-right: 80px;
-  box-sizing: border-box;
+  margin-bottom: 30px;
 }
 
 hr {
-  width: 50%;
+  width: 100%;
   margin: 15px 0 20px 0;
 }
 
@@ -385,8 +382,7 @@ hr {
 }
 
 .kontaktformular {
-  float: left;
-  width: 35%;
+  margin-bottom: 30px;
 }
 
 .vagbeskrivning {
@@ -553,7 +549,6 @@ footer {
   background-color: #1c2b19;
   padding: 15px 50px;
   overflow: hidden;
-  margin-top: 100px;
 }
 
 .footercontainer {
@@ -720,6 +715,8 @@ div.tab button.active {
 }
 
 
+
+
 /*---footer-----*/
 .footerobject {
   float: left;
@@ -826,13 +823,6 @@ transition: all 0.1s;
     right: 60px;
   }
 
-  /*.menu li:nth-child(3){
-  padding-right: 10%;
-  }
-  .menu li:nth-child(4){
-  padding-left: 10%;
-  }*/
-
   .rightmenu {
     float: right;
   }
@@ -921,6 +911,60 @@ transition: all 0.1s;
 .rightbox {
   background-size: 110%;
   height: 375px;
+}
+
+/*--Page: Kontakt----*/
+
+.kontaktheading {
+  margin-bottom: 30px;
+  font-size: 36px;
+  text-align: center;
+}
+
+.oppettider {
+  float: left;
+  width: 65%;
+  padding-right: 80px;
+  box-sizing: border-box;
+}
+
+hr {
+  width: 50%;
+  margin: 15px 0 20px 0;
+}
+
+#oppet_tabell {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+#oppet_tabell th {
+  width: 30%;
+  text-align: left;
+  font-size: 18px;
+  padding-bottom: 20px;
+  font-weight: normal;
+}
+
+#oppet_tabell td {
+  font-weight: 300;
+}
+
+.kontaktformular {
+  float: left;
+  width: 35%;
+}
+
+.vagbeskrivning p {
+  width: 40%;
+  float: left;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.huge_it_google_map_container {
+  width: 60%;
+  float: left;
 }
 
 
