@@ -325,7 +325,7 @@ li.current_page_item  a, li.current_page_ancestor  a{
 
 .boende {
   overflow: hidden;
-  padding-top: 120px;
+  padding-top: 20px;
 }
 
 .boendebild {
@@ -558,6 +558,53 @@ footer {
   text-align: center;
 }
 
+/* --- code taken and modified from https://www.w3schools.com/howto/howto_js_tabs.asp 2 dec 2017 --- */
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    margin: auto;
+    margin-top: 40px;
+    /*border: 1px solid #ccc;*/
+    /*background-color: #f1f1f1;*/
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    font-size: 20px;
+    font-family: 'lato';
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    margin: auto;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border-radius: 0px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    /*background-color: #ddd;*/
+    border-top: 2px #eee solid;
+    border-bottom: 2px #eee solid;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    /*background-color: #ccc;*/
+    border-top: 2px #f6ca3b solid;
+    border-bottom: 2px #f6ca3b solid;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
 
 /*=====================================640PX========================================*/
 @media (min-width: 640px) {
