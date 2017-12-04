@@ -348,8 +348,36 @@ li.current_page_item  a, li.current_page_ancestor  a{
 
 /*--Page: Kontakt----*/
 
+.kontaktheading {
+  margin-bottom: 60px;
+  font-size: 45px;
+  text-align: center;
+}
+
+.oppettider {
+  float: left;
+  width: 65%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 #oppet_tabell {
   margin-bottom: 60px;
+  border: 1px solid #000;
+}
+
+#oppet_tabell th {
+  width:
+}
+
+.kontaktformular {
+  float: left;
+  width: 35%;
+}
+
+.vagbeskrivning {
+  width: 100%;
+  overflow: hidden;
 }
 
 /*--page: aktiviteter--*/

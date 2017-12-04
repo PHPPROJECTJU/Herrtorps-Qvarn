@@ -21,13 +21,18 @@ if( have_posts() ) {
       the_post();
 ?>
 
-  <h1 class='topheading'><?php the_field('rubrik'); ?></h1>
+  <h1 class='kontaktheading'><?php the_field('rubrik'); ?></h1>
 <?php
   }
 }
 ?>
 
 <!--ÖPPETTIDER START----------------------------------------->
+<!--solution to display posts by category found 4/12-17 here: https://wordpress.stackexchange.com/questions/66219/list-all-posts-in-custom-post-type-by-taxonomy-->
+
+<div class='oppettider'>
+
+<h2 class='page_rubrik'>Öppettider</h2>
 
 <?php
 function getTider() {
@@ -49,7 +54,6 @@ foreach($categories as $category) {
 
   $query = new WP_Query($args);
      if( $query->have_posts() ) {
-
 
       echo "<h3 class='page_rubrik'>" . $category->name . "</h3>";
       echo "<table id='oppet_tabell'>";
@@ -94,9 +98,14 @@ foreach($categories as $category) {
 
 getTider();
 ?>
-
+</div>
 
 <!--ÖPPETTIDER SLUT---------------------------------------->
+
+<div class='kontaktformular'>
+  <h2 class='page_rubrik'>Kontakta oss</h2>
+  <?php dynamic_sidebar( 'footer-1' ); ?>
+</div>
 
 
 <?php
@@ -105,11 +114,13 @@ if( have_posts() ) {
     while ( have_posts() ) {
       the_post();
           ?>
+<div class='vagbeskrivning'>
+    <h2 class='page_rubrik'><?php the_field('vagbeskrivningrubrik'); ?></h2>
+    <p><?php the_field('vagbeskrivningtext'); ?></p>
 
-<h2 class='page_rubrik'><?php the_field('vagbeskrivningrubrik'); ?></h2>
-<p><?php the_field('vagbeskrivningtext'); ?></p>
+    <?php echo do_shortcode("[huge_it_maps id='1']");?>
+</div><?php
 
-<?php
 }
 }
 ?>
