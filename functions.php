@@ -40,4 +40,6 @@ function special_nav_class ($classes, $item) {
     return $classes;
 }
 
+add_filter('show_admin_bar', '__return_false');
+
 ?>
