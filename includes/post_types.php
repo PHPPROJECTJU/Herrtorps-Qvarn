@@ -670,9 +670,9 @@ non-hierarchical-->*/
 
               'hierarchical'        => false, // bool (defaults to FALSE)
 
-              'has_archive'         => 'ompost', // bool|string (defaults to FALSE)
+              'has_archive'         => 'oppettider', // bool|string (defaults to FALSE)
 
-              'query_var'           => 'ompost', // bool|string (defaults to TRUE - post type name)
+              'query_var'           => 'oppettider', // bool|string (defaults to TRUE - post type name)
 
               'capability_type'     => 'post', // string|array (defaults to 'post')
 
@@ -721,7 +721,7 @@ non-hierarchical-->*/
                   //'post-formats',
               ),
 
-             /*'taxonomies'            => array( 'boende_skill', 'boende_type' ),*/
+             'taxonomies'            => array( 'oppettidstyp' ),
               'labels' => array(
                   'name'               => __( 'Öppettider',                   'oppettider-textdomain' ),
                   'singular_name'      => __( 'Öppettid',                    'oppettider-textdomain' ),
@@ -741,7 +741,7 @@ non-hierarchical-->*/
 
           /* Register the post type. */
           register_post_type(
-              'öppettider', // Post type name. Max of 20 characters. Uppercase and spaces not allowed.
+              'oppettider', // Post type name. Max of 20 characters. Uppercase and spaces not allowed.
               $args      // Arguments for post type.
           );
       }

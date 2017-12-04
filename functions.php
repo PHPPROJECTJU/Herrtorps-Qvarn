@@ -8,7 +8,7 @@ $media = "all";
 wp_register_style( $handle, $src, $deps, $ver, $media );
 
 require('includes/post_types.php');
-/*require('includes/taxonomies.php');*/
+require('includes/taxonomies.php');
 require('includes/reg_widgets.php');
 require('includes/reg_menu.php');
 

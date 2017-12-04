@@ -49,44 +49,29 @@ foreach($categories as $category) {
 
   $query = new WP_Query($args);
      if( $query->have_posts() ) {
+      ?>
 
+      <h2 class="page_rubrik"><?php echo $category->name;?></h2>
+      <table id='oppet_tabell'>
+        <tr>
+          <th>Säsong</th>
+          <th>Period</th>
+          <th>Öppet</th>
+        </tr>
 
-      echo "<h3 class='page_rubrik'>" . $category->name . "</h3>";
-      echo "<table id='oppet_tabell'>";
-      echo "<tr>";
-          echo "<th>Säsong</th>";
-          echo "<th>Datum</th>";
-          echo "<th>Öppet</th>";
-      echo "</tr>";
-
+        <?php
         while ( $query->have_posts() ) {
         $query->the_post();
+        ?>
 
+        <tr>
+          <td><?php the_field('namn');?></td>
+          <td><?php the_field('fran');?>-<?php the_field('till');?></td>
+          <td><?php the_field('oppettid');?>-<?php the_field('stangningstid');?></td>
+        </tr>
 
-      ?><tr>
-      <td><?php
-        echo the_field('namn');
-      ?></td>
-      <td><?php
-        echo the_field('fran');
-
-        $till = get_field('till');
-
-        if ($till) {
-          echo "-";
-          echo the_field('till');
-        }
-
-      ?></td>
-      <td><?php
-        echo the_field('oppettid');
-        echo "-";
-        echo the_field('stangningstid');
-      ?></td>
-    </tr><?php
-
-      }
-      echo "</table>";
+    <?php}?>
+      </table><?php
      }
    }
 }

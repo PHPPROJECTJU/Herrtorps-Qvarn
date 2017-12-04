@@ -346,6 +346,12 @@ li.current_page_item  a, li.current_page_ancestor  a{
   background-size: 100%;
 }
 
+/*--Page: Kontakt----*/
+
+#oppet_tabell {
+  margin-bottom: 60px;
+}
+
 /*--page: aktiviteter--*/
 
 .akt_grid {
@@ -792,7 +798,7 @@ footer {
 /*menu*/
 
 .menu {
-  width: 70%;
+  width: 60%;
 }
 
 /*news boxes*/
