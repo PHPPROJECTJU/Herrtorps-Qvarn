@@ -197,6 +197,22 @@ cursor: pointer;
 li.current_page_item  a, li.current_page_ancestor  a{
   color: #FCDD7A;
 }
+
+.menu li.lang-item-sv a:before {
+  content: url('../img/sv_SE.png') " ";
+  width: 20px;
+}
+
+.menu li.lang-item-en a:before {
+  content: url('../img/en_GB.png') " ";
+  width: 20px;
+}
+.menu li.lang-item-en a img{
+  display: none;
+}
+.menu li.lang-item-sv a img{
+  display: none;
+}
 /*--header end---------------*/
 
 /*--all content between header image and footer--*/
@@ -659,7 +675,7 @@ footer {
 
   .menu li:nth-child(7){
     position: absolute;
-    top: 28px;
+    top: 20px;
     right: 60px;
   }
 

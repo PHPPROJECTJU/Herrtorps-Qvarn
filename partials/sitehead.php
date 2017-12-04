@@ -6,7 +6,7 @@
 
                 <a href="<?php echo home_url();?>"><div id='logo'></div></a>
             <div class="extras">
-                <a href="/opening-hours">
+                <a href="">
                     <div class="opening-icon">
                     </div>
                 </a>
