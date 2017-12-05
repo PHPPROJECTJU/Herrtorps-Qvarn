@@ -3,25 +3,73 @@
 /*-----5 dec 2017 https://stackoverflow.com/questions/18004938/responsive-dropdown-menu-hide-previously-displayed-menu-items-when-screen-size -------*/
 
 
+$(document).ready(function(){
+      function windowSize() {
+        windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+      }
 
-    var subitem1 = document.querySelector(".sub-menu");
-    var subitem2 = document.querySelectorAll(".sub-menu")[1];
+      //Init Function of init it wherever you like...
+      windowSize();
 
-            document.querySelector(".sub-menu-1").addEventListener("click", function(){
-                if(subitem1.style.display == "block"){
-                    subitem1.style.display = "none";
-                } else {
-                  subitem1.style.display = "block";
-                }
-            });
+      // For example, get window size on window resize
+      $(window).resize(function() {
+            windowSize();
+            console.log('width is :', windowWidth);
 
-            document.querySelector(".sub-menu-2").addEventListener("click", function(){
-                if(subitem2.style.display == "block"){
-                    subitem2.style.display = "none";
-                } else {
-                    subitem2.style.display = "block";
-                }
-            });
+            var subitem1 = document.querySelector(".sub-menu");
+            var subitem2 = document.querySelectorAll(".sub-menu")[1];
+
+            if (windowWidth < 960) {
+                    console.log('width is under 960px!');
+
+                    document.querySelector(".sub-menu-1").addEventListener("click", function(){
+                        if(subitem1.style.display == "block"){
+                            subitem1.style.display = "none";
+                        } else {
+                          subitem1.style.display = "block";
+                        }
+                    });
+
+                    document.querySelector(".sub-menu-2").addEventListener("click", function(){
+                        if(subitem2.style.display == "block"){
+                            subitem2.style.display = "none";
+                        } else {
+                            subitem2.style.display = "block";
+                        }
+                    });
+            } else {
+                  subitem1.style.display = "";
+                  subitem2.style.display = "";
+            }
+      });
+});
+
+            // $(window).resize(function() {
+            //    if ($(window).width() <= 959) {
+            //      var subitem1 = document.querySelector(".sub-menu");
+            //      var subitem2 = document.querySelectorAll(".sub-menu")[1];
+            //
+                         // document.querySelector(".sub-menu-1").addEventListener("click", function(){
+                         //     if(subitem1.style.display == "block"){
+                         //         subitem1.style.display = "none";
+                         //     } else {
+                         //       subitem1.style.display = "block";
+                         //     }
+                         // });
+                         //
+                         // document.querySelector(".sub-menu-2").addEventListener("click", function(){
+                         //     if(subitem2.style.display == "block"){
+                         //         subitem2.style.display = "none";
+                         //     } else {
+                         //         subitem2.style.display = "block";
+                         //     }
+                         // });
+            //    }
+            //   else {
+            //      subitem1.style.display = "none";
+            //      subitem2.style.display = "none";
+            //   }
+            //   });
 
 
 var menuleft = document.querySelector(".menuleft");
