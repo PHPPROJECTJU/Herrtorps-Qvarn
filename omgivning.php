@@ -51,7 +51,7 @@ if( $query->have_posts() ) {
               <br />
 
               <div class='btncontainer'>
-                <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_beige'>Gå till hemsida</button></a>
+                <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_beige'><?php echo the_field('lank-etikett');?></button></a>
               </div>
           </div>
 
