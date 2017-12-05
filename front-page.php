@@ -25,7 +25,7 @@
                           <div class="line1_green"></div>
 
                           <div class='btncontainer'>
-                              <a href='/boende'><button class='outlinebtn_green'>Boka boende</button></a>
+                              <a href='/boende'><button class='outlinebtn_green'><?php the_field('lank-etikett-1');?></button></a>
                           </div>
 
                       </div>
@@ -42,7 +42,7 @@
 
                                 <div class='btncontainer'>
                                   <div class='btncontainer'>
-                                    <a href="<?php the_field('nyhetslank');?>"><button class='outlinebtn_beige'>Se aktiviteter</button></a>
+                                    <a href="<?php the_field('nyhetslank');?>"><button class='outlinebtn_beige'><?php the_field('lank-etikett-2');?></button></a>
                                   </div>
                                 </div>
                             </div>
