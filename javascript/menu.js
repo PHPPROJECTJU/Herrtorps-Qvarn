@@ -1,3 +1,7 @@
+/*------Menu fix-------*/
+
+/*-----5 dec 2017 https://stackoverflow.com/questions/18004938/responsive-dropdown-menu-hide-previously-displayed-menu-items-when-screen-size -------*/
+
 var menuleft = document.querySelector(".menuleft");
 
     var subitem1 = document.querySelector(".sub-menu");
@@ -17,7 +21,7 @@ var menuleft = document.querySelector(".menuleft");
                 } else {
                     subitem2.style.display = "block";
                 }
-            });    
+            });
 
 function openNav(x) {
     x.classList.toggle("change");
