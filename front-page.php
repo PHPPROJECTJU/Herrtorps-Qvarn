@@ -25,7 +25,7 @@
                           <div class="line1_green"></div>
 
                           <div class='btncontainer'>
-                              <a href='/boende'><button class='outlinebtn_green'><?php the_field('lank-etikett-1');?></button></a>
+                              <a href="<?php the_field('go-to-lank');?>"><button class='outlinebtn_green'><?php the_field('lank-etikett-1');?></button></a>
                           </div>
 
                       </div>
