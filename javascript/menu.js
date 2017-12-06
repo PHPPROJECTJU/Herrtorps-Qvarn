@@ -6,41 +6,47 @@
 $(document).ready(function(){
       function windowSize() {
         windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+        return windowWidth;
       }
 
-      //Init Function of init it wherever you like...
-      windowSize();
+      function openSub(){
+          if(this.children[1].style.display == "block"){
+              this.children[1].style.display = "none";
+          } else {
+            this.children[1].style.display = "block";
+          }
+      };
+
+      function sizeFunction(){
+        console.log('hej');
+        var subitem1 = document.querySelector(".sub-menu");
+        var subitem2 = document.querySelectorAll(".sub-menu")[1];
+        if (windowSize() < 960) {
+                console.log('width is under 960px!');
+
+                document.querySelector(".sub-menu-1").addEventListener("click", openSub);
+                document.querySelector(".sub-menu-2").addEventListener("click", openSub);
+
+        } else {
+          console.log('width is over 960px!');
+          document.querySelector(".sub-menu-1").removeEventListener("click", openSub);
+          document.querySelector(".sub-menu-2").removeEventListener("click", openSub);
+          subitem1.style = "";
+          subitem2.style = "";
+        }
+      };
+/*to ba able to open submenu without resizing window*/
+      sizeFunction();
 
       // For example, get window size on window resize
       $(window).resize(function() {
             windowSize();
-            console.log('width is :', windowWidth);
+            console.log('width is :', windowSize());
 
             var subitem1 = document.querySelector(".sub-menu");
             var subitem2 = document.querySelectorAll(".sub-menu")[1];
 
-            if (windowWidth < 960) {
-                    console.log('width is under 960px!');
-
-                    document.querySelector(".sub-menu-1").addEventListener("click", function(){
-                        if(subitem1.style.display == "block"){
-                            subitem1.style.display = "none";
-                        } else {
-                          subitem1.style.display = "block";
-                        }
-                    });
-
-                    document.querySelector(".sub-menu-2").addEventListener("click", function(){
-                        if(subitem2.style.display == "block"){
-                            subitem2.style.display = "none";
-                        } else {
-                            subitem2.style.display = "block";
-                        }
-                    });
-            } else {
-                  subitem1.style.display = "";
-                  subitem2.style.display = "";
-            }
+            sizeFunction();
       });
 });
 
