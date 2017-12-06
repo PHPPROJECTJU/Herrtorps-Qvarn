@@ -373,12 +373,12 @@ hr {
   margin: 15px 0 20px 0;
 }
 
-#oppet_tabell {
+.oppet_tabell {
   width: 100%;
   margin-bottom: 60px;
 }
 
-#oppet_tabell th {
+.oppet_tabell th {
   width: 30%;
   text-align: left;
   font-size: 18px;
@@ -386,7 +386,7 @@ hr {
   font-weight: normal;
 }
 
-#oppet_tabell td {
+.oppet_tabell td {
   font-weight: 300;
 }
 
@@ -942,12 +942,12 @@ hr {
   margin: 15px 0 20px 0;
 }
 
-#oppet_tabell {
+.oppet_tabell {
   width: 100%;
   margin-bottom: 60px;
 }
 
-#oppet_tabell th {
+.oppet_tabell th {
   width: 30%;
   text-align: left;
   font-size: 18px;
@@ -955,7 +955,7 @@ hr {
   font-weight: normal;
 }
 
-#oppet_tabell td {
+.oppet_tabell td {
   font-weight: 300;
 }
 
