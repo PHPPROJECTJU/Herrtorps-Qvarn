@@ -18,7 +18,6 @@ $(document).ready(function(){
       };
 
       function sizeFunction(){
-        console.log('hej');
         var subitem1 = document.querySelector(".sub-menu");
         var subitem2 = document.querySelectorAll(".sub-menu")[1];
         if (windowSize() < 960) {
