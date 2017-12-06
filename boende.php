@@ -12,26 +12,37 @@
 
 <div class='contentwidth'>
 
-  <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'Enkelrum')" id="defaultOpen">Enkelrum</button>
-    <button class="tablinks" onclick="openTab(event, 'Dubbelrum')">Dubbelrum</button>
-    <button class="tablinks" onclick="openTab(event, 'Flerbäddsrum')">Flerbäddsrum</button>
-  </div>
+<?php
+  $args = array(
+    'post_type' => 'boendepost',
+    'posts_per_page' => -1
+  );
 
-  <div id="Enkelrum" class="tabcontent">
-    <div class="boende">
-    <?php
-    $args = array(
-      'post_type' => 'boendepost',
-      'posts_per_page' => -1
-    );
+  $query = new WP_Query( $args );
 
-    $query = new WP_Query( $args );
+?>
+<div class="tab">
+<?php
+  if( $query->have_posts() ) {
+     while ( $query->have_posts() ) {
+       $query->the_post();
+        $rumstyp = get_field('rumstyp');
+       ?>
 
-    if( $query->have_posts() ) {
-        while ( $query->have_posts() ) {
-          $query->the_post();
-          ?>
+    <button class="tablinks" id="defaultOpen" onclick="openTab(event, '<?php echo $rumstyp;?>')"><?php echo $rumstyp;?></button>
+
+<?php }
+}
+?></div><?php
+
+if( $query->have_posts() ) {
+   while ( $query->have_posts() ) {
+     $query->the_post();
+      $rumstyp = get_field('rumstyp');
+     ?>
+
+            <div id="<?php echo $rumstyp;?>" class="tabcontent">
+
 
               <?php
                 $mediumlarge = 'medium_large';
@@ -49,7 +60,7 @@
               </div>
 
               <div class="boendetext">
-                  <h2 class="page_rubrik"><?php the_field('rumstyp'); ?></h2>
+                  <h2 class="page_rubrik"><?php echo $rumstyp ?></h2>
                   <ul class="icons">
                       <li>
                         <img src="<?php echo  get_template_directory_uri();?>/img/bed-32.png" class='boendeicon' alt='Bäddar' /><p><?php the_field('baddar'); ?></p>
@@ -62,23 +73,11 @@
 
                   <p>Pris: <?php the_field('pris'); ?>kr/natt</p>
               </div>
+              </div>
 
         <?php } ?>
     <?php } ?>
-    </div>
   </div>
-
-  <div id="Dubbelrum" class="tabcontent">
-    <h3>Dubbelrum</h3>
-    <p>Dubbelrum med en dubbelsäng.</p>
-  </div>
-
-  <div id="Flerbäddsrum" class="tabcontent">
-    <h3>Flerbäddsrum</h3>
-    <p>Flerbäddsrum för flera personer.</p>
-  </div>
-
-</div>
 
 <br>
 <br>
@@ -94,6 +93,7 @@
 document.getElementById("defaultOpen").click();
 
 function openTab(evt, rumsTyp) {
+
     // Declare all variables
     var i, tabcontent, tablinks;
 

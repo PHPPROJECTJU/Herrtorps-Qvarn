@@ -589,7 +589,7 @@ div.tab {
 }
 
 /* Style the buttons inside the tab */
-div.tab button {
+.tablinks {
     font-size: 20px;
     font-family: 'lato';
     background-color: inherit;
@@ -605,14 +605,14 @@ div.tab button {
 }
 
 /* Change background color of buttons on hover */
-div.tab button:hover {
+.tablinks:hover {
     /*background-color: #ddd;*/
     border-top: 2px #eee solid;
     border-bottom: 2px #eee solid;
 }
 
 /* Create an active/current tablink class */
-div.tab button.active {
+.tablinks.active {
     /*background-color: #ccc;*/
     border-top: 2px #f6ca3b solid;
     border-bottom: 2px #f6ca3b solid;
