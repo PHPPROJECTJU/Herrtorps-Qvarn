@@ -1,7 +1,5 @@
 <?php get_header();?>
 
-<main>
-
 <?php
 
             if( have_posts() ) {
@@ -72,8 +70,5 @@
             }
 ?>
 
-
-
-</main>
 
 <?php get_footer(); ?>

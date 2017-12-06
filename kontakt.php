@@ -55,7 +55,7 @@ foreach($categories as $category) {
   );
 
   ?>
-  <div class="tab">
+  <div class="kontakttab">
   <?php
 
   $oppettid = $category->name;
@@ -65,7 +65,7 @@ foreach($categories as $category) {
        while ( $query->have_posts() ) {
        $query->the_post();
        ?>
-       <button class="tablinks" id="defaultOpen" onclick="openTab(event, '<?php echo $oppettid;?>')"><?php echo $oppettid;?></button>
+       <button class="kontaktTablinks" id="defaultOpen" onclick="openTab(event, '<?php echo $oppettid;?>')"><?php echo $oppettid;?></button>
        <?php
      }
    }?>
@@ -168,7 +168,7 @@ document.getElementById("defaultOpen").click();
 function openTab(evt, oppettid) {
 
     // Declare all variables
-    var i, oppet_tabell, tablinks;
+    var i, oppet_tabell, kontaktTablinks;
 
     // Get all elements with class="oppet_tabell" and hide them
     oppet_tabell = document.getElementsByClassName("oppet_tabell");
@@ -176,10 +176,10 @@ function openTab(evt, oppettid) {
         oppet_tabell[i].style.display = "none";
     }
 
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    // Get all elements with class="kontaktTablinks" and remove the class "active"
+    kontaktTablinks = document.getElementsByClassName("kontaktTablinks");
+    for (i = 0; i < kontaktTablinks.length; i++) {
+        kontaktTablinks[i].className = kontaktTablinks[i].className.replace(" active", "");
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab

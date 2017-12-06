@@ -8,7 +8,7 @@
 
 <?php require('custom-fields/intro-sida.php'); ?>
 
-<div class='contentwidth'>
+<div class='contentmargins'>
 
   <!-- MENY (för mat) -->
   <div class="matmeny">

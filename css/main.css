@@ -1,3 +1,8 @@
+/*ljusa färger:
+#FAF8F1
+#e3ddcb
+*/
+
 @font-face {
     font-family: 'Korinna';
     src: url(../fonts/KorinnaStd-Regular.otf);
@@ -37,6 +42,12 @@ p {
 body {
   margin: 0;
   padding: 0;
+  background-color: #1c2b19;
+}
+
+main {
+  background-color: #FAF8F1;
+  overflow: hidden;
 }
 
 ul {
@@ -61,6 +72,12 @@ h1, h2, h3, h4 {
 .contentwidth {
   width: 85%;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+.contentmargins{
+  width: 85%;
+  margin: 60px auto 100px auto;
   overflow: hidden;
 }
 
@@ -234,7 +251,7 @@ li.current_page_item  a, li.current_page_ancestor  a{
 /*--First section of most/all pages--*/
 
 .lightsection {
-  background: radial-gradient(rgba(210,209,216,0.35) 40%, rgba(227,210,200,1));
+  background: radial-gradient(rgba(250,248,241,1) 40%, rgba(227,221,203,1));
   padding: 60px 0;
 }
 
@@ -295,7 +312,7 @@ li.current_page_item  a, li.current_page_ancestor  a{
 
 .omgivning {
   overflow: hidden;
-  padding-top: 120px;
+  margin: 80px 0;
 }
 
 .omgivningbild {
@@ -368,14 +385,37 @@ li.current_page_item  a, li.current_page_ancestor  a{
   margin-bottom: 30px;
 }
 
-hr {
-  width: 100%;
-  margin: 15px 0 20px 0;
+.kontakttab {
+  overflow: hidden;
+  margin: auto;
+}
+
+.kontaktTablinks {
+    font-size: 20px;
+    font-family: 'lato';
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    margin: auto;
+    margin-right: 10px;
+    border-radius: 0px;
+}
+
+.kontaktTablinks:hover {
+    background-color: #fff;
+}
+
+.kontaktTablinks.active {
+    background-color: #fff;
 }
 
 .oppet_tabell {
   width: 100%;
   margin-bottom: 60px;
+  background-color: #fff;
 }
 
 .oppet_tabell th {
@@ -403,7 +443,6 @@ hr {
 
 .akt_grid {
   overflow: hidden;
-  margin-top: 60px;
 }
 
 .akt_grid_item {
@@ -461,7 +500,7 @@ hr {
 /*-- page: kök & café --*/
 
 .matmeny h1 {
-  margin-top: 40px;
+
 }
 
 .matmeny {
@@ -529,10 +568,10 @@ hr {
 
 /*--forms----------------*/
 
-.footerform table {
+#wpforms-411 {
   width: 100%;
 }
-.footerform input[type=text] {
+#wpforms-411 input[type=text], #wpforms-411 input[type=email] {
   border-radius: 5px;
   border: none;
   padding: 5px;
@@ -542,7 +581,7 @@ hr {
   margin-top: 10px;
 }
 
-.footerform textarea {
+#wpforms-411 textarea {
   border-radius: 10px;
   border: none;
   padding: 5px;
@@ -571,6 +610,16 @@ footer {
   font-weight: 300;
 }
 
+#fb_logo {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/FB-f-Logo__white_58.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: block;
+  margin-top: 20px;
+}
+
 #blackfooter p {
   background-color: #222;
   color: #baa646;
@@ -583,9 +632,6 @@ footer {
 div.tab {
     overflow: hidden;
     margin: auto;
-    margin-top: 40px;
-    /*border: 1px solid #ccc;*/
-    /*background-color: #f1f1f1;*/
 }
 
 /* Style the buttons inside the tab */
@@ -623,6 +669,7 @@ div.tab {
     display: none;
     padding: 6px 12px;
     border-top: none;
+    overflow: hidden;
 }
 
 /*=====================================640PX========================================*/
@@ -631,6 +678,10 @@ div.tab {
 /*Basics*/
 
     .contentwidth {
+      max-width: 640px;
+    }
+
+    .contentmargins {
       max-width: 640px;
     }
 
@@ -760,6 +811,10 @@ div.tab {
 /*Basics*/
 
   .contentwidth {
+    max-width: 960px;
+  }
+
+  .contentmargins{
     max-width: 960px;
   }
 
@@ -944,7 +999,7 @@ hr {
 
 .oppet_tabell {
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .oppet_tabell th {

@@ -21,7 +21,7 @@ $query = new WP_Query( $args );
 
 if( $query->have_posts() ) {
 ?>
-    <div class="contentwidth">
+    <div class="contentmargins">
 
       <div class="akt_grid">
 <?php
@@ -44,6 +44,5 @@ if( $query->have_posts() ) {
       </div>
     </div>
 <?php } ?>
-
 
 <?php get_footer(); ?>

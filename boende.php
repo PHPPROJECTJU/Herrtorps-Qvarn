@@ -10,7 +10,7 @@
 
 <!--code taken and modified from https://www.w3schools.com/howto/howto_js_tabs.asp 2 dec 2017-->
 
-<div class='contentwidth'>
+<div class='contentmargins'>
 
 <?php
   $args = array(
@@ -77,14 +77,16 @@ if( $query->have_posts() ) {
 
         <?php } ?>
     <?php } ?>
+
+
+<br>
+<br>
+<br>
+
+  <div class='btncontainer'>
+    <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_green'>Boka rum</button></a>
   </div>
 
-<br>
-<br>
-<br>
-
-<div class='btncontainer'>
-  <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_green'>Boka rum</button></a>
 </div>
 
 <script>

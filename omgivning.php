@@ -16,9 +16,9 @@ $args = array(
 );
 
 $query = new WP_Query( $args );
-
-
-
+?>
+<div class="contentwidth">
+<?php
 if( $query->have_posts() ) {
 
     while ( $query->have_posts() ) {
@@ -26,7 +26,6 @@ if( $query->have_posts() ) {
       ?>
 
       <section class="omgivning">
-        <div class="contentwidth">
 
             <?php
             $mediumlarge = 'medium_large';
@@ -54,13 +53,11 @@ if( $query->have_posts() ) {
                 <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_beige'><?php the_field('lank-etikett');?></button></a>
               </div>
           </div>
-
-
-        </div>
       </section>
 
     <?php }
 }
 ?>
+</div>
 
 <?php get_footer(); ?>
