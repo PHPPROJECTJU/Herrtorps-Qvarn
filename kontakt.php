@@ -48,17 +48,34 @@ foreach($categories as $category) {
       array(
           'taxonomy' => 'oppettidstyp',
           'field' => 'slug',
-          'terms' => $category->slug
+          'terms' => $category->slug,
+          'posts_per_page' => -1
       ),
     ),
   );
 
+  ?>
+  <div class="kontakttab">
+  <?php
+
+  $oppettid = $category->name;
+
   $query = new WP_Query($args);
      if( $query->have_posts() ) {
+       while ( $query->have_posts() ) {
+       $query->the_post();
+       ?>
+       <button class="kontaktTablinks" id="defaultOpen" onclick="openTab(event, '<?php echo $oppettid;?>')"><?php echo $oppettid;?></button>
+       <?php
+     }
+   }?>
+ </div>
+ <?php
+      if( $query->have_posts() ) {
+        while ( $query->have_posts() ) {
+        $query->the_post();
 
-      echo "<h3>" . $category->name . "</h3>";
-      echo "<hr>";
-      echo "<table id='oppet_tabell'>";
+      ?><table id='<?php echo $oppettid ?>' class='oppet_tabell'><?php
       echo "<tr>";
 
       if ($category->name == 'Pubkvällar') {
@@ -74,8 +91,7 @@ foreach($categories as $category) {
           echo "<th>Öppet</th>";
       echo "</tr>";
 
-        while ( $query->have_posts() ) {
-        $query->the_post();
+
 
 
       ?><tr>
@@ -143,5 +159,34 @@ if( have_posts() ) {
 
 </div>
 </section>
+
+<script>
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+function openTab(evt, oppettid) {
+
+    // Declare all variables
+    var i, oppet_tabell, kontaktTablinks;
+
+    // Get all elements with class="oppet_tabell" and hide them
+    oppet_tabell = document.getElementsByClassName("oppet_tabell");
+    for (i = 0; i < oppet_tabell.length; i++) {
+        oppet_tabell[i].style.display = "none";
+    }
+
+    // Get all elements with class="kontaktTablinks" and remove the class "active"
+    kontaktTablinks = document.getElementsByClassName("kontaktTablinks");
+    for (i = 0; i < kontaktTablinks.length; i++) {
+        kontaktTablinks[i].className = kontaktTablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(oppettid).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
 
 <?php get_footer(); ?>
