@@ -47,6 +47,15 @@
 
 <?php echo "</section>";?>
 
+<!-- PUBKVÄLL -->
+<div class="pubkvall">
+  <div class="innerpubkvall">
+    <h1><?php the_field('pubrubrik'); ?></h1>
+    <p><?php the_field('pubbeskrivning'); ?></p>
+    <p><?php the_field('pubtid'); ?></p>
+  </div>
+</div>
+
 <!--code taken and modified from https://www.w3schools.com/howto/howto_js_tabs.asp 2 dec 2017-->
 
 <?php
@@ -59,6 +68,9 @@
 ?>
 
 <div class="tab">
+  <h1>Högtider</h1>
+  <?php //funkar inte! the_field('hogtid'); ?>
+
 <?php
     if( $query->have_posts() ) {
        while ( $query->have_posts() ) {
@@ -72,7 +84,9 @@
   }
 ?>
 
-</div><?php
+</div>
+
+<?php
 
   if( $query->have_posts() ) {
      while ( $query->have_posts() ) {
@@ -101,17 +115,10 @@
                     <h2 class="page_rubrik"><?php echo $hogtid ?></h2>
                     <p><?php the_field('beskrivning'); ?></p>
                 </div>
-                </div>
+              </div>
 
           <?php } ?>
       <?php } ?>
-
-  <!-- PUBKVÄLL -->
-  <div class="pubkvall">
-    <h1><?php the_field('pubrubrik'); ?></h1>
-    <p><?php the_field('pubbeskrivning'); ?></p>
-    <p><?php the_field('pubtid'); ?></p>
-  </div>
 
 </div>
 
