@@ -11,56 +11,100 @@
 <div class='contentmargins'>
 
   <!-- MENY (för mat) -->
-  <div class="matmeny">
-    <h1>Meny</h1>
-    <p>• <?php the_field('matratt1'); ?></p>
-    <p>• <?php the_field('matratt2'); ?></p>
-    <p>• <?php the_field('matratt3'); ?></p>
-    <p>• <?php the_field('matratt4'); ?></p>
-    <p>• <?php the_field('matratt5'); ?></p>
-  </div>
+  <section class='boxsection'>
+    <div class='leftbox' style="background-color: #3e0909;">
 
-  <div class="matmenybild">
-    <?php // the_field('menybild'); ?>
-  </div>
+        <!-- <div class="corner1_beige"></div> -->
+
+        <div class='boxwidth'> <!--constrains box content width-->
+          <div class="matmeny">
+            <h1><?php the_field('meny'); ?></h1>
+            <p>• <?php the_field('matratt1'); ?></p>
+            <p>• <?php the_field('matratt2'); ?></p>
+            <p>• <?php the_field('matratt3'); ?></p>
+            <p>• <?php the_field('matratt4'); ?></p>
+            <p>• <?php the_field('matratt5'); ?></p>
+          </div>
+        </div>
+      </div>
+
+      <?php
+      $large = 'large';
+      $mediumlarge = 'medium_large';
+
+      $matbild = get_field('menybild');
+
+      $lbild = $matbild['sizes'][ $large ];
+      $width = $matbild['sizes'][ $large . '-width' ];
+      $height = $matbild['sizes'][ $large . '-height' ];
+
+      if ($matbild) {
+        ?>
+        <div class='rightbox' style='background-image: url("<?php echo  $lbild;?>");'>
+      <?php }
+      ?>
+    </div>
+
+<?php echo "</section>";?>
 
 <!--code taken and modified from https://www.w3schools.com/howto/howto_js_tabs.asp 2 dec 2017-->
 
-  <!-- HÖGTIDER -->
+<?php
+    $args = array(
+      'post_type' => 'hogtidpost',
+      'posts_per_page' => -1
+    );
 
-  <div class="tab">
-    <h1>Högtider</h1>
-    <button class="tablinks" onclick="openTab(event, 'Morsdag')" id="defaultOpen">Morsdag</button>
-    <button class="tablinks" onclick="openTab(event, 'Farsdag')">Farsdag</button>
-    <button class="tablinks" onclick="openTab(event, 'Påsk')">Påsk</button>
-    <button class="tablinks" onclick="openTab(event, 'Jul')">Jul</button>
-    <button class="tablinks" onclick="openTab(event, 'Midsommar')">Midsommar</button>
-  </div>
+    $query = new WP_Query( $args );
+?>
 
-  <div id="Morsdag" class="tabcontent">
-    <h3><?php the_field('morsdag'); ?></h3>
-    <p><?php the_field('morsdagbeskrivning'); ?></p>
-  </div>
+<div class="tab">
+<?php
+    if( $query->have_posts() ) {
+       while ( $query->have_posts() ) {
+         $query->the_post();
+         $hogtid = get_field('namn');
+?>
 
-  <div id="Farsdag" class="tabcontent">
-    <h3><?php the_field('farsdag'); ?></h3>
-    <p><?php the_field('farsdagbeskrivning'); ?></p>
-  </div>
+<button class="tablinks" id="defaultOpen" onclick="openTab(event, '<?php echo $hogtid;?>')"><?php echo $hogtid;?></button>
 
-  <div id="Påsk" class="tabcontent">
-    <h3><?php the_field('pask'); ?></h3>
-    <p><?php the_field('paskbeskrivning'); ?></p>
-  </div>
+<?php }
+  }
+?>
 
-  <div id="Jul" class="tabcontent">
-    <h3><?php the_field('jul'); ?></h3>
-    <p><?php the_field('julbeskrivning'); ?></p>
-  </div>
+</div><?php
 
-  <div id="Midsommar" class="tabcontent">
-    <h3><?php the_field('midsommar'); ?></h3>
-    <p><?php the_field('midsommarbeskrivning'); ?></p>
-  </div>
+  if( $query->have_posts() ) {
+     while ( $query->have_posts() ) {
+       $query->the_post();
+       $hogtid = get_field('namn');
+       ?>
+
+              <div id="<?php echo $hogtid;?>" class="tabcontent">
+
+                <?php
+                  $mediumlarge = 'medium_large';
+                  $bild = get_field('bild');
+                  $mlbild = $bild['sizes'][ $mediumlarge ];
+                  $width = $bild['sizes'][ $mediumlarge . '-width' ];
+                  $height = $bild['sizes'][ $mediumlarge . '-height' ];
+                ?>
+
+                <div class="boendebild">
+                <?php
+                   if ($bild) { ?>
+                  <div class='boende_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
+                <?php } ?>
+                </div>
+
+                <div class="boendetext">
+                    <h2 class="page_rubrik"><?php echo $hogtid ?></h2>
+                    <p><?php the_field('beskrivning'); ?></p>
+                </div>
+                </div>
+
+          <?php } ?>
+      <?php } ?>
 
   <!-- PUBKVÄLL -->
   <div class="pubkvall">
@@ -76,7 +120,8 @@
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
-function openTab(evt, Hogtid) {
+function openTab(evt, hogtidTyp) {
+
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -93,7 +138,7 @@ function openTab(evt, Hogtid) {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(Hogtid).style.display = "block";
+    document.getElementById(hogtidTyp).style.display = "block";
     evt.currentTarget.className += " active";
 }
 </script>

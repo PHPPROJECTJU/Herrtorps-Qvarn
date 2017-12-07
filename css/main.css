@@ -373,7 +373,7 @@ li.current_page_item  a, li.current_page_ancestor  a{
   background-size: 100%;
 }
 
-/*--Page: Kontakt----*/
+/*--page: Kontakt----*/
 
 .kontaktheading {
   margin-bottom: 30px;
@@ -499,12 +499,8 @@ li.current_page_item  a, li.current_page_ancestor  a{
 
 /*-- page: kök & café --*/
 
-.matmeny h1 {
-
-}
-
-.matmeny {
-  font-style: italic;
+.matmeny>h1 {
+  margin-bottom: 10px;
 }
 
 .pubkvall {
