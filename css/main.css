@@ -283,10 +283,10 @@ li.current_page_item  a, li.current_page_ancestor  a{
 .leftbox2 {
   width: 100%;
   background-color: #C6B594;
-  color: #ccc0b9;
+  color: #1c2b19;
   padding: 40px;
   box-sizing: border-box;
-  background-image: url(../img/1x/ornament-corner-7.png), url(../img/1x/ornament-corner-8.png);
+  background-image: url(../img/1x/ornament-corner-green-7.png), url(../img/1x/ornament-corner-green-8.png);
   background-repeat: no-repeat, no-repeat;
   background-size: 16%;
   background-position: left 25px bottom 25px, right 25px top 25px;

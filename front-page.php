@@ -114,7 +114,7 @@
 
                                 <div class='btncontainer'>
                                   <div class='btncontainer'>
-                                    <a href="<?php the_field('nyhetslank-2');?>"><button class='outlinebtn_beige'><?php the_field('lank-etikett-4');?></button></a>
+                                    <a href="<?php the_field('nyhetslank-2');?>"><button class='outlinebtn_green'><?php the_field('lank-etikett-4');?></button></a>
                                   </div>
                                 </div>
                             </div>
