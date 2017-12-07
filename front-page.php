@@ -12,21 +12,21 @@
                 while ( have_posts() ) {
                   the_post();
 
-                      // Section 1: light area with intro text
-                      echo "<section class='lightsection'>";
-                      echo "<div class='contentwidth'>"
+
                       ?>
+                      <!-- Section 1: light area with intro text -->
+                      <section class='lightsection'>
+                          <div class='contentwidth'>
+                              <h1 class='topheading'><?php the_field('rubrik'); ?></h1>
+                              <p class='introtext'><?php the_field('beskrivning'); ?></p>
 
-                          <h1 class='topheading'><?php the_field('rubrik'); ?></h1>
-                          <p class='introtext'><?php the_field('beskrivning'); ?></p>
+                              <div class="line1_green"></div>
 
-                          <div class="line1_green"></div>
+                              <div class='btncontainer'>
+                                  <a href="<?php the_field('go-to-lank');?>"><button class='outlinebtn_green'><?php the_field('lank-etikett-1');?></button></a>
+                              </div>
 
-                          <div class='btncontainer'>
-                              <a href="<?php the_field('go-to-lank');?>"><button class='outlinebtn_green'><?php the_field('lank-etikett-1');?></button></a>
                           </div>
-
-                      </div>
                       </section>
 
                       <section class='boxsection'>
@@ -47,16 +47,16 @@
                           </div>
 
                           <?php
-                          $large = 'large';
-                          $mediumlarge = 'medium_large';
+                                $large = 'large';
+                                $mediumlarge = 'medium_large';
 
-                          $nyhetsbild = get_field('nyhetsbild');
+                                $nyhetsbild = get_field('nyhetsbild');
 
-                          $lbild = $nyhetsbild['sizes'][ $large ];
-                          $width = $nyhetsbild['sizes'][ $large . '-width' ];
-                          $height = $nyhetsbild['sizes'][ $large . '-height' ];
+                                $lbild = $nyhetsbild['sizes'][ $large ];
+                                $width = $nyhetsbild['sizes'][ $large . '-width' ];
+                                $height = $nyhetsbild['sizes'][ $large . '-height' ];
 
-                          if ($nyhetsbild) {
+                                if ($nyhetsbild) {
                             ?>
                             <div class='rightbox' style='background-image: url("<?php echo  $lbild;?>");'>
                           <?php }
@@ -64,8 +64,63 @@
 
 
                         </div>
+                      </section>
 
-                    <?php echo "</section>";
+                      <!-- Second light section -->
+
+                      <section class='lightsection'>
+                          <div class='contentwidth'>
+                              <h1 class='topheading'><?php the_field('rubrik-3'); ?></h1>
+                              <p class='introtext'><?php the_field('beskrivning-3'); ?></p>
+
+                              <div class="line1_green"></div>
+
+                              <div class='btncontainer'>
+                                  <a href="<?php the_field('go-to-lank-3');?>"><button class='outlinebtn_green'><?php the_field('lank-etikett-3');?></button></a>
+                              </div>
+
+                          </div>
+                      </section>
+
+                      <!-- Second box section -->
+
+                      <section class='boxsection'>
+                        <div class='leftbox'>
+
+                            <!-- <div class="corner1_beige"></div> -->
+
+                            <div class='boxwidth'> <!--constrains box content width-->
+                              <h2><?php the_field('nyhetsrubrik-2'); ?></h2>
+                              <p><?php the_field('nyhetstext-2'); ?></p>
+
+                                <div class='btncontainer'>
+                                  <div class='btncontainer'>
+                                    <a href="<?php the_field('nyhetslank-2');?>"><button class='outlinebtn_beige'><?php the_field('lank-etikett-4');?></button></a>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <?php
+                                $large = 'large';
+                                $mediumlarge = 'medium_large';
+
+                                $nyhetsbild = get_field('nyhetsbild-2');
+
+                                $lbild = $nyhetsbild['sizes'][ $large ];
+                                $width = $nyhetsbild['sizes'][ $large . '-width' ];
+                                $height = $nyhetsbild['sizes'][ $large . '-height' ];
+
+                                if ($nyhetsbild) {
+                            ?>
+                            <div class='rightbox' style='background-image: url("<?php echo  $lbild;?>");'>
+                          <?php }
+                          ?>
+
+
+                        </div>
+                      </section>
+                    <?php
                 }
             }
 ?>
