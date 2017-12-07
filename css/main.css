@@ -675,6 +675,10 @@ div.tab {
     overflow: hidden;
 }
 
+.current-menu-parent .sub-menu {
+  display:block;
+}
+
 /*=====================================640PX========================================*/
 @media (min-width: 640px) {
 
@@ -950,6 +954,7 @@ transition: all 0.1s;
   #hamburger {
     display: none;
   }
+
 
 
 /*--header end---------------*/
