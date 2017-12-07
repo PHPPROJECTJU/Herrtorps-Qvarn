@@ -471,15 +471,11 @@ li.current_page_item  a, li.current_page_ancestor  a{
   background-color: rgba(58,56,55,0.6);
 }
 
-.akt_grid_item:hover .overlay {
+.akt_grid_item .overlay {
   opacity: 1;
 }
 
 .akt_grid_item h3 {
-  display: none;
-}
-
-.akt_grid_item:hover h3 {
   text-align: center;
   width: 100%;
   padding-top: calc(50% - 11px);
@@ -1038,8 +1034,31 @@ hr {
   float: left;
 }
 
+/*-- page:aktivitet --*/
 
+.akt_grid_item .overlay {
+  opacity: 0;
+}
 
+.akt_grid_item:hover .overlay {
+  opacity: 1;
+}
+
+.akt_grid_item h3 {
+  display: none;
+}
+
+.akt_grid_item:hover h3 {
+  text-align: center;
+  width: 100%;
+  padding-top: calc(50% - 11px);
+  color: #fff;
+  font-family: 'Lato';
+  font-style: normal;
+  letter-spacing: 0.8px;
+  display: inline;
+  position: absolute;
+}
 
 }
 
