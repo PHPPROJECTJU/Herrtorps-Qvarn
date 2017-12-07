@@ -280,6 +280,18 @@ li.current_page_item  a, li.current_page_ancestor  a{
   background-position: left 25px bottom 25px, right 25px top 25px;
 }
 
+.leftbox2 {
+  width: 100%;
+  background-color: #C6B594;
+  color: #ccc0b9;
+  padding: 40px;
+  box-sizing: border-box;
+  background-image: url(../img/1x/ornament-corner-7.png), url(../img/1x/ornament-corner-8.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 16%;
+  background-position: left 25px bottom 25px, right 25px top 25px;
+}
+
 .boxwidth {
   margin: 20px auto;
   width: 85%;
@@ -290,7 +302,16 @@ li.current_page_item  a, li.current_page_ancestor  a{
   font-weight: 400;
 }
 
+.leftbox2 h2 {
+  font-style: normal;
+  font-weight: 400;
+}
+
 .leftbox p {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.leftbox2 p {
   font-weight: 300;
   margin-bottom: 20px;
 }
@@ -766,6 +787,20 @@ li.current-menu-parent>a{
   margin-bottom: 20px;
 }
 
+.leftbox2 {
+  height: 425px;
+  float: right;
+  width: 50%;
+  padding: 30px;
+  background-size: 18%;
+  background-position: left 15px bottom 15px, right 15px top 15px;
+}
+
+.leftbox2 p {
+  margin-bottom: 20px;
+}
+
+
 .boxwidth {
   width: 90%;
   margin: 25px auto;
@@ -801,6 +836,9 @@ li.current-menu-parent>a{
 }
 
 .leftbox {
+  background-size: 18%;
+}
+.leftbox2 {
   background-size: 18%;
 }
 
@@ -979,6 +1017,16 @@ transition: all 0.1s;
   margin-bottom: 25px;
 }
 
+.leftbox2 {
+  padding: 40px;
+  height: 375px;
+  background-position: left 25px bottom 25px, right 25px top 25px;
+}
+
+.leftbox2 p {
+  margin-bottom: 25px;
+}
+
 .boxwidth {
   width: 75%;
   margin: 20px auto;
@@ -1082,9 +1130,6 @@ hr {
 }
 
 /*news boxes*/
-
-.leftbox {
-}
 
 .boxwidth {
   width: 60%;

@@ -85,7 +85,26 @@
                       <!-- Second box section -->
 
                       <section class='boxsection'>
-                        <div class='leftbox'>
+
+                          <?php
+                                $large = 'large';
+                                $mediumlarge = 'medium_large';
+
+                                $nyhetsbild = get_field('nyhetsbild-2');
+
+                                $lbild = $nyhetsbild['sizes'][ $large ];
+                                $width = $nyhetsbild['sizes'][ $large . '-width' ];
+                                $height = $nyhetsbild['sizes'][ $large . '-height' ];
+
+                                if ($nyhetsbild) {
+                            ?>
+                            <div class='rightbox2' style='background-image: url("<?php echo  $lbild;?>");'>
+                          <?php }
+                          ?>
+
+
+                        </div>
+                        <div class='leftbox2'>
 
                             <!-- <div class="corner1_beige"></div> -->
 
@@ -100,25 +119,6 @@
                                 </div>
                             </div>
                           </div>
-
-                          <?php
-                                $large = 'large';
-                                $mediumlarge = 'medium_large';
-
-                                $nyhetsbild = get_field('nyhetsbild-2');
-
-                                $lbild = $nyhetsbild['sizes'][ $large ];
-                                $width = $nyhetsbild['sizes'][ $large . '-width' ];
-                                $height = $nyhetsbild['sizes'][ $large . '-height' ];
-
-                                if ($nyhetsbild) {
-                            ?>
-                            <div class='rightbox' style='background-image: url("<?php echo  $lbild;?>");'>
-                          <?php }
-                          ?>
-
-
-                        </div>
                       </section>
 
                       <!-- Last light section before footer -->
