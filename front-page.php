@@ -120,6 +120,22 @@
 
                         </div>
                       </section>
+
+                      <!-- Last light section before footer -->
+
+                      <section class='lightsection'>
+                          <div class='contentwidth'>
+                              <h1 class='topheading'><?php the_field('rubrik-3'); ?></h1>
+                              <p class='introtext'><?php the_field('beskrivning-3'); ?></p>
+
+                              <div class="line1_green"></div>
+
+                              <div class='btncontainer'>
+                                  <a href="<?php the_field('go-to-lank-3');?>"><button class='outlinebtn_green'><?php the_field('lank-etikett-3');?></button></a>
+                              </div>
+
+                          </div>
+                      </section>
                     <?php
                 }
             }
