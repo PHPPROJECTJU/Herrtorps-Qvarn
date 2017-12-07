@@ -678,6 +678,9 @@ div.tab {
 .current-menu-parent .sub-menu {
   display:block;
 }
+li.current-menu-parent>a{
+  color:#FCDD7A;
+}
 
 /*=====================================640PX========================================*/
 @media (min-width: 640px) {
@@ -896,10 +899,12 @@ transition: all 0.1s;
 
   .rightmenu {
     float: right;
+    display: block;
   }
 
   .leftmenu {
     float: left;
+    display: block;
   }
 
   .menuleft li li {
@@ -953,6 +958,10 @@ transition: all 0.1s;
   }
   #hamburger {
     display: none;
+  }
+
+  .current-menu-parent .sub-menu {
+    display:none;
   }
 
 
