@@ -268,11 +268,6 @@ li.current_page_item  a, li.current_page_ancestor  a{
 
 /*--news boxes--*/
 
-.boxsection {
-
-}
-
-
 .leftbox {
   width: 100%;
   background-color: #1c2b19;
@@ -280,6 +275,18 @@ li.current_page_item  a, li.current_page_ancestor  a{
   padding: 40px;
   box-sizing: border-box;
   background-image: url(../img/1x/ornament-corner-7.png), url(../img/1x/ornament-corner-8.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 16%;
+  background-position: left 25px bottom 25px, right 25px top 25px;
+}
+
+.leftbox2 {
+  width: 100%;
+  background-color: #C6B594;
+  color: #1c2b19;
+  padding: 40px;
+  box-sizing: border-box;
+  background-image: url(../img/1x/ornament-corner-green-7.png), url(../img/1x/ornament-corner-green-8.png);
   background-repeat: no-repeat, no-repeat;
   background-size: 16%;
   background-position: left 25px bottom 25px, right 25px top 25px;
@@ -295,7 +302,16 @@ li.current_page_item  a, li.current_page_ancestor  a{
   font-weight: 400;
 }
 
+.leftbox2 h2 {
+  font-style: normal;
+  font-weight: 400;
+}
+
 .leftbox p {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.leftbox2 p {
   font-weight: 300;
   margin-bottom: 20px;
 }
@@ -373,7 +389,7 @@ li.current_page_item  a, li.current_page_ancestor  a{
   background-size: 100%;
 }
 
-/*--Page: Kontakt----*/
+/*--page: Kontakt----*/
 
 .kontaktheading {
   margin-bottom: 30px;
@@ -471,15 +487,11 @@ li.current_page_item  a, li.current_page_ancestor  a{
   background-color: rgba(58,56,55,0.6);
 }
 
-.akt_grid_item:hover .overlay {
+.akt_grid_item .overlay {
   opacity: 1;
 }
 
 .akt_grid_item h3 {
-  display: none;
-}
-
-.akt_grid_item:hover h3 {
   text-align: center;
   width: 100%;
   padding-top: calc(50% - 11px);
@@ -499,16 +511,22 @@ li.current_page_item  a, li.current_page_ancestor  a{
 
 /*-- page: kök & café --*/
 
-.matmeny h1 {
-
-}
-
-.matmeny {
-  font-style: italic;
+.matmeny>h1 {
+  margin-bottom: 10px;
 }
 
 .pubkvall {
-  margin-top: 20px;
+  background-color: #1c2b19;
+  color: #ccc0b9;
+}
+
+.innerpubkvall {
+  padding: 20px;
+}
+
+.tab h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 /*--icons-----*/
@@ -660,16 +678,24 @@ div.tab {
 /* Create an active/current tablink class */
 .tablinks.active {
     /*background-color: #ccc;*/
-    border-top: 2px #f6ca3b solid;
-    border-bottom: 2px #f6ca3b solid;
+    border-top: 2px #FCDD7A solid;
+    border-bottom: 2px #FCDD7A solid;
 }
 
 /* Style the tab content */
 .tabcontent {
     display: none;
     padding: 6px 12px;
+    padding-left: 0px;
     border-top: none;
     overflow: hidden;
+}
+
+.current-menu-parent .sub-menu {
+  display:block;
+}
+li.current-menu-parent>a{
+  color:#FCDD7A;
 }
 
 /*=====================================640PX========================================*/
@@ -745,7 +771,6 @@ div.tab {
 
 .boxsection {
   overflow: hidden;
-  margin-bottom: 50px;
   height: 425px;
 }
 
@@ -761,6 +786,20 @@ div.tab {
 .leftbox p {
   margin-bottom: 20px;
 }
+
+.leftbox2 {
+  height: 425px;
+  float: right;
+  width: 50%;
+  padding: 30px;
+  background-size: 18%;
+  background-position: left 15px bottom 15px, right 15px top 15px;
+}
+
+.leftbox2 p {
+  margin-bottom: 20px;
+}
+
 
 .boxwidth {
   width: 90%;
@@ -797,6 +836,9 @@ div.tab {
 }
 
 .leftbox {
+  background-size: 18%;
+}
+.leftbox2 {
   background-size: 18%;
 }
 
@@ -889,10 +931,12 @@ transition: all 0.1s;
 
   .rightmenu {
     float: right;
+    display: block;
   }
 
   .leftmenu {
     float: left;
+    display: block;
   }
 
   .menuleft li li {
@@ -923,7 +967,7 @@ transition: all 0.1s;
     color: #1c2b19;
     display: block;
     width: 110px;
-    padding: 10px;
+    padding: 15px;
   }
 
   .sub-menu li:hover {
@@ -932,6 +976,7 @@ transition: all 0.1s;
   .sub-menu li a{
     color: #1c2b19;
     padding: 10px;
+    display: table-row-group;
   }
   .sub-menu li + li {
     clear:left;
@@ -947,6 +992,11 @@ transition: all 0.1s;
   #hamburger {
     display: none;
   }
+
+  .current-menu-parent .sub-menu {
+    display:none;
+  }
+
 
 
 /*--header end---------------*/
@@ -964,6 +1014,16 @@ transition: all 0.1s;
 }
 
 .leftbox p {
+  margin-bottom: 25px;
+}
+
+.leftbox2 {
+  padding: 40px;
+  height: 375px;
+  background-position: left 25px bottom 25px, right 25px top 25px;
+}
+
+.leftbox2 p {
   margin-bottom: 25px;
 }
 
@@ -1031,8 +1091,31 @@ hr {
   float: left;
 }
 
+/*-- page:aktivitet --*/
 
+.akt_grid_item .overlay {
+  opacity: 0;
+}
 
+.akt_grid_item:hover .overlay {
+  opacity: 1;
+}
+
+.akt_grid_item h3 {
+  display: none;
+}
+
+.akt_grid_item:hover h3 {
+  text-align: center;
+  width: 100%;
+  padding-top: calc(50% - 11px);
+  color: #fff;
+  font-family: 'Lato';
+  font-style: normal;
+  letter-spacing: 0.8px;
+  display: inline;
+  position: absolute;
+}
 
 }
 
@@ -1047,9 +1130,6 @@ hr {
 }
 
 /*news boxes*/
-
-.leftbox {
-}
 
 .boxwidth {
   width: 60%;

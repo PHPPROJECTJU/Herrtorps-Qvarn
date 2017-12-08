@@ -20,6 +20,8 @@ $(document).ready(function(){
       function sizeFunction(){
         var subitem1 = document.querySelector(".sub-menu");
         var subitem2 = document.querySelectorAll(".sub-menu")[1];
+
+        var menuleft = document.querySelector(".menuleft");
         if (windowSize() < 960) {
                 console.log('width is under 960px!');
 
@@ -32,6 +34,7 @@ $(document).ready(function(){
           document.querySelector(".sub-menu-2").removeEventListener("click", openSub);
           subitem1.style = "";
           subitem2.style = "";
+          menuleft.style = "";
         }
       };
 /*to ba able to open submenu without resizing window*/
