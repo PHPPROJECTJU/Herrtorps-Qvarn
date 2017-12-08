@@ -147,10 +147,6 @@ header nav {
   padding: 0px;
 }
 
-.menuleft li:hover{
-  background-color: #303030;
-}
-
 .menuleft .sub-menu{
   list-style-type: none;
   display: none;
@@ -201,10 +197,11 @@ header nav {
   background-image: url(../img/time.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   float: left;
   margin-right: 10px;
+  margin-top: 1px;
 }
 
 .extras {
@@ -215,10 +212,10 @@ header nav {
 }
 
 #hamburger {
-  font-size: 45px;
-  color: white;
+  font-size: 36px;
+  color: #FAF8F1;
   position: absolute;
-  top: -3px;
+  top: 4px;
   right: 15px;
 }
 #hamburger:hover {
@@ -231,12 +228,10 @@ li.current_page_item  a, li.current_page_ancestor  a{
 
 .menu li.lang-item-sv a:before {
   content: url('../img/sv_SE.png') " ";
-  width: 20px;
 }
 
 .menu li.lang-item-en a:before {
   content: url('../img/en_GB.png') " ";
-  width: 20px;
 }
 .menu li.lang-item-en a img{
   display: none;
@@ -902,15 +897,26 @@ transition: all 0.1s;
   }
 
   .menuleft {
-    display: block;
+    display: flex;
+    justify-content: space-around;
     background-color: #1c2b19;
     margin: 0 auto;
     box-shadow: none;
     width: 100%;
   }
 
+  .menu li:nth-child(3) {
+    padding-right: 24%;
+    box-sizing: border-box;
+  }
+
+  .menu li:nth-child(4) {
+  }
+
   .menuleft li {
     padding: 0px;
+    position: relative;
+    padding-bottom: 25px;
   }
 
   .menuleft li:hover{
@@ -918,24 +924,23 @@ transition: all 0.1s;
   }
 
   .menu li{
-    position:relative;
+    /*position:relative;
     padding: 0 1.5% 15px 1.5%;
-    display: inline-block;
+    display: inline-block;*/
   }
 
   .menu li:nth-child(7){
     position: absolute;
-    top: 20px;
+    top: 22px;
+    width: 36px;
     right: 60px;
   }
 
   .rightmenu {
-    float: right;
     display: block;
   }
 
   .leftmenu {
-    float: left;
     display: block;
   }
 
@@ -963,7 +968,7 @@ transition: all 0.1s;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   }
   .sub-menu li{
-    background: white;
+    background-color: #FAF8F1;
     color: #1c2b19;
     display: block;
     width: 110px;
@@ -971,7 +976,7 @@ transition: all 0.1s;
   }
 
   .sub-menu li:hover {
-    background-color: #eaeaea;
+    background-color: #e3ddcb;
   }
   .sub-menu li a{
     color: #1c2b19;
@@ -1126,7 +1131,7 @@ hr {
 /*menu*/
 
 .menu {
-  width: 60%;
+  width: 67%;
 }
 
 /*news boxes*/
