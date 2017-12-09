@@ -116,3 +116,20 @@ window.onscroll = function() {
 
   }
 }
+
+/*öppettider-dropdown*/
+
+var clock = document.getElementById('clock');
+var oppettider = document.getElementById('oppetdropdown');
+oppettider.style.display = "none";
+
+function clickClock(x){
+
+x.classList.toggle("change");
+
+  if(oppettider.style.display == "block"){
+    oppettider.style.display = "none";
+  } else {
+    oppettider.style.display = "block";
+  }
+};

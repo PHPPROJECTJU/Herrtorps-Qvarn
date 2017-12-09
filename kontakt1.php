@@ -49,7 +49,7 @@ foreach($categories as $category) {
           'taxonomy' => 'oppettidstyp',
           'field' => 'slug',
           'terms' => $category->slug,
-          'posts_per_page' => -1
+          'posts_per_page' => 1
       ),
     ),
   );
@@ -61,84 +61,101 @@ foreach($categories as $category) {
   $oppettid = $category->name;
 
   $query = new WP_Query($args);
-     if( $query->have_posts() ) {
 
+     if( $query->have_posts() ) {
+       while ( $query->have_posts() ) {
+       $query->the_post();
        ?>
        <button class="kontaktTablinks" id="defaultOpen" onclick="openTab(event, '<?php echo $oppettid;?>')"><?php echo $oppettid;?></button>
        <?php
-
-       while ( $query->have_posts() ) {
-       $query->the_post();
-
      }
    }?>
  </div>
  <?php
-      if( $query->have_posts() ) {
 
-        ?><table id='<?php echo $oppettid ?>' class='oppet_tabell'><?php
+ $args2 = array(
+   'post_type' => 'oppettider',
+   'posts_per_page' => -1
+ );
+
+ $query2 = new WP_Query( $args2 );
+
+      if( $query2->have_posts() ) {
+        while ( $query2->have_posts() ) {
+        $query2->the_post();
+
+      ?><table id='<?php echo $oppettid ?>' class='oppet_tabell'><?php
+      echo "<tr>";
+
+      if ($oppettid == 'Pubkvällar') {
+        echo "<th>Titel</th>";
+      } elseif($oppettid == 'Säsongsöppettider') {
+        echo "<th>Säsong</th>";
+      } else {
+        echo "<th>Tillfälle</th>";
+      }
+
+
+          echo "<th>Datum</th>";
+          echo "<th>Öppet</th>";
+      echo "</tr>";
+
+
+
+
+      ?><tr>
+      <td><?php
+        echo the_field('namn');
+      ?></td>
+      <td><?php
+        echo the_field('fran');
+
+        $till = get_field('till');
+
+        if ($till) {
+          echo "-";
+          echo the_field('till');
+        }
+
+      ?></td>
+      <td><?php
+
+      $frandag = get_field('frandag');
+      $tilldag = get_field('tilldag');
+
+      if (($frandag) && ($tilldag)){
+        echo $frandag;
+        echo "-";
+        echo $tilldag." ";
+      }
+
+        echo the_field('oppettid');
+        echo "-";
+        echo the_field('stangningstid');
+      ?></td>
+      </tr>
+      <?php
+
+      $laggtill = get_field('lagg_till_en_tid');
+
+      if ($laggtill) {
         echo "<tr>";
-        if ($category->name == 'Pubkvällar') {
-          echo "<th>Titel</th>";
-        } elseif($category->name == 'Säsongsöppettider') {
-          echo "<th>Säsong</th>";
-        } else {
-          echo "<th>Tillfälle</th>";
-        }
-        echo "<th>Datum</th>";
-        echo "<th>Öppet</th>";
+        echo "<td>";
+
+        echo the_field('frandag2');
+        echo "-";
+        echo the_field('tilldag2')." ";
+        echo the_field('oppettid2');
+        echo "-";
+        echo the_field('stangningstid2');
+
+        echo "</td>";
         echo "</tr>";
+      }
 
-        while ( $query->have_posts() ) {
-        $query->the_post();
 
-        ?><tr>
-        <td><?php
-          echo the_field('namn');
-        ?></td>
-        <td><?php
-          echo the_field('fran');
-
-          $till = get_field('till');
-
-          if ($till) {
-            echo "-";
-            echo the_field('till');
-          }
-
-        ?></td>
-        <td><?php
-
-        $laggtill = get_field('lagg_till_en_tid');
-
-        $frandag = get_field('frandag');
-        $tilldag = get_field('tilldag');
-
-        if (($frandag) && ($tilldag)){
-          echo $frandag;
-          echo "-";
-          echo $tilldag." ";
-        }
-
-          echo the_field('oppettid');
-          echo "-";
-          echo the_field('stangningstid');
-
-          if ($laggtill) {
-            echo "<br />";
-            echo the_field('frandag2');
-            echo "-";
-            echo the_field('tilldag2')." ";
-            echo the_field('oppettid2');
-            echo "-";
-            echo the_field('stangningstid2');
-
-        ?></td>
-        </tr>
-        <?php
-        }
-        }
-        echo "</table>";
+      }
+      echo "</table>";
      }
    }
 }
