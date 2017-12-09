@@ -246,17 +246,21 @@ li.current_page_item  a, li.current_page_ancestor  a{
 }
 
 #oppetdropdown {
-width: 100px;
+width: 130px;
 background-color: #FAF8F1;
 position: absolute;
 right: 75px;
 top: 50px;
 padding: 15px;
 box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-text-transform: uppercase;
-color: #1c2b19;
-font-family: 'Lato';
-font-size: 14px;
+display: none;
+}
+
+#oppetdropdown p{
+  text-transform: uppercase;
+  color: #1c2b19;
+  font-family: 'Lato';
+  font-size: 14px;
 }
 
 /*--header end---------------*/
@@ -915,6 +919,10 @@ transition: all 0.1s;
     padding: 28px 0;
     max-width: 900px;
     width: 76%;
+  }
+
+  .sub-menu {
+    z-index: 1;
   }
 
   .menuleft {

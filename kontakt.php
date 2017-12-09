@@ -6,20 +6,20 @@
 
 <?php get_header(); ?>
 
-<div class='headerimage'>
-<?php the_post_thumbnail( 'top_img' );?>
-</div>
-
-<section class='lightsection'>
-<div class='contentwidth'>
-
 
 <?php
 if( have_posts() ) {
-
     while ( have_posts() ) {
       the_post();
-?>
+      ?>
+
+      <div class='headerimage'>
+      <?php the_post_thumbnail( 'top_img' );?>
+      </div>
+
+      <section class='lightsection'>
+      <div class='contentwidth'>
+
 
   <h1 class='kontaktheading'><?php the_field('rubrik'); ?></h1>
   <div class="line1_green"></div>

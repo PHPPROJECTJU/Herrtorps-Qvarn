@@ -4,14 +4,12 @@
 
             if( have_posts() ) {
 
-              echo "<div class='headerimage'>";
-
-                the_post_thumbnail( 'top_img' );
-              echo "</div>";
-
                 while ( have_posts() ) {
                   the_post();
+                  echo "<div class='headerimage'>";
 
+                    the_post_thumbnail( 'top_img' );
+                  echo "</div>";
 
                       ?>
                       <!-- Section 1: light area with intro text -->
