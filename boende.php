@@ -52,14 +52,14 @@ if( $query->have_posts() ) {
                 $height = $bild['sizes'][ $mediumlarge . '-height' ];
               ?>
 
-              <div class="boendebild">
+              <div class="tabbild">
               <?php
                  if ($bild) { ?>
-                <div class='boende_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
+                <div class='tab_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
               <?php } ?>
               </div>
 
-              <div class="boendetext">
+              <div class="tabtext">
                   <h2 class="page_rubrik"><?php echo $rumstyp ?></h2>
                   <ul class="icons">
                       <li>

@@ -8,25 +8,20 @@
 
 <?php require('custom-fields/intro-sida.php'); ?>
 
-<div class='contentmargins'>
+<!-- MENY (för mat) -->
+<div class="matmeny">
+<section class='boxsection'>
+  <div class='leftbox' style="background-color: #3e0909;">
+        <div class='boxwidth'>
 
-  <!-- MENY (för mat) -->
-  <section class='boxsection'>
-    <div class='leftbox' style="background-color: #3e0909;">
-
-        <!-- <div class="corner1_beige"></div> -->
-
-        <div class='boxwidth'> <!--constrains box content width-->
-          <div class="matmeny">
             <h1><?php the_field('meny'); ?></h1>
             <p>• <?php the_field('matratt1'); ?></p>
             <p>• <?php the_field('matratt2'); ?></p>
             <p>• <?php the_field('matratt3'); ?></p>
             <p>• <?php the_field('matratt4'); ?></p>
             <p>• <?php the_field('matratt5'); ?></p>
-          </div>
         </div>
-      </div>
+  </div>
 
       <?php
       $large = 'large';
@@ -46,81 +41,92 @@
     </div>
 
 <?php echo "</section>";?>
+</div> <!-- end of matmeny -->
+
+<!--<div class="line1_green"></div>-->
 
 <!-- PUBKVÄLL -->
 <div class="pubkvall">
-  <div class="innerpubkvall">
-    <h1><?php the_field('pubrubrik'); ?></h1>
-    <p><?php the_field('pubbeskrivning'); ?></p>
-    <p><?php the_field('pubtid'); ?></p>
-  </div>
+  <section class='lightsection'>
+      <div class='contentwidth'>
+        <h1><?php the_field('pubrubrik'); ?></h1>
+        <p><?php the_field('pubbeskrivning'); ?></p>
+        <p><?php the_field('pubtid'); ?></p>
+
+        <div class="pubgalleri">
+          <?php the_field('pubgalleri');?>
+        </div>
+
+      </div>
+  </section>
 </div>
 
+<!-- HÖGTID -->
 <!--code taken and modified from https://www.w3schools.com/howto/howto_js_tabs.asp 2 dec 2017-->
+<div class='contentmargins'>
+  <?php
+      $args = array(
+        'post_type' => 'hogtidpost',
+        'posts_per_page' => -1
+      );
 
-<?php
-    $args = array(
-      'post_type' => 'hogtidpost',
-      'posts_per_page' => -1
-    );
+      $query = new WP_Query( $args );
+  ?>
 
-    $query = new WP_Query( $args );
-?>
+  <div class="tab">
+    <h1>Högtider</h1>
+    <?php //funkar inte! the_field('hogtid'); ?>
 
-<div class="tab">
-  <h1>Högtider</h1>
-  <?php //funkar inte! the_field('hogtid'); ?>
+  <?php // gets the name for each tab and later on creates a tab (btn) with each name
+      if( $query->have_posts() ) {
+         while ( $query->have_posts() ) {
+           $query->the_post();
+           $hogtid = get_field('namn');
+  ?>
 
-<?php
+  <button class="tablinks" id="defaultOpen" onclick="openTab(event, '<?php echo $hogtid;?>')"><?php echo $hogtid;?></button>
+
+  <?php } //endwhile
+  } //endif
+  ?>
+
+  </div>
+
+  <?php
+
     if( $query->have_posts() ) {
        while ( $query->have_posts() ) {
          $query->the_post();
          $hogtid = get_field('namn');
-?>
+         ?>
 
-<button class="tablinks" id="defaultOpen" onclick="openTab(event, '<?php echo $hogtid;?>')"><?php echo $hogtid;?></button>
+                <div id="<?php echo $hogtid;?>" class="tabcontent">
 
-<?php }
-  }
-?>
+                  <?php
+                    $mediumlarge = 'medium_large';
+                    $bild = get_field('bild');
+                    $mlbild = $bild['sizes'][ $mediumlarge ];
+                    $width = $bild['sizes'][ $mediumlarge . '-width' ];
+                    $height = $bild['sizes'][ $mediumlarge . '-height' ];
+                  ?>
 
-</div>
+                  <div class="tabbild">
+                  <?php
+                     if ($bild) { ?>
+                    <div class='tab_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
+                  <?php } ?>
+                  </div>
 
-<?php
-
-  if( $query->have_posts() ) {
-     while ( $query->have_posts() ) {
-       $query->the_post();
-       $hogtid = get_field('namn');
-       ?>
-
-              <div id="<?php echo $hogtid;?>" class="tabcontent">
-
-                <?php
-                  $mediumlarge = 'medium_large';
-                  $bild = get_field('bild');
-                  $mlbild = $bild['sizes'][ $mediumlarge ];
-                  $width = $bild['sizes'][ $mediumlarge . '-width' ];
-                  $height = $bild['sizes'][ $mediumlarge . '-height' ];
-                ?>
-
-                <div class="boendebild">
-                <?php
-                   if ($bild) { ?>
-                  <div class='boende_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
-                <?php } ?>
+                  <div class="tabtext">
+                      <h2 class="page_rubrik"><?php echo $hogtid ?></h2>
+                      <p><?php the_field('beskrivning'); ?></p>
+                  </div>
                 </div>
 
-                <div class="boendetext">
-                    <h2 class="page_rubrik"><?php echo $hogtid ?></h2>
-                    <p><?php the_field('beskrivning'); ?></p>
-                </div>
-              </div>
+            <?php } ?>
+        <?php } ?>
 
-          <?php } ?>
-      <?php } ?>
-
-</div>
+</div> <!-- end of contentmargins -->
 
 <script>
 
