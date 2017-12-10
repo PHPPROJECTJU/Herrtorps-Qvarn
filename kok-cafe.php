@@ -49,12 +49,15 @@
 <div class="pubkvall">
   <section class='lightsection'>
       <div class='contentwidth'>
-        <h1><?php the_field('pubrubrik'); ?></h1>
-        <p><?php the_field('pubbeskrivning'); ?></p>
-        <p><?php the_field('pubtid'); ?></p>
 
         <div class="pubgalleri">
           <?php the_field('pubgalleri');?>
+        </div>
+
+        <div class="pubtext">
+          <h1><?php the_field('pubrubrik'); ?></h1>
+          <p><?php the_field('pubbeskrivning'); ?></p>
+          <p><?php the_field('pubtid'); ?></p>
         </div>
 
       </div>

@@ -54,9 +54,8 @@ if( $query->have_posts() ) {
 
               <div class="tabbild">
               <?php
-                 if ($bild) { ?>
-                <div class='tab_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
-              <?php } ?>
+                the_field('slider');
+              ?>
               </div>
 
               <div class="tabtext">

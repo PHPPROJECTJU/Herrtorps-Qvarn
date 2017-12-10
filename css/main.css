@@ -553,28 +553,26 @@ display: none;
 .pubkvall {
   /*margin-top: 20px;*/
   text-align: center;
+  overflow: hidden;
   /*background-color: #1c2b19;
   color: #ccc0b9;*/
 }
 
-.innerpubkvall {
-  padding: 20px;
+.pubgalleri {
+  width: 50%;
+  float: left;
+}
+
+.pubtext {
+  float: left;
+  width: 45%;
+  margin-top: 40px;
+  margin-left: 40px;
 }
 
 .tab h1 {
   margin-top: 40px;
   margin-bottom: 20px;
-}
-
-/* GALLERY STANDARDS */
-
-.image_browser_images_conteiner_0 {
-  background-color: none !important;
-  border-width: none !important;
-}
-
-.paging-input_0 {
-  font-family: 'lato' !important;
 }
 
 /*--icons-----*/
@@ -775,6 +773,7 @@ div.tab {
 .tabbild {
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .tabtext {
