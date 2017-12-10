@@ -9,9 +9,10 @@
 
 
       <div class='footerobject'>
+        <div id='footerform'>
 
-         <?php echo do_shortcode( '[contact-form-7 id="617" title="Kontaktformulär 1"]' ); ?>
-
+         <?php echo do_shortcode( '[contact-form-7 id="617" title="Kontaktformulär 2"]' ); ?>
+       </div>
       </div>
 
   </div>

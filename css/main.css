@@ -415,15 +415,15 @@ display: none;
 /*--page: Kontakt----*/
 
 .kontaktheading {
-  margin-bottom: 30px;
-  font-size: 36px;
+  margin-bottom: 50px;
+  font-size: 24px;
   text-align: center;
 }
 
 .oppettider {
-  margin-bottom: 30px;
   width: 100%;
   display: inline-block;
+  background-color: #e3ddcb;
 }
 
 .kontakttab {
@@ -448,7 +448,7 @@ display: none;
 .kontaktTablinks:hover {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 1px 1px 5px rgba(227,221,203,1);
+    box-shadow: 1px 1px 5px rgba(188,189,170,1);
 }
 
 .kontaktTablinks.active {
@@ -458,13 +458,15 @@ display: none;
     box-shadow: none;
 }
 
-
+.onetable{
+  margin: 0 auto;
+}
 
 .oppet_tabell {
   width: 100%;
   margin-bottom: 60px;
   background-color: #fff;
-  box-shadow: 1px 1px 5px rgba(227,221,203,1);
+  box-shadow: 1px 1px 5px rgba(188,189,170,1);
   border-radius: 0 5px 5px 5px;
   padding-bottom: 20px;
 }
@@ -686,7 +688,7 @@ display: none;
 }
 
 /*formuläret i footern*/
-#wpcf7-f617-o2 input, #wpcf7-f617-o2 textarea {
+#footerform input, #footerform textarea {
   background-color: #ede7cb;
   margin-bottom: 10px;
   font-size: 16px;
@@ -694,7 +696,7 @@ display: none;
   box-sizing: border-box;
 }
 
-#wpcf7-f617-o2 input[type='submit'] {
+#footerform input[type='submit'] {
   padding: 10px 15px;
   text-transform: uppercase;
   font-size: 14px;
@@ -713,16 +715,6 @@ display: none;
   box-sizing: border-box;
   width: 100%;
 }
-
-/*.wpcf7 textarea {
-  border-radius: 10px;
-  border: none;
-  padding: 5px;
-  box-sizing: border-box;
-  background-color: #ede7cb;
-  width: 100%;
-  margin-top: 10px;
-}*/
 
 /*--footer-----------------*/
 
@@ -1178,12 +1170,6 @@ transition: all 0.1s;
 
 /*--Page: Kontakt----*/
 
-.kontaktheading {
-  margin-bottom: 30px;
-  font-size: 36px;
-  text-align: center;
-}
-
 .oppettider {
 
 }
@@ -1194,8 +1180,11 @@ hr {
 }
 
 .oppet_tabell {
-  width: 100%;
   margin-bottom: 20px;
+}
+
+.onetable{
+  width: 75%;
 }
 
 .oppet_tabell th {

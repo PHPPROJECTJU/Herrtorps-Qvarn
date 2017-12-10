@@ -12,7 +12,7 @@
 
 <section class='kontaktyta'>
 
-  <h2 class='page_rubrik'>Kontakta oss</h2>
+  <h2 class='kontaktheading'>Kontakta oss</h2>
 
     <div class='kontaktuppgifter'>
 
@@ -55,24 +55,20 @@
 
 </section>
 
-<br/>
-<br/>
-<br/>
-
-
 
 <!--ÖPPETTIDER START----------------------------------------->
 <!--solution to display posts by category found 4/12-17 here: https://wordpress.stackexchange.com/questions/66219/list-all-posts-in-custom-post-type-by-taxonomy-->
 
+</div>
+
 <div class='oppettider'>
 
+<div class='contentwidth'>
 
-  <div class="line1_green"></div>
-  <br/>
   <br/>
   <br/>
 
-  <h2 class='page_rubrik'>Öppettider</h2>
+  <h2 class='kontaktheading'>Öppettider</h2>
 
 <?php
 function getTider() {
@@ -94,7 +90,8 @@ foreach($categories as $category) {
   );
 
   ?>
-  <div class="kontakttab">
+
+
   <?php
 
   $oppettid = $category->name;
@@ -103,6 +100,8 @@ foreach($categories as $category) {
      if( $query->have_posts() ) {
 
        ?>
+       <div class='onetable'>
+       <div class="kontakttab">
        <button class="kontaktTablinks" id="defaultOpen" onclick="openTab(event, '<?php echo $oppettid;?>')"><?php echo $oppettid;?></button>
        <?php
 
@@ -184,6 +183,10 @@ foreach($categories as $category) {
         }
         }
         echo "</table>";
+        ?>
+        </div>
+        <?php
+
      }
    }
 }
@@ -191,12 +194,12 @@ foreach($categories as $category) {
 
 getTider();
 ?>
+
+</div>
 </div>
 
-<br/>
-<br/>
-
 <!--ÖPPETTIDER SLUT---------------------------------------->
+
 
 
 <?php
@@ -207,13 +210,9 @@ if( have_posts() ) {
           ?>
 
 <div class='vagbeskrivning'>
-  <div class="line1_green"></div>
-
-  <br/>
-  <br/>
-  <br/>
+  <div class='contentmargins'>
+<h2 class='kontaktheading'><?php the_field('vagbeskrivningrubrik'); ?></h2>
     <div class='vagbeskrivningleft'>
-      <h2 class='page_rubrik'><?php the_field('vagbeskrivningrubrik'); ?></h2>
       <p><?php the_field('vagbeskrivningtext'); ?></p>
     </div>
 
@@ -227,7 +226,7 @@ if( have_posts() ) {
 ?>
 
 
-
+</div>
 </div>
 
 <script>
