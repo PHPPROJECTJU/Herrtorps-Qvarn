@@ -6,30 +6,9 @@
       <div class='footerobject'><p>ipsum dolor sit amet, consectetur adipiscing elit. Nulla in magna molestie, lobortis risus et.</p></div>
 
       <div class='footerobject'>
-
+        
          <?php echo do_shortcode( '[contact-form-7 id="617" title="Kontaktformulär 1"]' ); ?>
 
-        <!-- <form method="POST" name="contactform" action="" class="footerform">
-
-                <table>
-                  <tr>
-                    <h3>Kontakta oss</h3>
-                  </tr>
-                  <tr>
-                    <td><input type="text" name="namn" placeholder="Namn" required></td>
-                  </tr>
-                  <tr>
-                    <td><input type="text" name="email" placeholder="Mailadress" required></td>
-                  </tr>
-                  <tr>
-                    <td><textarea name="message" rows='5' placeholder="Meddelande"></textarea></td>
-                  </tr>
-                  <tr>
-                    <td><input type="submit" name="submit" value="Skicka"></td>
-                  </tr>
-                </table>
-
-        </form> -->
       </div>
 
   </div>

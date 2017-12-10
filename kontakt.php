@@ -6,34 +6,73 @@
 
 <?php get_header(); ?>
 
+<?php require('custom-fields/intro-sida.php'); ?>
 
-<?php
-if( have_posts() ) {
-    while ( have_posts() ) {
-      the_post();
+<div class='contentmargins'>
+
+<section class='kontaktyta'>
+
+  <h2 class='page_rubrik'>Kontakta oss</h2>
+
+    <div class='kontaktuppgifter'>
+
+      <?php
+       if( have_posts() ) {
+         while ( have_posts() ) {
+            the_post();
+            ?>
+
+            <h3>Adress</h3>
+              <p>
+                <?php
+                  echo the_field('adress');
+                ?>
+              </p>
+              <br/>
+            <h3>Telefon</h3>
+              <p><?php
+                echo the_field('telefon');
+              ?></p>
+              <br/>
+            <h3>E-post</h3>
+              <p><?php
+                echo the_field('epost');
+              ?></p>
+              <p>Eller använd vårt kontaktformulär</p>
+              <br/>
+          </div>
+
+
+      <?php
+         }
+       }
       ?>
 
-      <div class='headerimage'>
-      <?php the_post_thumbnail( 'top_img' );?>
-      </div>
 
-      <section class='lightsection'>
-      <div class='contentwidth'>
+    <div class='kontaktformular'>
+      <?php echo do_shortcode( '[contact-form-7 id="617" title="Kontaktformulär 1"]' ); ?>
+    </div>
+
+</section>
+
+<br/>
+<br/>
+<br/>
 
 
-  <h1 class='kontaktheading'><?php the_field('rubrik'); ?></h1>
-  <div class="line1_green"></div>
-<?php
-  }
-}
-?>
 
 <!--ÖPPETTIDER START----------------------------------------->
 <!--solution to display posts by category found 4/12-17 here: https://wordpress.stackexchange.com/questions/66219/list-all-posts-in-custom-post-type-by-taxonomy-->
 
 <div class='oppettider'>
 
-<h2 class='page_rubrik'>Öppettider</h2>
+
+  <div class="line1_green"></div>
+  <br/>
+  <br/>
+  <br/>
+
+  <h2 class='page_rubrik'>Öppettider</h2>
 
 <?php
 function getTider() {
@@ -85,7 +124,13 @@ foreach($categories as $category) {
         } else {
           echo "<th>Tillfälle</th>";
         }
-        echo "<th>Datum</th>";
+
+        if ($category->name == 'Säsongsöppettider') {
+          echo "<th>Period</th>";
+        } else {
+          echo "<th>Datum</th>";
+        }
+
         echo "<th>Öppet</th>";
         echo "</tr>";
 
@@ -148,13 +193,10 @@ getTider();
 ?>
 </div>
 
+<br/>
+<br/>
+
 <!--ÖPPETTIDER SLUT---------------------------------------->
-
-<div class='kontaktformular'>
-  <h2 class='page_rubrik'>Kontakta oss</h2>
-  <?php echo do_shortcode( '[contact-form-7 id="617" title="Kontaktformulär 1"]' ); ?>
-</div>
-
 
 
 <?php
@@ -166,8 +208,16 @@ if( have_posts() ) {
 
 <div class='vagbeskrivning'>
   <div class="line1_green"></div>
-    <h2 class='page_rubrik'><?php the_field('vagbeskrivningrubrik'); ?></h2>
-    <p><?php the_field('vagbeskrivningtext'); ?></p>
+
+  <br/>
+  <br/>
+  <br/>
+    <div class='vagbeskrivningleft'>
+      <h2 class='page_rubrik'><?php the_field('vagbeskrivningrubrik'); ?></h2>
+      <p><?php the_field('vagbeskrivningtext'); ?></p>
+    </div>
+
+    <br/>
 
     <?php echo do_shortcode("[huge_it_maps id='1']");?>
 </div><?php
@@ -179,7 +229,6 @@ if( have_posts() ) {
 
 
 </div>
-</section>
 
 <script>
 

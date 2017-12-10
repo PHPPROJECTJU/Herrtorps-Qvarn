@@ -68,6 +68,10 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
+input:focus, textarea:focus {
+  outline: none;
+}
+
 /*applied where the content should be less than 100%*/
 .contentwidth {
   width: 85%;
@@ -418,6 +422,8 @@ display: none;
 
 .oppettider {
   margin-bottom: 30px;
+  width: 100%;
+  display: inline-block;
 }
 
 .kontakttab {
@@ -433,40 +439,55 @@ display: none;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 15px;
-    margin: auto;
+    padding: 20px;
+    margin-bottom: 20px;
     margin-right: 10px;
-    border-radius: 0px;
+    font-family: 'Korinna';
 }
 
 .kontaktTablinks:hover {
     background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(227,221,203,1);
 }
 
 .kontaktTablinks.active {
     background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 0;
 }
+
+
 
 .oppet_tabell {
   width: 100%;
   margin-bottom: 60px;
   background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(227,221,203,1);
+  border-radius: 0 5px 5px 5px;
+  padding-bottom: 20px;
 }
 
 .oppet_tabell th {
   width: 30%;
   text-align: left;
   font-size: 18px;
-  padding: 20px 10px;
-  font-weight: normal;
+  padding: 20px;
+  font-weight: bold;
+  text-transform: lowercase;
+  font-variant: small-caps;
 }
 
 .oppet_tabell td {
   font-weight: 300;
-  padding: 15px 10px;
+  padding: 15px 20px;
 }
 
 .kontaktformular {
+  margin-bottom: 30px;
+}
+
+.kontaktuppgifter {
   margin-bottom: 30px;
 }
 
@@ -474,6 +495,7 @@ display: none;
   width: 100%;
   overflow: hidden;
 }
+
 
 /*--page: aktiviteter--*/
 
@@ -627,20 +649,71 @@ display: none;
 
 /*--forms----------------*/
 
-#wpforms-411 {
+.wpcf7 {
   width: 100%;
 }
-#wpforms-411 input[type=text], #wpforms-411 input[type=email] {
+
+.wpcf7 textarea{
+  resize: none;
+  rows: 5;
+}
+
+.wpcf7 label {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/*formuläret på Kontakt*/
+#wpcf7-f617-o1 input, #wpcf7-f617-o1 textarea {
+  box-shadow: 1px 1px 5px rgba(227,221,203,1);
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#wpcf7-f617-o1 input[type='submit'] {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 50px;
+  border: 1.5px solid #1c2b19;
+  color: #1c1b19;
+  background-color: transparent;
+  width: 50%;
+  cursor: pointer;
+}
+
+/*formuläret i footern*/
+#wpcf7-f617-o2 input, #wpcf7-f617-o2 textarea {
+  background-color: #ede7cb;
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#wpcf7-f617-o2 input[type='submit'] {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 50px;
+  border: 1.5px solid #ccc0b9;
+  color: #ccc0b9;
+  background-color: transparent;
+  width: 50%;
+  cursor: pointer;
+}
+
+.wpcf7 input, .wpcf7 textarea {
   border-radius: 5px;
   border: none;
   padding: 5px;
   box-sizing: border-box;
-  background-color: #ede7cb;
   width: 100%;
-  margin-top: 10px;
 }
 
-#wpforms-411 textarea {
+/*.wpcf7 textarea {
   border-radius: 10px;
   border: none;
   padding: 5px;
@@ -648,7 +721,7 @@ display: none;
   background-color: #ede7cb;
   width: 100%;
   margin-top: 10px;
-}
+}*/
 
 /*--footer-----------------*/
 
@@ -1110,10 +1183,7 @@ transition: all 0.1s;
 }
 
 .oppettider {
-  float: left;
-  width: 65%;
-  padding-right: 80px;
-  box-sizing: border-box;
+
 }
 
 hr {
@@ -1131,19 +1201,31 @@ hr {
   text-align: left;
   font-size: 18px;
   padding-bottom: 20px;
-  font-weight: normal;
 }
 
 .oppet_tabell td {
   font-weight: 300;
 }
 
-.kontaktformular {
-  float: left;
-  width: 35%;
+.kontaktyta {
+  overflow: hidden;
 }
 
-.vagbeskrivning p {
+.kontaktformular {
+  float: left;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.kontaktuppgifter {
+  float: left;
+  width: 50%;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.vagbeskrivningleft {
+  float: left;
   width: 40%;
   float: left;
   padding-right: 30px;
