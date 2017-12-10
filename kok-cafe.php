@@ -118,7 +118,7 @@
                   </div>
 
                   <div class="tabtext">
-                      <h2 class="page_rubrik"><?php echo $hogtid ?></h2>
+                      <h2><?php echo $hogtid ?></h2>
                       <p><?php the_field('beskrivning'); ?></p>
                   </div>
                 </div>
