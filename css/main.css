@@ -805,6 +805,24 @@ li.current-menu-parent>a{
   color:#FCDD7A;
 }
 
+.single-paragraf {
+  margin-bottom: 20px;
+}
+
+.aktivitet-box {
+  max-width: 100%;
+}
+
+.price-box {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(188,189,170,1);
+  border-radius:5px;
+  max-width: 98%;/*Why 98%? To make the box-shadow visible*/
+  line-height: 1.8em;
+  margin: 0 3px 40px 2px;
+}
+
 /*=====================================640PX========================================*/
 @media (min-width: 640px) {
 
@@ -918,6 +936,23 @@ li.current-menu-parent>a{
   width: 50%;
   height: 425px;
   background-size: 180%;
+}
+
+/*-- page:single.php --*/
+
+.single-paragraf {
+  margin-bottom: 40px;
+}
+.aktivitet-box {
+  float:left;
+  max-width: 58%;
+}
+
+.price-box {
+  float:left;
+  max-width: 30%;
+  margin: 49px 5px 5px 15px ;
+  max-width: 30%;
 }
 
 
@@ -1252,6 +1287,15 @@ hr {
   letter-spacing: 0.8px;
   display: inline;
   position: absolute;
+}
+
+/*-- page:single.php --*/
+.aktivitet-box {
+  max-width: 60%;
+}
+
+.price-box {
+  max-width: 30%;
 }
 
 }
