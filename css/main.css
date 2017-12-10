@@ -339,7 +339,7 @@ display: none;
   margin-bottom: 20px;
 }
 
-.rightbox {
+.rightbox, .rightbox2 {
   width: 100%;
   height: 350px;
   background-size: 150%;
@@ -921,7 +921,7 @@ li.current-menu-parent>a{
   margin: 25px auto;
 }
 
-.rightbox {
+.rightbox, .rightbox2 {
   float: left;
   width: 50%;
   height: 425px;
@@ -1171,7 +1171,7 @@ transition: all 0.1s;
   margin: 20px auto;
 }
 
-.rightbox {
+.rightbox, .rightbox2 {
   background-size: 110%;
   height: 375px;
 }

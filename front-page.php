@@ -38,7 +38,7 @@
 
                                 <div class='btncontainer'>
                                   <div class='btncontainer'>
-                                    <a href="<?php the_field('nyhetslank');?>"><button class='outlinebtn_beige'><?php the_field('lank-etikett-2');?></button></a>
+                                    <a href="<?php the_field('nyhetslank');?>"><button class='outlinebtn_beige'><?php the_field('nyhetslank-etikett-1');?></button></a>
                                   </div>
                                 </div>
                             </div>
@@ -68,13 +68,13 @@
 
                       <section class='lightsection'>
                           <div class='contentwidth'>
-                              <h1 class='topheading'><?php the_field('rubrik-3'); ?></h1>
-                              <p class='introtext'><?php the_field('beskrivning-3'); ?></p>
+                              <h1 class='topheading'><?php the_field('rubrik-2'); ?></h1>
+                              <p class='introtext'><?php the_field('beskrivning-2'); ?></p>
 
                               <div class="line1_green"></div>
 
                               <div class='btncontainer'>
-                                  <a href="<?php the_field('go-to-lank-3');?>"><button class='outlinebtn_green'><?php the_field('lank-etikett-3');?></button></a>
+                                  <a href="<?php the_field('go-to-lank-2');?>"><button class='outlinebtn_green'><?php the_field('lank-etikett-2');?></button></a>
                               </div>
 
                           </div>
@@ -88,15 +88,15 @@
                                 $large = 'large';
                                 $mediumlarge = 'medium_large';
 
-                                $nyhetsbild = get_field('nyhetsbild-2');
+                                $nyhetsbild2 = get_field('nyhetsbild-2');
 
-                                $lbild = $nyhetsbild['sizes'][ $large ];
-                                $width = $nyhetsbild['sizes'][ $large . '-width' ];
-                                $height = $nyhetsbild['sizes'][ $large . '-height' ];
+                                $lbild2 = $nyhetsbild2['sizes'][ $large ];
+                                $width = $nyhetsbild2['sizes'][ $large . '-width' ];
+                                $height = $nyhetsbild2['sizes'][ $large . '-height' ];
 
-                                if ($nyhetsbild) {
+                                if ($nyhetsbild2) {
                             ?>
-                            <div class='rightbox2' style='background-image: url("<?php echo  $lbild;?>");'>
+                            <div class='rightbox2' style='background-image: url("<?php echo  $lbild2;?>");'>
                           <?php }
                           ?>
 
@@ -112,7 +112,7 @@
 
                                 <div class='btncontainer'>
                                   <div class='btncontainer'>
-                                    <a href="<?php the_field('nyhetslank-2');?>"><button class='outlinebtn_green'><?php the_field('lank-etikett-4');?></button></a>
+                                    <a href="<?php the_field('nyhetslank-2');?>"><button class='outlinebtn_green'><?php the_field('nyhetslank-etikett-2');?></button></a>
                                   </div>
                                 </div>
                             </div>
