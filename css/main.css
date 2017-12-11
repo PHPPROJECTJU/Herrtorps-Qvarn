@@ -1014,9 +1014,9 @@ li.current-menu-parent>a{
 
 /* Style the buttons inside the tab */
 .tablinks {
-    font-size: 20px;
+    font-size: 15px;
     float: left;
-    width: 22%;
+    width: 120px;
     background: inherit;
     padding: 14px 16px;
 }
