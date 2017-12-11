@@ -395,6 +395,60 @@ display: none;
   padding-top: 20px;
 }
 
+/* --- Page: Konferens --- */
+
+.konferens {
+  overflow: hidden;
+}
+
+.konferensinfo h1 {
+  margin-bottom: 15px;
+}
+
+.konferensinfo {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.konferensdagpris {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.konferensdag {
+  width: 100%;
+}
+
+.konferensdag p {
+  margin-bottom: 20px;
+}
+
+.konferenspris {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(188,189,170,1);
+  border-radius: 5px;
+  max-width: 98%;
+  line-height: 1.8em;
+}
+
+.konferenspris p {
+  margin-bottom: 20px;
+}
+
+.konferensformular h1 {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.konferensformular .kontaktformular {
+  float: none;
+  margin: auto;
+}
+
 /*--page: Kontakt----*/
 
 .kontaktheading {
@@ -1359,6 +1413,63 @@ transition: all 0.1s;
 .rightbox, .rightbox2 {
   background-size: 110%;
   height: 375px;
+}
+
+/* --- Page: Konferens --- */
+
+.konferens {
+  overflow: hidden;
+}
+
+.konferensinfo h1 {
+  margin-bottom: 15px;
+}
+
+.konferensinfo {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.konferensdagpris {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.konferensdag {
+  float: left;
+  width: 60%;
+}
+
+.konferensdag p {
+  margin-bottom: 20px;
+}
+
+.konferenspris {
+  float: left;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(188,189,170,1);
+  border-radius: 5px;
+  max-width: 98%;
+  line-height: 1.8em;
+  margin-left: 60px;
+}
+
+.konferenspris p {
+  margin-bottom: 20px;
+}
+
+.konferensformular h1 {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.konferensformular .kontaktformular {
+  float: none;
+  margin: auto;
 }
 
 /*--Page: Kontakt----*/
