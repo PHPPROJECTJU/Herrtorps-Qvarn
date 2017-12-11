@@ -57,7 +57,7 @@
         <div class="pubtext">
           <h1><?php the_field('pubrubrik'); ?></h1>
           <p><?php the_field('pubbeskrivning'); ?></p>
-          <p><?php the_field('pubtid'); ?></p>
+          <p><b><?php the_field('pubtid'); ?></b></p>
         </div>
 
       </div>
