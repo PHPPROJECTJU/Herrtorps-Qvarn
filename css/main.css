@@ -612,6 +612,13 @@ display: none;
   margin-bottom: 40px;
 }
 
+.historie_img {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 30px;
+}
+
 /*-- page: kök & café --*/
 
 .matmeny {
@@ -935,6 +942,14 @@ li.current-menu-parent>a{
     width: 480px;
     margin: 0 auto;
   }
+
+  .historie_img {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 30px;
+  }
+
 }
 /*=====================================640PX========================================*/
 @media (min-width: 640px) {
@@ -1198,6 +1213,12 @@ div.tab {
   background-size: 18%;
 }
 
+.historie_img {
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 30px;
+}
 
 }
 
@@ -1570,6 +1591,13 @@ hr {
 
 .price-box {
   max-width: 30%;
+}
+
+.historie_img {
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 30px;
 }
 
 /* PUB */

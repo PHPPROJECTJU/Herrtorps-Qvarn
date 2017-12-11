@@ -40,10 +40,10 @@ if( $query->have_posts() ) {
             $height = $bild['sizes'][ $mediumlarge . '-height' ];
           ?>
 
-          <div class="tabbild" style="width:100%;">
+          <div class="historiebild">
             <?php
                if ($bild) { ?>
-              <div class='tab_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
+              <div class='historie_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
             <?php } ?>
           </div>
 
