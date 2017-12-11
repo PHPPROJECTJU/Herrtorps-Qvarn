@@ -50,7 +50,7 @@ if( $query->have_posts() ) {
               <br />
 
               <div class='btncontainer'>
-                <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_beige'><?php the_field('lank-etikett');?></button></a>
+                <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_green'><?php the_field('lank-etikett');?></button></a>
               </div>
           </div>
       </section>

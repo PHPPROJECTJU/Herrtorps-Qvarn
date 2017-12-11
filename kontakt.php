@@ -47,11 +47,16 @@
          }
        }
       ?>
-
-
-    <div class='kontaktformular'>
-      <?php echo do_shortcode( '[contact-form-7 id="617" title="Kontaktformulär 1"]' ); ?>
-    </div>
+<!-- https://stackoverflow.com/questions/29118772/how-to-determine-the-current-language-of-a-wordpress-page-when-using-polylang -->
+  <div class='kontaktformular'>
+      <?php
+      if (get_locale() == 'en_GB') {
+          echo do_shortcode( '[contact-form-7 id="725" title="Kontaktformulär 1 - ENGLISH"]' );
+      } else{
+          echo do_shortcode( '[contact-form-7 id="617" title="Kontaktformulär 1"]' );
+      }
+      ?>
+  </div>
 
 </section>
 

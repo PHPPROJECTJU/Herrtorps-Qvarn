@@ -2,8 +2,9 @@
 
 /*-----5 dec 2017 https://stackoverflow.com/questions/18004938/responsive-dropdown-menu-hide-previously-displayed-menu-items-when-screen-size -------*/
 
-
+/*---Enable function when doc is loaded---*/
 $(document).ready(function(){
+
       function windowSize() {
         windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
         return windowWidth;
@@ -23,13 +24,13 @@ $(document).ready(function(){
 
         var menuleft = document.querySelector(".menuleft");
         if (windowSize() < 960) {
-                console.log('width is under 960px!');
+                /*width is under 960px.*/
 
                 document.querySelector(".sub-menu-1").addEventListener("click", openSub);
                 document.querySelector(".sub-menu-2").addEventListener("click", openSub);
 
         } else {
-          console.log('width is over 960px!');
+          /*width is 960px or larger.*/
           document.querySelector(".sub-menu-1").removeEventListener("click", openSub);
           document.querySelector(".sub-menu-2").removeEventListener("click", openSub);
           subitem1.style = "";
@@ -43,7 +44,6 @@ $(document).ready(function(){
       // For example, get window size on window resize
       $(window).resize(function() {
             windowSize();
-            console.log('width is :', windowSize());
 
             var subitem1 = document.querySelector(".sub-menu");
             var subitem2 = document.querySelectorAll(".sub-menu")[1];
@@ -51,33 +51,6 @@ $(document).ready(function(){
             sizeFunction();
       });
 });
-
-            // $(window).resize(function() {
-            //    if ($(window).width() <= 959) {
-            //      var subitem1 = document.querySelector(".sub-menu");
-            //      var subitem2 = document.querySelectorAll(".sub-menu")[1];
-            //
-                         // document.querySelector(".sub-menu-1").addEventListener("click", function(){
-                         //     if(subitem1.style.display == "block"){
-                         //         subitem1.style.display = "none";
-                         //     } else {
-                         //       subitem1.style.display = "block";
-                         //     }
-                         // });
-                         //
-                         // document.querySelector(".sub-menu-2").addEventListener("click", function(){
-                         //     if(subitem2.style.display == "block"){
-                         //         subitem2.style.display = "none";
-                         //     } else {
-                         //         subitem2.style.display = "block";
-                         //     }
-                         // });
-            //    }
-            //   else {
-            //      subitem1.style.display = "none";
-            //      subitem2.style.display = "none";
-            //   }
-            //   });
 
 
 var menuleft = document.querySelector(".menuleft");

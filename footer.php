@@ -1,9 +1,29 @@
 <footer>
   <div class='footercontainer'>
 
-      <div class='footerobject'><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in magna molestie, lobortis risus et, viverra lacus. Sed ut turpis finibus, rhoncus massa quis. Lorem ipsum dolor sit amet, consectetur.</p></div>
+      <div class='footerobject'>
+        <p>
 
-      <div class='footerobject'><p>ipsum dolor sit amet, consectetur adipiscing elit. Nulla in magna molestie, lobortis risus et.</p>
+          <?php
+          if (get_locale() == 'sv_SE') {
+            dynamic_sidebar('footer-1');
+          } else {
+            dynamic_sidebar('footer-3');
+          }
+          ?>
+        </p>
+      </div>
+
+      <div class='footerobject'>
+        <p>
+          <?php
+          if (get_locale() == 'sv_SE') {
+            dynamic_sidebar('footer-2');
+          } else {
+            dynamic_sidebar('footer-4');
+          }
+          ?>
+        </p>
         <a target ='_blank' href='https://www.facebook.com/HerrtorpsQvarn'><span id='fb_logo'></span></a>
       </div>
 
@@ -11,7 +31,13 @@
       <div class='footerobject'>
         <div id='footerform'>
 
-         <?php echo do_shortcode( '[contact-form-7 id="617" title="Kontaktformulär 2"]' ); ?>
+          <?php
+          if (get_locale() == 'en_GB') {
+              echo do_shortcode( '[contact-form-7 id="725" title="Kontaktformulär 2 - ENGLISH"]' );
+          } else{
+              echo do_shortcode( '[contact-form-7 id="617" title="Kontaktformulär 2"]' );
+          }
+          ?>
        </div>
       </div>
 

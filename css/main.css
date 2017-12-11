@@ -614,7 +614,7 @@ display: none;
 /*--button standards-----------------*/
 
 
-.outlinebtn_beige, .outlinebtn_green  {
+.outlinebtn_beige, .outlinebtn_green, .outlinebtn_special {
   border-radius: 50px;
   background-color: transparent;
   font-family: 'Korinna';
@@ -624,6 +624,7 @@ display: none;
   padding: 16px 20px 10px 20px;
   cursor: pointer;
   margin: 0 auto;
+  transition: 0.3s;
 }
 
 .outlinebtn_beige {
@@ -635,6 +636,29 @@ display: none;
   border: 1.5px solid #1c2b19;
   color: #1c2b19;
 }
+
+.outlinebtn_special {
+  border: 1.5px solid #1c2b19;
+  color: #1c2b19;
+}
+
+.outlinebtn_beige:hover {
+  border: 1.5px solid #ccc0b9;
+  color: #1c2b19;
+  background-color: #ccc0b9;
+}
+
+.outlinebtn_green:hover {
+  border: 1.5px solid #1c2b19;
+  color: rgba(250,248,241,1);
+  background-color: #1c2b19;
+}
+.outlinebtn_special:hover{
+  border: 1.5px solid #1c2b19;
+  color: #C6B594;
+  background-color: #1c2b19;
+}
+
 
 .btncontainer {
   text-align: center;
