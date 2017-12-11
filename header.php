@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="KEYWORDS" content="Upplevelser, upplevelsepaket, fiske, fiskepaket, naturupplevelse, safari, paddling, kanot, lägenheter, hotell, vandrarhem, konferens, kvarn, qvarn, stuga, cafe, café, restaurang, festarrangör, boule, femkamp, Västergötland, Skara">
+    <meta name="keywords" content="Upplevelse, fiska, natur, bäver, paddling, kanot, lägenhet, hotell, vandrarhem, konferens, kvarn, qvarn, stuga, cafe, café, restaurang, fest, Västergötland, Skara">
+    <meta name="description" content="Herrtorps qvarn är ett mysigt vandrarhem mitt utanför Skara i Västra Götalands län. Ett naturnära område nära Hornborgarsjön och andra naturupplevelser.">
     <!--  No title tag at all -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>">
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,800,800i" rel="stylesheet">
