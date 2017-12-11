@@ -70,7 +70,7 @@ if( $query->have_posts() ) {
                   </ul>
                   <p><?php the_field('beskrivning'); ?></p>
 
-                  <p>Pris: <?php the_field('pris'); ?>kr/natt</p>
+                  <p><?php the_field('pris'); ?></p>
               </div>
               </div>
 
