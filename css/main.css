@@ -408,6 +408,11 @@ display: none;
   background-color: #e3ddcb;
 }
 
+.oppetmargins {
+  width: 90%;
+  margin: 30px auto;
+}
+
 .kontakttab {
   overflow: hidden;
   margin: auto;
@@ -446,18 +451,19 @@ display: none;
 
 .oppet_tabell {
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(188,189,170,1);
   border-radius: 0 5px 5px 5px;
   padding-bottom: 20px;
+  font-size: 14px;
 }
 
 .oppet_tabell th {
   width: 30%;
   text-align: left;
   font-size: 18px;
-  padding: 20px;
+  padding: 7px;
   font-weight: bold;
   text-transform: lowercase;
   font-variant: small-caps;
@@ -465,8 +471,12 @@ display: none;
 
 .oppet_tabell td {
   font-weight: 300;
-  padding: 15px 20px;
+  padding: 10px 7px;
 }
+
+/*
+
+*/
 
 .kontaktformular {
   margin-bottom: 30px;
@@ -647,7 +657,7 @@ display: none;
 }
 
 /*formuläret på Kontakt*/
-#wpcf7-f617-o1 input, #wpcf7-f617-o1 textarea {
+.kontaktformular input, .kontaktformular textarea {
   box-shadow: 1px 1px 5px rgba(227,221,203,1);
   margin-bottom: 10px;
   font-size: 16px;
@@ -655,7 +665,7 @@ display: none;
   box-sizing: border-box;
 }
 
-#wpcf7-f617-o1 input[type='submit'] {
+.kontaktformular input[type='submit'] {
   padding: 10px 15px;
   text-transform: uppercase;
   font-size: 14px;
@@ -665,6 +675,7 @@ display: none;
   background-color: transparent;
   width: 50%;
   cursor: pointer;
+  box-shadow: none;
 }
 
 /*formuläret i footern*/
@@ -944,6 +955,22 @@ li.current-menu-parent>a{
   max-width: 30%;
   margin: 49px 5px 5px 15px ;
   max-width: 30%;
+}
+
+/*Kontakt---*/
+
+.oppet_tabell {
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.oppet_tabell th {
+  font-size: 18px;
+  padding: 20px;
+}
+
+.oppet_tabell td {
+  padding: 15px 20px;
 }
 
 /*---footer-----*/

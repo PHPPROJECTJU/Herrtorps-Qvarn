@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-<?php require('custom-fields/intro-sida.php'); ?>
+<?php require('custom-fields/intro-sida-only-img.php'); ?>
 
 <div class='contentmargins'>
 
@@ -63,10 +63,7 @@
 
 <div class='oppettider'>
 
-<div class='contentwidth'>
-
-  <br/>
-  <br/>
+<div class='oppetmargins'>
 
   <h2 class='kontaktheading'>Öppettider</h2>
 
