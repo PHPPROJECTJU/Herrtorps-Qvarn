@@ -487,6 +487,8 @@ display: none;
 
 .akt_grid {
   overflow: hidden;
+  width: 240px;
+  margin: 0 auto;
 }
 
 .akt_grid_item {
@@ -853,7 +855,13 @@ li.current-menu-parent>a{
   line-height: 1.8em;
   margin: 0 3px 40px 2px;
 }
-
+/*=====================================540PX========================================*/
+@media (min-width: 540px) {
+  .akt_grid{
+    width: 480px;
+    margin: 0 auto;
+  }
+}
 /*=====================================640PX========================================*/
 @media (min-width: 640px) {
 
@@ -1097,10 +1105,8 @@ div.tab {
   background-size: 18%;
 }
 
+
 }
-
-
-
 
 /*=====================================960PX========================================*/
 @media (min-width: 960px) {
@@ -1382,6 +1388,11 @@ hr {
   opacity: 0;
 }
 
+.akt_grid{
+  width: 720px;
+  margin: 0 auto;
+}
+
 .akt_grid_item:hover .overlay {
   opacity: 1;
 }
@@ -1448,6 +1459,11 @@ hr {
 
 .boxwidth {
   width: 60%;
+}
+
+.akt_grid{
+  width: 960px;
+  margin: 0 auto;
 }
 
 }
