@@ -45,25 +45,6 @@
 
 <!--<div class="line1_green"></div>-->
 
-<!-- PUBKVÄLL -->
-<div class="pubkvall">
-  <section class='lightsection'>
-      <div class='contentwidth'>
-
-        <div class="pubgalleri">
-          <?php the_field('pubgalleri');?>
-        </div>
-
-        <div class="pubtext">
-          <h1><?php the_field('pubrubrik'); ?></h1>
-          <p><?php the_field('pubbeskrivning'); ?></p>
-          <p><b><?php the_field('pubtid'); ?></b></p>
-        </div>
-
-      </div>
-  </section>
-</div>
-
 <!-- HÖGTID -->
 <!--code taken and modified from https://www.w3schools.com/howto/howto_js_tabs.asp 2 dec 2017-->
 <div class='contentmargins'>
@@ -130,6 +111,34 @@
         <?php } ?>
 
 </div> <!-- end of contentmargins -->
+
+<?php
+if( have_posts() ) {
+   while ( have_posts() ) {
+     the_post();
+?>
+
+<!-- PUBKVÄLL -->
+<div class="pubkvall">
+      <div class='contentwidth'>
+
+        <div class="pubgalleri">
+          <?php the_field('pubgalleri');?>
+        </div>
+
+        <div class="pubtext">
+          <h1><?php the_field('pubrubrik'); ?></h1>
+          <p><?php the_field('pubbeskrivning'); ?></p>
+          <p><b><?php the_field('pubtid'); ?></b></p>
+        </div>
+
+      </div>
+</div>
+<?php
+}
+}
+ ?>
+
 
 <script>
 

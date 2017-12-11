@@ -101,6 +101,16 @@ input:focus, textarea:focus {
   margin: 0 auto 30px auto;
 }
 
+.line_beige {
+  width: 100%;
+  height: 30px;
+  background-image: url(../img/1x/line_beige.png);
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: center;
+  margin: 50px auto 0 auto;
+}
+
 .divider1_green {
   width: 60%;
   height: 30px;
@@ -404,6 +414,7 @@ display: none;
   margin: 30px auto;
 }
 
+
 .kontakttab {
   overflow: hidden;
   margin: auto;
@@ -562,20 +573,15 @@ display: none;
 }
 
 .pubkvall {
-  /*margin-top: 20px;*/
-  text-align: center;
+  margin-bottom: 60px;
   overflow: hidden;
-  /*background-color: #1c2b19;
-  color: #ccc0b9;*/
 }
 
 .pubgalleri {
   width: 100%;
+  margin-bottom: 10px;
 }
 
-.pubtext {
-  margin-top: 40px;
-}
 
 .tab h1 {
   text-align: center;
@@ -621,7 +627,7 @@ display: none;
   padding: 16px 20px 10px 20px;
   cursor: pointer;
   margin: 0 auto;
-  transition: 0.3s;
+  transition: 0.2s;
   outline: none;
 }
 
@@ -688,18 +694,24 @@ display: none;
 }
 
 .kontaktformular input[type='submit'] {
-  padding: 10px 15px;
+  padding: 10px 40px;
   text-transform: uppercase;
   font-size: 14px;
   border-radius: 50px;
   border: 1.5px solid #1c2b19;
-  color: #1c1b19;
+  color: #1c2b19;
   background-color: transparent;
-  width: 100px;
+  width: auto;
   cursor: pointer;
   box-shadow: none;
   margin: 0 auto;
   display: block;
+  transition: 0.2s;
+}
+
+.kontaktformular input[type='submit']:hover {
+  background-color: #1c2b19;
+  color: #FAF8F1;
 }
 
 /*formuläret i footern*/
@@ -712,18 +724,24 @@ display: none;
 }
 
 #footerform input[type='submit'] {
-  padding: 10px 15px;
+  padding: 10px 40px;
   text-transform: uppercase;
   font-size: 14px;
   border-radius: 50px;
-  border: 1.5px solid #ccc0b9;
-  color: #ccc0b9;
+  border: 1px solid #ede7cb;
+  color: #ede7cb;
   background-color: transparent;
-  width: 100px;
+  width: auto;
   cursor: pointer;
   box-shadow: none;
   margin: 0 auto;
   display: block;
+  transition: 0.2s;
+}
+
+#footerform input[type='submit']:hover {
+  background-color: #ede7cb;
+  color: #1c2b19;
 }
 
 .wpcf7 input, .wpcf7 textarea {
@@ -766,9 +784,15 @@ footer {
   margin-top: 20px;
 }
 
+#blackfooter{
+  padding: 10px 0;
+  background-color: #111;
+}
+
 #blackfooter p {
-  background-color: #222;
-  color: #baa646;
+  font-weight: 300;
+  font-size: 14px;
+  color: #827F1E;
   text-align: center;
 }
 
@@ -996,6 +1020,10 @@ li.current-menu-parent>a{
 
 /*Kontakt---*/
 
+.oppetmargins {
+  max-width: 640px;
+}
+
 .oppet_tabell {
   margin-bottom: 40px;
   font-size: 16px;
@@ -1008,6 +1036,12 @@ li.current-menu-parent>a{
 
 .oppet_tabell td {
   padding: 15px 20px;
+}
+
+/*Kök café*/
+
+.pubkvall {
+  margin-bottom: 100px;
 }
 
 /*---footer-----*/
@@ -1051,13 +1085,13 @@ div.tab {
 .tabbild {
   width: 60%;
   float: left;
-  padding-right: 30px;
-  box-sizing: border-box;
 }
 
 .tabtext {
   width: 40%;
   float: left;
+  padding-left: 30px;
+  box-sizing: border-box;
 }
 
 .tab_img {
@@ -1151,7 +1185,7 @@ transition: all 0.1s;
 
   .logoslim {
     width: 124px;
-    height: 123px;
+    height: 60px;
     top: 10px;
     left: calc(50% - 62px);
   }
@@ -1324,8 +1358,8 @@ transition: all 0.1s;
 
 /*--Page: Kontakt----*/
 
-.oppettider {
-
+.oppetmargins {
+  max-width: 960px;
 }
 
 hr {
@@ -1425,23 +1459,19 @@ hr {
 /* PUB */
 
 .pubkvall {
-  /*margin-top: 20px;*/
-  text-align: center;
   overflow: hidden;
-  /*background-color: #1c2b19;
-  color: #ccc0b9;*/
 }
 
 .pubgalleri {
-  width: 50%;
+  width: 60%;
   float: left;
 }
 
 .pubtext {
   float: left;
-  width: 45%;
-  margin-top: 40px;
-  margin-left: 40px;
+  width: 40%;
+  padding-left: 40px;
+  box-sizing: border-box;
 }
 
 }

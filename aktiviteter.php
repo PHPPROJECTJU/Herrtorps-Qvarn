@@ -33,7 +33,6 @@ if( $query->have_posts() ) {
                 <?php
                 the_post_thumbnail( 'grid_thumbnail' );
                 ?>
-                  <div class='akt_thumbnail' style='background-image: url("<?php echo $thbild;?>");'></div>
                     <div class='overlay'>
                       <h3><?php the_field('aktivitet'); ?></h3>
                     </div>

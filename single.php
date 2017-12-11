@@ -27,12 +27,19 @@ if( have_posts() ) {
                         ?>
                       </div>
                   </div>
+
+                  <?php
+                  $prisrubrik = get_field('pris-rubrik');
+
+
+                  if ($prisrubrik) {?>
                   <div class="price-box">
-                    <h3><?php echo get_field('pris-rubrik');?></h3>
+                    <h3><?php echo $prisrubrik;?></h3>
                     <?php
                         echo get_field('pris');
                     ?>
                   </div>
+                <?php }?>
 
               </div>
           </div>

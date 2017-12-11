@@ -25,6 +25,7 @@
           ?>
         </p>
         <a target ='_blank' href='https://www.facebook.com/HerrtorpsQvarn'><span id='fb_logo'></span></a>
+        <div class="line_beige"></div>
       </div>
 
 
@@ -47,16 +48,23 @@
 <?php
 $src = get_template_directory_uri() . "/javascript/menu.js";
 $src2 = get_template_directory_uri() . "/javascript/flexibility.js";
+
 ?>
 
   <script type="text/javascript" src="<?php echo $src;?>"></script>
   <script type="text/javascript" src="<?php echo $src2;?>"></script>
 
+<!-- [IF IE]>
+<script type="text/javascript">
+flexibility(document.body);
+</script>
+<![endif] -->
+
 
 
 </footer>
 <div id='blackfooter'>
-    <p>©The golden shower trio <?php echo date(Y); ?></p>
+    <p>© Herrtorps Qvarn <?php echo date(Y); ?></p>
 </div>
 
 <?php wp_footer() ?>

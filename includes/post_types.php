@@ -106,7 +106,7 @@
           * rules from being created.
           */
          'rewrite' => array(
-       		'slug'                  => 'aktivitetspost',
+       		'slug'                  => 'aktiviteter',
        		'with_front'            => false,
        		'pages'                 => true,
        		'feeds'                 => false,
