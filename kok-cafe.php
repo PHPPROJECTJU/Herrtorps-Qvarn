@@ -58,7 +58,7 @@
   ?>
 
   <div class="tab">
-    <h1>Högtider</h1>
+    <h2 class='page_rubrik'>Högtider</h2>
     <?php //funkar inte! the_field('hogtid'); ?>
 
   <?php // gets the name for each tab and later on creates a tab (btn) with each name
@@ -127,7 +127,7 @@ if( have_posts() ) {
         </div>
 
         <div class="pubtext">
-          <h1><?php the_field('pubrubrik'); ?></h1>
+          <h2 class='page_rubrik'><?php the_field('pubrubrik'); ?></h2>
           <p><?php the_field('pubbeskrivning'); ?></p>
           <p><b><?php the_field('pubtid'); ?></b></p>
         </div>
