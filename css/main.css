@@ -564,10 +564,6 @@ display: none;
   /*margin-bottom: 40px;*/
 }
 
-.matmeny>h1 {
-  margin-bottom: 10px;
-}
-
 .matmeny>p {
   margin-bottom: 0px;
 }
@@ -901,6 +897,15 @@ li.current-menu-parent>a{
 
     p {
       font-size: 16px;
+    }
+
+    .topheading {
+      font-size: 28px;
+    }
+
+    .page_rubrik {
+      font-size: 28px;
+      margin-bottom: 20px;
     }
 
 /*--ornaments-------------*/

@@ -14,7 +14,7 @@
   <div class='leftbox' style="background-color: #3e0909;">
         <div class='boxwidth'>
 
-            <h1><?php the_field('meny'); ?></h1>
+            <h2 class='page_rubrik'><?php the_field('meny'); ?></h2>
             <p>• <?php the_field('matratt1'); ?></p>
             <p>• <?php the_field('matratt2'); ?></p>
             <p>• <?php the_field('matratt3'); ?></p>
@@ -102,7 +102,7 @@
                   </div>
 
                   <div class="tabtext">
-                      <h2><?php echo $hogtid ?></h2>
+                      <h3><?php echo $hogtid ?></h3>
                       <p><?php the_field('beskrivning'); ?></p>
                   </div>
                 </div>
