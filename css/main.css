@@ -625,6 +625,7 @@ display: none;
   cursor: pointer;
   margin: 0 auto;
   transition: 0.3s;
+  outline: none;
 }
 
 .outlinebtn_beige {
@@ -748,6 +749,9 @@ footer {
   box-sizing: border-box;
   color: #ccc0b9;
   font-weight: 300;
+}
+.textwidget a {
+  color: #ccc0b9;
 }
 
 #fb_logo {

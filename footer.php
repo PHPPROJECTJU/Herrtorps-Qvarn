@@ -8,7 +8,7 @@
           if (get_locale() == 'sv_SE') {
             dynamic_sidebar('footer-1');
           } else {
-            dynamic_sidebar('footer-3');
+            dynamic_sidebar('footer-2');
           }
           ?>
         </p>
@@ -18,7 +18,7 @@
         <p>
           <?php
           if (get_locale() == 'sv_SE') {
-            dynamic_sidebar('footer-2');
+            dynamic_sidebar('footer-3');
           } else {
             dynamic_sidebar('footer-4');
           }

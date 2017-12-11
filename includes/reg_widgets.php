@@ -6,7 +6,7 @@
     $args = array(
       'id'            => 'footer-1',
       //Visible name in the Admin Dashboard Widget page
-      'name'          => __( 'Footer', 'herrtorps-qvarn' ),
+      'name'          => __( 'Footer - Svensk kontaktinfo', 'herrtorps-qvarn' ),
       //Visible description in the Admin Dashboard Widget page
       'description'   => __( 'Footer widget', 'herrtorps-qvarn' ),
       //HTML to wrap widget title in
@@ -20,7 +20,7 @@
     $args1 = array(
       'id'            => 'footer-2',
       //Visible name in the Admin Dashboard Widget page
-      'name'          => __( 'Footer 2', 'herrtorps-qvarn' ),
+      'name'          => __( 'Footer - Engelsk kontaktinfo', 'herrtorps-qvarn' ),
       //Visible description in the Admin Dashboard Widget page
       'description'   => __( 'Footer widget 2', 'herrtorps-qvarn' ),
       //HTML to wrap widget title in
@@ -34,7 +34,7 @@
     $args2 = array(
       'id'            => 'footer-3',
       //Visible name in the Admin Dashboard Widget page
-      'name'          => __( 'Footer 3', 'herrtorps-qvarn' ),
+      'name'          => __( 'Footer - Svensk socialmedia text', 'herrtorps-qvarn' ),
       //Visible description in the Admin Dashboard Widget page
       'description'   => __( 'Footer widget', 'herrtorps-qvarn' ),
       //HTML to wrap widget title in
@@ -48,7 +48,7 @@
     $args3 = array(
       'id'            => 'footer-4',
       //Visible name in the Admin Dashboard Widget page
-      'name'          => __( 'Footer 4', 'herrtorps-qvarn' ),
+      'name'          => __( 'Footer - Engelsk socialmediatext', 'herrtorps-qvarn' ),
       //Visible description in the Admin Dashboard Widget page
       'description'   => __( 'Footer widget 4', 'herrtorps-qvarn' ),
       //HTML to wrap widget title in
