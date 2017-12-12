@@ -415,6 +415,7 @@ display: none;
   display: block;
   overflow: hidden;
   margin-bottom: 40px;
+  padding: 5px 0 5px 0;
 }
 
 .konferensdag {
@@ -432,6 +433,7 @@ display: none;
   border-radius: 5px;
   max-width: 98%;
   line-height: 1.8em;
+  margin: 3px;
 }
 
 .konferenspris p {
@@ -1468,14 +1470,13 @@ transition: all 0.1s;
 }
 
 .konferenspris {
-  float: left;
+  float: right;
   padding: 20px;
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(188,189,170,1);
   border-radius: 5px;
   max-width: 98%;
   line-height: 1.8em;
-  margin-left: 60px;
 }
 
 .konferenspris p {
