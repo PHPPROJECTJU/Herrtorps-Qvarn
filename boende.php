@@ -62,10 +62,10 @@ if( $query->have_posts() ) {
                   <h2 class="page_rubrik"><?php echo $rumstyp ?></h2>
                   <ul class="icons">
                       <li>
-                        <img src="<?php echo  get_template_directory_uri();?>/img/bed-32.png" class='boendeicon' alt='Bäddar' /><p><?php the_field('baddar'); ?></p>
+                        <img src="<?php echo  get_template_directory_uri();?>/img/bed-icon.png" class='boendeicon' alt='Bäddar' /><p><?php the_field('baddar'); ?></p>
                       </li>
                       <li>
-                        <img src="<?php echo  get_template_directory_uri();?>/img/window-layout-32.png" class='boendeicon' alt='Utsikt' /><p><?php the_field('utsikt'); ?></p>
+                        <img src="<?php echo  get_template_directory_uri();?>/img/window-icon_1.png" class='boendeicon' alt='Utsikt' /><p><?php the_field('utsikt'); ?></p>
                       </li>
                   </ul>
                   <p><?php the_field('beskrivning'); ?></p>

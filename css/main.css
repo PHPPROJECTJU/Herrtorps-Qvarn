@@ -560,10 +560,10 @@ display: none;
 
 .akt_grid_item {
   float: left;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   position: relative;
-  padding: 20px;
+  padding: 10px;
 }
 
 .akt_thumbnail {
@@ -575,10 +575,10 @@ display: none;
 
 .overlay {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  height: calc(100% - 40px);
-  width: calc(100% - 40px);
+  top: 10px;
+  left: 10px;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
   opacity: 0;
   transition: .3s ease;
   background-color: rgba(58,56,55,0.6);
