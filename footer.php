@@ -53,9 +53,7 @@ $src2 = get_template_directory_uri() . "/javascript/flexibility.js";
 
   <script type="text/javascript" src="<?php echo $src;?>"></script>
   <script type="text/javascript" src="<?php echo $src2;?>"></script>
-
 <!-- [if IE]> <script type="text/javascript"> flexibility(document.body); </script> <![endif] -->
-
 
 
 </footer>

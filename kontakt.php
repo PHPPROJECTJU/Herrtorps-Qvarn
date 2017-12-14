@@ -104,7 +104,7 @@ foreach($categories as $category) {
        ?>
        <div class='onetable'>
        <div class="kontakttab">
-       <button class="kontaktTablinks" id="defaultOpen" onclick="openTab(event, '<?php echo $oppettid;?>')"><?php echo $oppettid;?></button>
+       <button class="kontaktTablinks" id="defaultOpen" onclick="oppetTab(event, '<?php echo $oppettid;?>')"><?php echo $oppettid;?></button>
        <?php
 
        while ( $query->have_posts() ) {
@@ -231,33 +231,9 @@ if( have_posts() ) {
 </div>
 </div>
 
-<script>
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
-function openTab(evt, oppettid) {
-
-    // Declare all variables
-    var i, oppet_tabell, kontaktTablinks;
-
-    // Get all elements with class="oppet_tabell" and hide them
-    oppet_tabell = document.getElementsByClassName("oppet_tabell");
-    for (i = 0; i < oppet_tabell.length; i++) {
-        oppet_tabell[i].style.display = "none";
-    }
-
-    // Get all elements with class="kontaktTablinks" and remove the class "active"
-    kontaktTablinks = document.getElementsByClassName("kontaktTablinks");
-    for (i = 0; i < kontaktTablinks.length; i++) {
-        kontaktTablinks[i].className = kontaktTablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(oppettid).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-</script>
-
+<?php
+$src3 = get_template_directory_uri() . "/javascript/tabs.js";
+?>
+<script type="text/javascript" src="<?php echo $src3;?>"></script>
 
 <?php get_footer(); ?>

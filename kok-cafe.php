@@ -68,7 +68,7 @@
            $hogtid = get_field('namn');
   ?>
 
-  <button class="tablinks" id="defaultOpen" onclick="openTab(event, '<?php echo $hogtid;?>')"><?php echo $hogtid;?></button>
+  <button class="tablinks" id="defaultOpen" onclick="hogtidTab(event, '<?php echo $hogtid;?>')"><?php echo $hogtid;?></button>
 
   <?php } //endwhile
   } //endif
@@ -139,33 +139,9 @@ if( have_posts() ) {
 }
  ?>
 
-
-<script>
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
-function openTab(evt, hogtidTyp) {
-
-    // Declare all variables
-    var i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(hogtidTyp).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-</script>
+ <?php
+ $src3 = get_template_directory_uri() . "/javascript/tabs.js";
+ ?>
+ <script type="text/javascript" src="<?php echo $src3;?>"></script>
 
 <?php get_footer(); ?>

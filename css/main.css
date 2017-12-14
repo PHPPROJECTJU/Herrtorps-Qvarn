@@ -681,9 +681,9 @@ display: none;
   background-color: transparent;
   font-family: 'Korinna';
   font-size: 16px;
-  line-height: 16px;
+  line-height: 14px;
   text-transform: uppercase;
-  padding: 16px 20px 10px 20px;
+  padding: 16px 25px 10px 25px;
   cursor: pointer;
   margin: 0 auto;
   transition: 0.2s;
@@ -753,8 +753,9 @@ display: none;
 }
 
 .kontaktformular input[type='submit'] {
-  padding: 10px 40px;
+  padding: 12px 30px 5px 30px;
   text-transform: uppercase;
+  font-family: 'Korinna';
   font-size: 14px;
   border-radius: 50px;
   border: 1.5px solid #1c2b19;
@@ -767,6 +768,7 @@ display: none;
   display: block;
   transition: 0.2s;
 }
+
 
 .kontaktformular input[type='submit']:hover {
   background-color: #1c2b19;
@@ -783,11 +785,12 @@ display: none;
 }
 
 #footerform input[type='submit'] {
-  padding: 10px 40px;
+  padding: 12px 30px 5px 30px;
   text-transform: uppercase;
+  font-family: 'Korinna';
   font-size: 14px;
   border-radius: 50px;
-  border: 1px solid #ede7cb;
+  border: 1.5px solid #ede7cb;
   color: #ede7cb;
   background-color: transparent;
   width: auto;
