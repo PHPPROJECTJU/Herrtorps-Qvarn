@@ -10,14 +10,6 @@
 
 <div class='contentmargins'>
 
-<div class="konferens">
-  <div class="konferensinfo">
-      <h1><?php the_field("konferensrubrik") ?></h1>
-      <p><?php the_field("konferensbeskrivning") ?></p>
-  </div>
-
-<div class="line1_green"></div>
-
 <div class="konferensdagpris">
   <div class="konferensdag">
       <h3><?php the_field("endagskonferens") ?></h3>
