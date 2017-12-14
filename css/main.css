@@ -129,10 +129,12 @@ header{
   position: relative;
   height: 60px;
 }
+
 header nav {
     height: inherit;
     background-color: #1c2b19;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
     position: fixed;
     top: 0px;
     left: 0px;
@@ -145,7 +147,8 @@ header nav {
   width: 100%;
   height: inherit;
   padding: 28px 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .menuleft{
@@ -154,7 +157,8 @@ header nav {
   list-style-type: none;
   background-color: #282828;
   margin-top: 32px;
-  box-shadow: 0px 30px 30px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 30px 30px rgba(0,0,0,0.5);
+          box-shadow: 0px 30px 30px rgba(0,0,0,0.5);
 }
 
 .menuleft li{
@@ -166,11 +170,10 @@ header nav {
   display: none;
 }
 
-
-
 .menuleft li li {
     margin-left: 25px;
 }
+
 .menu li a{
   text-decoration: none;
   color: white;
@@ -185,6 +188,7 @@ header nav {
 .rightmenu {
   float: none;
 }
+
 .logofull {
   width: 100px;
   height: 50px;
@@ -207,7 +211,6 @@ header nav {
   overflow: hidden;
 }
 
-
 .extras {
   overflow: hidden;
   position: absolute;
@@ -222,9 +225,11 @@ header nav {
   top: 4px;
   right: 15px;
 }
+
 #hamburger:hover {
 cursor: pointer;
 }
+
 /*---https://stackoverflow.com/questions/15603950/wordpress-highlight-the-parent-menu-item-when-child-menu-item-page-is-selected 1 dec 2017---*/
 li.current_page_item  a, li.current_page_ancestor  a{
   color: #FCDD7A;
@@ -237,9 +242,11 @@ li.current_page_item  a, li.current_page_ancestor  a{
 .menu li.lang-item-en a:before {
   content: url('../img/en_GB.png') " ";
 }
+
 .menu li.lang-item-en a img{
   display: none;
 }
+
 .menu li.lang-item-sv a img{
   display: none;
 }
@@ -266,7 +273,8 @@ position: absolute;
 right: 75px;
 top: 50px;
 padding: 15px;
-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+-webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 display: none;
 }
 
@@ -306,7 +314,8 @@ display: none;
   background-color: #1c2b19;
   color: #ccc0b9;
   padding: 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-image: url(../img/1x/ornament-corner-7.png), url(../img/1x/ornament-corner-8.png);
   background-repeat: no-repeat, no-repeat;
   background-size: 16%;
@@ -318,7 +327,8 @@ display: none;
   background-color: #D0C9B3;
   color: #1c2b19;
   padding: 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-image: url(../img/1x/ornament-corner-green-7.png), url(../img/1x/ornament-corner-green-8.png);
   background-repeat: no-repeat, no-repeat;
   background-size: 16%;
@@ -344,6 +354,7 @@ display: none;
   font-weight: 300;
   margin-bottom: 20px;
 }
+
 .leftbox2 p {
   font-weight: 300;
   margin-bottom: 20px;
@@ -366,7 +377,8 @@ display: none;
 
 .omgivningbild {
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .omgivningtext{
@@ -429,7 +441,8 @@ display: none;
 .konferenspris {
   padding: 20px;
   background-color: #fff;
-  box-shadow: 1px 1px 5px rgba(188,189,170,1);
+  -webkit-box-shadow: 1px 1px 5px rgba(188,189,170,1);
+          box-shadow: 1px 1px 5px rgba(188,189,170,1);
   border-radius: 5px;
   max-width: 98%;
   line-height: 1.8em;
@@ -470,7 +483,6 @@ display: none;
   margin: 30px auto;
 }
 
-
 .kontakttab {
   overflow: hidden;
   margin: auto;
@@ -493,14 +505,16 @@ display: none;
 .kontaktTablinks:hover {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 1px 1px 5px rgba(188,189,170,1);
+    -webkit-box-shadow: 1px 1px 5px rgba(188,189,170,1);
+            box-shadow: 1px 1px 5px rgba(188,189,170,1);
 }
 
 .kontaktTablinks.active {
     background-color: #fff;
     border-radius: 5px 5px 0 0;
     margin-bottom: 0;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 
 .onetable{
@@ -511,7 +525,8 @@ display: none;
   width: 100%;
   margin-bottom: 30px;
   background-color: #fff;
-  box-shadow: 1px 1px 5px rgba(188,189,170,1);
+  -webkit-box-shadow: 1px 1px 5px rgba(188,189,170,1);
+          box-shadow: 1px 1px 5px rgba(188,189,170,1);
   border-radius: 0 5px 5px 5px;
   padding-bottom: 20px;
   font-size: 14px;
@@ -532,10 +547,6 @@ display: none;
   padding: 10px 7px;
 }
 
-/*
-
-*/
-
 .kontaktformular {
   margin-bottom: 30px;
 }
@@ -548,7 +559,6 @@ display: none;
   width: 100%;
   overflow: hidden;
 }
-
 
 /*--page: aktiviteter--*/
 
@@ -580,6 +590,7 @@ display: none;
   height: calc(100% - 20px);
   width: calc(100% - 20px);
   opacity: 0;
+  -webkit-transition: .3s ease;
   transition: .3s ease;
   background-color: rgba(58,56,55,0.6);
 }
@@ -606,7 +617,6 @@ display: none;
   margin-top: 60px;
 }
 
-
 /* -- page: historia --*/
 
 .historia {
@@ -623,10 +633,6 @@ display: none;
 
 /*-- page: kök & café --*/
 
-.matmeny {
-  /*margin-bottom: 40px;*/
-}
-
 .matmeny>p {
   margin-bottom: 0px;
 }
@@ -640,7 +646,6 @@ display: none;
   width: 100%;
   margin-bottom: 10px;
 }
-
 
 .tab h1 {
   text-align: center;
@@ -675,7 +680,6 @@ display: none;
 
 /*--button standards-----------------*/
 
-
 .outlinebtn_beige, .outlinebtn_green, .outlinebtn_special {
   border-radius: 50px;
   background-color: transparent;
@@ -686,6 +690,7 @@ display: none;
   padding: 16px 25px 10px 25px;
   cursor: pointer;
   margin: 0 auto;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
   outline: none;
 }
@@ -722,7 +727,6 @@ display: none;
   background-color: #1c2b19;
 }
 
-
 .btncontainer {
   text-align: center;
 }
@@ -745,11 +749,13 @@ display: none;
 
 /*formuläret på Kontakt*/
 .kontaktformular input, .kontaktformular textarea {
-  box-shadow: 1px 1px 5px rgba(227,221,203,1);
+  -webkit-box-shadow: 1px 1px 5px rgba(227,221,203,1);
+          box-shadow: 1px 1px 5px rgba(227,221,203,1);
   margin-bottom: 10px;
   font-size: 16px;
   padding: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .kontaktformular input[type='submit'] {
@@ -763,12 +769,13 @@ display: none;
   background-color: transparent;
   width: auto;
   cursor: pointer;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   margin: 0 auto;
   display: block;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-
 
 .kontaktformular input[type='submit']:hover {
   background-color: #1c2b19;
@@ -781,7 +788,8 @@ display: none;
   margin-bottom: 10px;
   font-size: 16px;
   padding: 5px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #footerform input[type='submit'] {
@@ -795,9 +803,11 @@ display: none;
   background-color: transparent;
   width: auto;
   cursor: pointer;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   margin: 0 auto;
   display: block;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -810,7 +820,8 @@ display: none;
   border-radius: 5px;
   border: none;
   padding: 5px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
 }
 
@@ -825,13 +836,16 @@ footer {
 .footercontainer {
   overflow: hidden;
 }
+
 .footerobject {
   width: 100%;
   padding: 30px 30px 0px 30px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #ccc0b9;
   font-weight: 300;
 }
+
 .textwidget a {
   color: #ccc0b9;
 }
@@ -899,7 +913,8 @@ div.tab {
 
 .tabbild {
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: 10px;
 }
 
@@ -919,6 +934,7 @@ div.tab {
 .current-menu-parent .sub-menu {
   display:block;
 }
+
 li.current-menu-parent>a{
   color:#FCDD7A;
 }
@@ -935,13 +951,16 @@ li.current-menu-parent>a{
 .price-box {
   padding: 20px;
   background-color: #fff;
-  box-shadow: 1px 1px 5px rgba(188,189,170,1);
+  -webkit-box-shadow: 1px 1px 5px rgba(188,189,170,1);
+          box-shadow: 1px 1px 5px rgba(188,189,170,1);
   border-radius:5px;
   max-width: 98%;/*Why 98%? To make the box-shadow visible*/
   line-height: 1.8em;
   margin: 0 3px 40px 2px;
 }
+
 /*=====================================540PX========================================*/
+
 @media (min-width: 540px) {
   .akt_grid{
     width: 480px;
@@ -957,6 +976,7 @@ li.current-menu-parent>a{
 
 }
 /*=====================================640PX========================================*/
+
 @media (min-width: 640px) {
 
 /*Basics*/
@@ -1020,7 +1040,8 @@ li.current-menu-parent>a{
     margin: 0 auto;
     width: 100%;
     height: inherit;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 
   .menuleft li {
@@ -1132,7 +1153,8 @@ footer {
   float: left;
   width: 33.33%;
   padding: 30px 30px 10px 30px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #ccc0b9;
   font-weight: 300;
 }
@@ -1170,7 +1192,8 @@ div.tab {
   width: 40%;
   float: left;
   padding-left: 30px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .tab_img {
@@ -1205,6 +1228,7 @@ div.tab {
 }
 
 /*=====================================750PX========================================*/
+
 @media (min-width: 750px) {
 
 .boxwidth {
@@ -1214,6 +1238,7 @@ div.tab {
 .leftbox {
   background-size: 18%;
 }
+
 .leftbox2 {
   background-size: 18%;
 }
@@ -1228,6 +1253,7 @@ div.tab {
 }
 
 /*=====================================960PX========================================*/
+
 @media (min-width: 960px) {
 
 /*Basics*/
@@ -1246,20 +1272,19 @@ div.tab {
     height: 75px;
   }
 
-header{
-transition: all 0.1s;
--moz-transition: all 0.1s; /* Firefox 4 */
--webkit-transition: all 0.1s; /* Safari and Chrome */
--o-transition: all 0.1s; /* Opera */
-}
+  header{
+  transition: all 0.1s;
+  -moz-transition: all 0.1s; /* Firefox 4 */
+  -webkit-transition: all 0.1s; /* Safari and Chrome */
+  -o-transition: all 0.1s; /* Opera */
+  }
 
-.menu {
-  transition: all 1s;
-  -moz-transition: all 1s; /* Firefox 4 */
-  -webkit-transition: all 1s; /* Safari and Chrome */
-  -o-transition: all 1s; /* Opera */
-}
-
+  .menu {
+    transition: all 1s;
+    -moz-transition: all 1s; /* Firefox 4 */
+    -webkit-transition: all 1s; /* Safari and Chrome */
+    -o-transition: all 1s; /* Opera */
+  }
 
   .logofull {
     width: 220px;
@@ -1287,17 +1312,22 @@ transition: all 0.1s;
 
   .menuleft {
     -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     background-color: #1c2b19;
     margin: 0 auto;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     width: 100%;
   }
 
   .menu li:nth-child(3) {
     padding-right: 24%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 
   .menu li:nth-child(4) {
@@ -1311,12 +1341,6 @@ transition: all 0.1s;
 
   .menuleft li:hover{
     background-color: #1c2b19;
-  }
-
-  .menu li{
-    /*position:relative;
-    padding: 0 1.5% 15px 1.5%;
-    display: inline-block;*/
   }
 
   .menu li:nth-child(7){
@@ -1355,8 +1379,10 @@ transition: all 0.1s;
     display: none;
     position: absolute;
     left: 0;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   }
+
   .sub-menu li{
     background-color: #FAF8F1;
     color: #1c2b19;
@@ -1368,11 +1394,13 @@ transition: all 0.1s;
   .sub-menu li:hover {
     background-color: #e3ddcb;
   }
+
   .sub-menu li a{
     color: #1c2b19;
     padding: 10px;
     display: table-row-group;
   }
+
   .sub-menu li + li {
     clear:left;
   }
@@ -1380,10 +1408,12 @@ transition: all 0.1s;
   .headerimage img {
     margin-top: -100px;
   }
+
   .extras {
     top: 20px;
     right: 20px;
   }
+
   #hamburger {
     display: none;
   }
@@ -1476,7 +1506,8 @@ transition: all 0.1s;
   float: right;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 1px 1px 5px rgba(188,189,170,1);
+  -webkit-box-shadow: 1px 1px 5px rgba(188,189,170,1);
+          box-shadow: 1px 1px 5px rgba(188,189,170,1);
   border-radius: 5px;
   max-width: 98%;
   line-height: 1.8em;
@@ -1541,7 +1572,8 @@ hr {
   float: left;
   width: 50%;
   padding-right: 30px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .vagbeskrivningleft {
@@ -1549,7 +1581,8 @@ hr {
   width: 40%;
   float: left;
   padding-right: 30px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .huge_it_google_map_container {
@@ -1619,12 +1652,14 @@ hr {
   float: left;
   width: 40%;
   padding-left: 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 }
 
 /*=====================================1200PX========================================*/
+
 @media (min-width: 1200px) {
 
 /*menu*/
