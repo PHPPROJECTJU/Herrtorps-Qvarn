@@ -1,17 +1,63 @@
 <?php
+// function getTider() {
+//
+// $typer = get_terms('oppettidstyp');
+//
+// foreach($typer as $typ) {
+//   wp_reset_query();
+//   $args = array(
+//     'oppettider' => 'custom_post_type',
+//     'tax_query' => array(
+//       array(
+//           'taxonomy' => 'oppettidstyp',
+//           'field' => 'slug',
+//           'terms' => $typ->slug,
+//           'posts_per_page' => 1
+//       ),
+//     ),
+//   );
+//
+//   $oppettidstyp = $category->name;
+//
+//   $query = new WP_Query($args);
+//
+//   if( $query->have_posts() ) {
+//      while ( $query->have_posts() ) {
+//        $query->the_post();
+//
+//         echo $oppettidstyp;
+//
+//         }
+//       }
+//
+//   }
+// }
+//
+//
+// getTider();
+
+
+
 
 function dropDown(){
   $args = array(
     'post_type' => 'oppettider',
-    'posts_per_page' => 1
+    'posts_per_page' => -1
   );
 
   $query = new WP_Query( $args );
 
+  $matches = 0;
 
   if( $query->have_posts() ) {
      while ( $query->have_posts() ) {
        $query->the_post();
+
+       $terms = get_terms(array('taxonomy' => 'oppettidstyp', 'hide_empty' => false));
+
+
+/*Namn på en tid*/
+      $titel = get_field('namn');
 
 /*från och till på en säsong/period, datum (ex: 5/12-19/12)*/
        $fran = get_field('fran');
@@ -48,28 +94,50 @@ function dropDown(){
        $tilldatum = substr($till, 0, strpos($till, '/'));
 
 
+
          if (($curmonth >= $franmanad) && ($curmonth <= $tillmanad) && ($curday >= $frandatum) && ($curday <= $tilldatum)) {
 
-               echo "Öppettider <br/>" . $frandatum . "/" . $franmanad;
-               echo "-" . $tilldatum . "/" . $tillmanad . "<br/>";
-               echo "<br/>";
-               echo $frandag . "-" . $tilldag . " kl " . $oppettid;
+               echo "<h3>".$titel."</h3>";
+               echo "<p>";
+               echo "Öppet ";
+               if ($frandag && $tilldag) {
+                 echo $frandag . "-" . $tilldag;
+               }
+               echo " kl " . $oppettid;
                echo "-" . $stangningstid . "<br/>";
 
                if ($laggtill){
                  echo $frandag2 . "-" . $tilldag2 . " kl " . $oppettid2;
                  echo "-" . $stangningstid2 . "<br/>";
                }
+               echo "</p>";
+               echo "<br/>";
 
-           } else {
-             echo "Vi har stängt just nu.";
-             echo "<br/>";
-             echo "<a href='/kontakt'>Se alla öppettider</a>";
+               $matches++;
            }
+           elseif ($fran == $curdate) {
+
+             echo "<h4>".$titel."</h4>" . "<p>" . $curdate;
+             echo "<br/>";
+             echo "Öppet kl " . $oppettid . "-" .$stangningstid;
+             echo "<br/>";
+             echo "<br/>";
+             echo "</p>";
+
+             $matches++;
+           }
+
      }
    }
+
+if ($matches == 0) {
+  echo "<p>Vi har stängt just nu.</p>";
+  echo "<br/>";
+}
+  echo "<a href='/kontakt'>Se alla öppettider</a>";
+
 };
 
-dropDown();
 
+dropDown();
 ?>
