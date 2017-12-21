@@ -99,15 +99,39 @@ function dropDown(){
 
                echo "<h3>".$titel."</h3>";
                echo "<p>";
+
+          if (get_locale() == 'sv_SE') {
                echo "Öppet ";
+          }//end of swe language check
+          if (get_locale() == 'en_GB') {
+              echo "Open ";
+          }//end of eng language check
+
                if ($frandag && $tilldag) {
                  echo $frandag . "-" . $tilldag;
                }
-               echo " kl " . $oppettid;
+
+                   if (get_locale() == 'sv_SE'){
+                     echo " kl ";
+                   }//end of swe language check
+                   if (get_locale() == 'en_GB') {
+                       echo ", ";
+                   }//end of eng language check
+
+               echo $oppettid;
                echo "-" . $stangningstid . "<br/>";
 
                if ($laggtill){
-                 echo $frandag2 . "-" . $tilldag2 . " kl " . $oppettid2;
+                 echo $frandag2 . "-" . $tilldag2;
+
+                  if (get_locale() == 'sv_SE'){
+                    echo " kl ";
+                  }//end of swe language check
+                  if (get_locale() == 'en_GB') {
+                      echo ", ";
+                  }//end of eng language check
+
+                 echo $oppettid2;
                  echo "-" . $stangningstid2 . "<br/>";
                }
                echo "</p>";
@@ -119,7 +143,15 @@ function dropDown(){
 
              echo "<h4>".$titel."</h4>" . "<p>" . $curdate;
              echo "<br/>";
-             echo "Öppet kl " . $oppettid . "-" .$stangningstid;
+
+                 if (get_locale() == 'sv_SE') {
+                 echo "Öppet kl ";
+                  }//end of swe language check
+                  if (get_locale() == 'en_GB') {
+                  echo "Open ";
+                   }//end of eng language check
+
+             echo $oppettid . "-" .$stangningstid;
              echo "<br/>";
              echo "<br/>";
              echo "</p>";
@@ -130,11 +162,26 @@ function dropDown(){
      }
    }
 
+
 if ($matches == 0) {
-  echo "<p>Vi har stängt just nu.</p>";
+  if (get_locale() == 'sv_SE') {
+    echo "<p>Vi har stängt just nu.</p>";
+  }//end of swe language check
+  if (get_locale() == 'en_GB') {
+  echo "<p>We are currently closed</p>";
+   }//end of eng language check
+
   echo "<br/>";
 }
-  echo "<a href='/kontakt'>Se alla öppettider</a>";
+
+  if (get_locale() == 'sv_SE') {
+    echo "<a href='/kontakt'>Se alla öppettider</a>";
+  }//end of swe language check
+  if (get_locale() == 'en_GB') {
+  echo "<a href='/en/contact-english/'>All opening hours</a>";
+   }//end of eng language check
+
+
 
 };
 
