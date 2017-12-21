@@ -168,6 +168,14 @@ header nav {
   padding: 0px;
 }
 
+.menu li:nth-child(7){
+  position: absolute;
+  top: -3px;
+  right: 100px;
+  float: left;
+  display: block;
+}
+
 .menuleft .sub-menu{
   list-style-type: none;
   display: none;
