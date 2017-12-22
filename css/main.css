@@ -501,27 +501,11 @@ display: none;
     font-size: 20px;
     font-family: 'Korinna';
     background-color: inherit;
-    float: left;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 20px 7px;
-    margin-right: 10px;
-    font-family: 'Korinna';
     width: 100%;
-}
-
-.kontaktTablinks:hover{
-    border-radius: 5px;
-    -webkit-box-shadow: 1px 1px 5px rgba(188,189,170,1);
-            box-shadow: 1px 1px 5px rgba(188,189,170,1);
-}
-
-.kontaktTablinks.active {
-    border-radius: 5px 5px 0 0;
-    margin-bottom: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
 }
 
 .onetable{
@@ -529,7 +513,10 @@ display: none;
   margin-bottom: 10px;
   border-radius: 5px;
   background-color: #fff;
+  -webkit-box-shadow: 1px 1px 5px rgba(188,189,170,1);
+          box-shadow: 1px 1px 5px rgba(188,189,170,1);
 }
+
 
 #oppet_disclaim {
   text-align: center;
