@@ -84,7 +84,7 @@ input:focus, textarea:focus {
 
 .contentmargins{
   width: 85%;
-  margin: 60px auto 100px auto;
+  margin: 40px auto 60px auto;
   overflow: hidden;
 }
 
@@ -489,7 +489,7 @@ display: none;
 
 .oppetmargins {
   width: 90%;
-  margin: 30px auto;
+  margin: 30px auto 60px auto;
 }
 
 .kontakttab {
@@ -505,21 +505,19 @@ display: none;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 20px 7px;
     margin-right: 10px;
     font-family: 'Korinna';
+    width: 100%;
 }
 
-.kontaktTablinks:hover {
-    background-color: #fff;
+.kontaktTablinks:hover{
     border-radius: 5px;
     -webkit-box-shadow: 1px 1px 5px rgba(188,189,170,1);
             box-shadow: 1px 1px 5px rgba(188,189,170,1);
 }
 
 .kontaktTablinks.active {
-    background-color: #fff;
     border-radius: 5px 5px 0 0;
     margin-bottom: 0;
     -webkit-box-shadow: none;
@@ -528,15 +526,27 @@ display: none;
 
 .onetable{
   margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+#oppet_disclaim {
+  text-align: center;
+  color: #81701D;
+  font-size: 13px;
+  width: 100%;
+  padding: 0 7px 7px 7px;
+  font-style: italic;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .oppet_tabell {
   width: 100%;
   margin-bottom: 30px;
-  background-color: #fff;
-  -webkit-box-shadow: 1px 1px 5px rgba(188,189,170,1);
-          box-shadow: 1px 1px 5px rgba(188,189,170,1);
-  border-radius: 0 5px 5px 5px;
+  /* -webkit-box-shadow: 1px 1px 5px rgba(188,189,170,1);
+          box-shadow: 1px 1px 5px rgba(188,189,170,1); */
   padding-bottom: 20px;
   font-size: 14px;
 }
@@ -556,9 +566,6 @@ display: none;
   padding: 10px 7px;
 }
 
-.kontaktformular {
-  margin-bottom: 30px;
-}
 
 .kontaktuppgifter {
   margin-bottom: 30px;
@@ -995,6 +1002,7 @@ li.current-menu-parent>a{
 
     .contentmargins {
       max-width: 640px;
+      margin: 40px auto 80px auto;
     }
 
     p {
@@ -1132,9 +1140,18 @@ li.current-menu-parent>a{
   max-width: 640px;
 }
 
+
+.kontaktTablinks {
+  padding: 20px;
+}
+
 .oppet_tabell {
   margin-bottom: 40px;
   font-size: 16px;
+}
+
+#oppet_disclaim {
+  padding: 0 20px 20px 20px;
 }
 
 .oppet_tabell th {
@@ -1272,6 +1289,7 @@ div.tab {
 
   .contentmargins{
     max-width: 960px;
+    margin: 60px auto 100px auto;
   }
 
 
@@ -1555,11 +1573,13 @@ hr {
 }
 
 .oppet_tabell {
-  margin-bottom: 20px;
+
 }
 
 .onetable{
   width: 75%;
+  background-color: #fff;
+  margin-bottom: 20px;
 }
 
 .oppet_tabell th {
@@ -1580,7 +1600,6 @@ hr {
 .kontaktformular {
   float: left;
   width: 50%;
-  margin-bottom: 10px;
 }
 
 .kontaktuppgifter {

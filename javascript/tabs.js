@@ -46,7 +46,10 @@ function hogtidTab(evt, hogtidTyp) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(hogtidTyp).style.display = "block";
     evt.currentTarget.className += " active";
+
 }
+
+
 
 
 function oppetTab(evt, oppettid) {
@@ -69,4 +72,31 @@ function oppetTab(evt, oppettid) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(oppettid).style.display = "block";
     evt.currentTarget.className += " active";
+
+    var disclaimer = document.getElementById('oppet_disclaim');
+    var säsong = document.getElementById('Säsongsöppettider');
+    var season = document.getElementById('Seasons');
+
+
+    if (säsong) {
+      if (säsong.style.display == 'block')  {
+          disclaimer.style.display = 'block'
+      }
+
+      if (säsong.style.display == 'none') {
+          disclaimer.style.display = 'none'
+      }
+    }
+
+    if (season) {
+      if (season.style.display == 'block')  {
+          disclaimer.style.display = 'block'
+      }
+
+      if (season.style.display == 'none') {
+          disclaimer.style.display = 'none'
+      }
+    }
+
+
 }

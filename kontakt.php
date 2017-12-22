@@ -12,7 +12,7 @@
 
 <section class='kontaktyta'>
 
-  <h2 class='kontaktheading'>Kontakta oss</h2>
+  <h2 class='kontaktheading'><?php the_field('kontaktrubrik') ?></h2>
 
     <div class='kontaktuppgifter'>
 
@@ -20,25 +20,44 @@
        if( have_posts() ) {
          while ( have_posts() ) {
             the_post();
-            ?>
 
-            <h3>Adress</h3>
+            if (get_locale() == 'sv_SE') {
+              echo "<h3>Adress</h3>";
+            }//end of swe language check
+            if (get_locale() == 'en_GB') {
+              echo "<h3>Address</h3>";
+             }//end of eng language check
+             ?>
+
               <p>
                 <?php
                   echo the_field('adress');
                 ?>
               </p>
               <br/>
-            <h3>Telefon</h3>
+              <?php
+              if (get_locale() == 'sv_SE') {
+                echo "<h3>Telefon</h3>";
+              }//end of swe language check
+              if (get_locale() == 'en_GB') {
+                echo "<h3>Phone</h3>";
+               }//end of eng language check
+               ?>
               <p><?php
                 echo the_field('telefon');
               ?></p>
               <br/>
-            <h3>E-post</h3>
+              <?php
+              if (get_locale() == 'sv_SE') {
+                echo "<h3>E-post</h3>";
+              }//end of swe language check
+              if (get_locale() == 'en_GB') {
+                echo "<h3>E-mail</h3>";
+               }//end of eng language check
+               ?>
               <p><?php
                 echo the_field('epost');
               ?></p>
-              <p>Eller använd vårt kontaktformulär</p>
               <br/>
           </div>
 
@@ -70,10 +89,13 @@
 
 <div class='oppetmargins'>
 
-  <h2 class='kontaktheading'>Öppettider</h2>
+<h2 class='kontaktheading'><?php the_field('oppettiderrubrik') ?></h2>
 
 <?php
 function getTider() {
+
+$disclaim = "<p style='display: none;' id='oppet_disclaim'>".get_field('tabelltext'). "</p>";
+
 
 $categories = get_terms('oppettidstyp');
 
@@ -116,24 +138,65 @@ foreach($categories as $category) {
  <?php
       if( $query->have_posts() ) {
 
+        if (($category->name == 'Säsongsöppettider') || ($category->name == 'Seasons')) {
+
+            echo $disclaim;
+
+        }
+
         ?><table id='<?php echo $oppettid ?>' class='oppet_tabell'><?php
+
+
         echo "<tr>";
-        if ($category->name == 'Pubkvällar') {
-          echo "<th>Titel</th>";
-        } elseif($category->name == 'Säsongsöppettider') {
-          echo "<th>Säsong</th>";
+
+        if (($category->name == 'Säsongsöppettider') || ($category->name == 'Seasons')) {
+
+          if (get_locale() == 'sv_SE') {
+            echo "<th>Säsong</th>";
+          }//end of swe language check
+          if (get_locale() == 'en_GB') {
+            echo "<th>Season</th>";
+           }//end of eng language check
+
         } else {
-          echo "<th>Tillfälle</th>";
+          if (get_locale() == 'sv_SE') {
+            echo "<th>Titel</th>";
+          }//end of swe language check
+          if (get_locale() == 'en_GB') {
+            echo "<th>Title</th>";
+           }//end of eng language check
         }
 
-        if ($category->name == 'Säsongsöppettider') {
-          echo "<th>Period</th>";
+
+
+        if (($category->name == 'Säsongsöppettider') || ($category->name == 'Seasons')) {
+
+          if (get_locale() == 'sv_SE') {
+            echo "<th>Period</th>";
+          }//end of swe language check
+          if (get_locale() == 'en_GB') {
+            echo "<th>Duration</th>";
+           }//end of eng language check
+
         } else {
-          echo "<th>Datum</th>";
+
+          if (get_locale() == 'sv_SE') {
+            echo "<th>Datum</th>";
+          }//end of swe language check
+          if (get_locale() == 'en_GB') {
+            echo "<th>Date</th>";
+           }//end of eng language check
         }
 
-        echo "<th>Öppet</th>";
+        if (get_locale() == 'sv_SE') {
+          echo "<th>Öppet</th>";
+        }//end of swe language check
+        if (get_locale() == 'en_GB') {
+          echo "<th>Open</th>";
+         }//end of eng language check
+
         echo "</tr>";
+
 
         while ( $query->have_posts() ) {
         $query->the_post();
@@ -180,6 +243,7 @@ foreach($categories as $category) {
             echo the_field('stangningstid2');
 
         ?></td>
+
         </tr>
         <?php
         }
