@@ -1,5 +1,11 @@
 <?php get_header(); ?>
 
+<script>
+
+document.getElementById('menu-item-512').className += ' current-menu-parent';
+
+</script>
+
 <?php
 
 
