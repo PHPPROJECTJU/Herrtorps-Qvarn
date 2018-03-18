@@ -81,9 +81,11 @@ if( $query->have_posts() ) {
 <br>
 <br>
 <br>
+<div class="line2_green"></div>
+
 
   <div class='btncontainer'>
-    <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_green'>
+    <a target="_blank" href="<?php the_field('lank');?>"><button style='padding: 22px 42px;' class='outlinebtn_green'>
 
       <?php
       if (get_locale() == 'sv_SE') {

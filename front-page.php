@@ -30,9 +30,9 @@
                       <section class='boxsection'>
                         <div class='leftbox'>
 
-                            <!-- <div class="corner1_beige"></div> -->
-
                             <div class='boxwidth'> <!--constrains box content width-->
+                              <div class="box_line_beige"></div>
+
                               <h2><?php the_field('nyhetsrubrik'); ?></h2>
                               <p><?php the_field('nyhetstext'); ?></p>
 
@@ -41,7 +41,10 @@
                                     <a href="<?php the_field('nyhetslank');?>"><button class='outlinebtn_beige'><?php the_field('nyhetslank-etikett-1');?></button></a>
                                   </div>
                                 </div>
+
+                                <div class="box_line_beige_flip"></div>
                             </div>
+
                           </div>
 
                           <?php
@@ -71,7 +74,7 @@
                               <h1 class='topheading'><?php the_field('rubrik-2'); ?></h1>
                               <p class='introtext'><?php the_field('beskrivning-2'); ?></p>
 
-                              <div class="line1_green"></div>
+                              <div class="line2_green"></div>
 
                               <div class='btncontainer'>
                                   <a href="<?php the_field('go-to-lank-2');?>"><button class='outlinebtn_green'><?php the_field('lank-etikett-2');?></button></a>
@@ -104,9 +107,10 @@
                         </div>
                         <div class='leftbox2'>
 
-                            <!-- <div class="corner1_beige"></div> -->
-
                             <div class='boxwidth'> <!--constrains box content width-->
+
+                              <div class="box_line_green"></div>
+
                               <h2><?php the_field('nyhetsrubrik-2'); ?></h2>
                               <p><?php the_field('nyhetstext-2'); ?></p>
 
@@ -115,7 +119,11 @@
                                     <a href="<?php the_field('nyhetslank-2');?>"><button class='outlinebtn_special'><?php the_field('nyhetslank-etikett-2');?></button></a>
                                   </div>
                                 </div>
+
+                                <div class="box_line_green_flip"></div>
+
                             </div>
+
                           </div>
                       </section>
 
@@ -126,7 +134,7 @@
                               <h1 class='topheading'><?php the_field('rubrik-3'); ?></h1>
                               <p class='introtext'><?php the_field('beskrivning-3'); ?></p>
 
-                              <div class="line1_green"></div>
+                              <div class="line2_green"></div>
 
                               <div class='btncontainer'>
                                   <a href="<?php the_field('go-to-lank-3');?>"><button class='outlinebtn_green'><?php the_field('lank-etikett-3');?></button></a>

@@ -3,7 +3,7 @@
 #e3ddcb
 .
 "mörkbeige" på grön backgrund
-#afa5a0
+#a2957f
 */
 
 @font-face {
@@ -38,7 +38,7 @@
 
 p {
   margin: 0;
-  line-height: 1.8em;
+  line-height: 1.6em;
   font-size: 14px;
 }
 
@@ -116,15 +116,24 @@ input:focus, textarea:focus {
 
 .line1_green {
   width: 100%;
-  height: 30px;
-  background-image: url(../img/1x/ornament-line-1.png);
+  height: 45px;
+  background-image: url(../img/1x/new_1_gr.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0 auto 30px auto;
+}
+
+.line2_green {
+  width: 100%;
+  height: 45px;
+  background-image: url(../img/1x/new_2_gr.png);
   background-repeat: no-repeat;
   background-size: 100%;
   margin: 0 auto 30px auto;
 }
 
 .line_beige {
-  width: 100%;
+  width: 50%;
   height: 30px;
   background-image: url(../img/1x/line_beige.png);
   background-repeat: no-repeat;
@@ -133,14 +142,31 @@ input:focus, textarea:focus {
   margin: 50px auto 0 auto;
 }
 
-.divider1_green {
-  width: 60%;
-  height: 30px;
-  background-image: url(../img/1x/ornament-divider-1.png);
+.box_line_green, .box_line_beige, .box_line_green_flip, .box_line_beige_flip {
+  width: 50%;
+  max-width: 130px;
+  height: 35px;
   background-repeat: no-repeat;
-  background-size: 80%;
-  margin: 10px 0;
+  background-size: 100%;
+  margin: 0 auto;
 }
+
+.box_line_green, .box_line_green_flip {
+    background-image: url(../img/1x/new_4_gr.png);
+}
+
+.box_line_beige, .box_line_beige_flip {
+  background-image: url(../img/1x/new_4_be.png);
+}
+
+
+.box_line_green_flip, .box_line_beige_flip {
+  transform: scaleY(-1);
+}
+
+
+
+
 
 /*--header---------------*/
 
@@ -245,7 +271,7 @@ header nav {
 
 #hamburger {
   font-size: 36px;
-  color: #FAF8F1;
+  color: #ddd8c1;
   position: absolute;
   top: 4px;
   right: 15px;
@@ -338,53 +364,52 @@ display: none;
 /*--news boxes--*/
 
 .leftbox {
+  display: flex;
+  align-items: center;
   width: 100%;
   background-color: #1c2b19;
-  color: #afa5a0;
-  padding: 40px;
+  color: #bcb595;
+  padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-image: url(../img/1x/ornament-corner-7.png), url(../img/1x/ornament-corner-8.png);
+  /*background-image: url(../img/1x/ornament-corner-7.png), url(../img/1x/ornament-corner-8.png);
   background-repeat: no-repeat, no-repeat;
   background-size: 16%;
-  background-position: left 25px bottom 25px, right 25px top 25px;
+  background-position: left 25px bottom 25px, right 25px top 25px;*/
 }
 
 .leftbox2 {
+  display: flex;
+  align-items: center;
   width: 100%;
   background-color: #D0C9B3;
   color: #1c2b19;
-  padding: 40px;
+  padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-image: url(../img/1x/ornament-corner-green-7.png), url(../img/1x/ornament-corner-green-8.png);
+  /*background-image: url(../img/1x/ornament-corner-green-7.png), url(../img/1x/ornament-corner-green-8.png);
   background-repeat: no-repeat, no-repeat;
   background-size: 16%;
-  background-position: left 25px bottom 25px, right 25px top 25px;
+  background-position: left 25px bottom 25px, right 25px top 25px;*/
 }
 
 .boxwidth {
-  margin: 20px auto;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
   width: 85%;
 }
 
-.leftbox h2 {
+.leftbox h2, .leftbox2 h2 {
+  text-align: center;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.3px;
+  margin-bottom: 10px;
 }
 
-.leftbox2 h2 {
-  font-style: normal;
-  font-weight: 400;
-}
-
-.leftbox p {
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-
-.leftbox2 p {
+.leftbox p, .leftbox2 p {
+  font-size: 14px;
   font-weight: 300;
   margin-bottom: 20px;
 }
@@ -474,7 +499,7 @@ display: none;
           box-shadow: 1px 1px 5px rgba(188,189,170,1);
   border-radius: 5px;
   max-width: 98%;
-  line-height: 1.8em;
+  line-height: 1.6em;
   margin: 3px;
 }
 
@@ -723,8 +748,8 @@ max-width: 300px;
 }
 
 .outlinebtn_beige {
-  border: 1.5px solid #afa5a0;
-  color: #afa5a0;
+  border: 1.5px solid #bcb595;
+  color: #bcb595;
 }
 
 .outlinebtn_green {
@@ -738,9 +763,9 @@ max-width: 300px;
 }
 
 .outlinebtn_beige:hover {
-  border: 1.5px solid #afa5a0;
+  border: 1.5px solid #bcb595;
   color: #1c2b19;
-  background-color: #afa5a0;
+  background-color: #bcb595;
 }
 
 .outlinebtn_green:hover {
@@ -981,7 +1006,7 @@ li.current-menu-parent>a{
           box-shadow: 1px 1px 5px rgba(188,189,170,1);
   border-radius:5px;
   max-width: 98%;/*Why 98%? To make the box-shadow visible*/
-  line-height: 1.8em;
+  line-height: 1.6em;
   margin: 0 3px 40px 2px;
 }
 
@@ -1024,9 +1049,14 @@ li.current-menu-parent>a{
 
 /*--ornaments-------------*/
 
-.line1_green {
+.line1_green  {
   width: 465px;
-  height: 25px;
+  background-size: 100%;
+  margin: 0 auto 40px auto;
+}
+
+.line2_green {
+  width: 400px;
   background-size: 100%;
   margin: 0 auto 40px auto;
 }
@@ -1086,7 +1116,6 @@ li.current-menu-parent>a{
   height: 425px;
   float: left;
   width: 50%;
-  padding: 30px;
   background-size: 18%;
   background-position: left 15px bottom 15px, right 15px top 15px;
 }
@@ -1099,7 +1128,6 @@ li.current-menu-parent>a{
   height: 425px;
   float: right;
   width: 50%;
-  padding: 30px;
   background-size: 18%;
   background-position: left 15px bottom 15px, right 15px top 15px;
 }
@@ -1111,7 +1139,6 @@ li.current-menu-parent>a{
 
 .boxwidth {
   width: 90%;
-  margin: 25px auto;
 }
 
 .rightbox, .rightbox2 {
@@ -1272,7 +1299,6 @@ div.tab {
 @media (min-width: 750px) {
 
 .boxwidth {
-  margin: 50px auto;
 }
 
 .leftbox {
@@ -1485,29 +1511,26 @@ div.tab {
 }
 
 .leftbox {
-  padding: 40px;
   height: 375px;
   background-position: left 25px bottom 25px, right 25px top 25px;
 }
 
 .leftbox p {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   letter-spacing: 0.2px;
 }
 
 .leftbox2 {
-  padding: 40px;
   height: 375px;
   background-position: left 25px bottom 25px, right 25px top 25px;
 }
 
 .leftbox2 p {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .boxwidth {
   width: 75%;
-  margin: 20px auto;
 }
 
 .rightbox, .rightbox2 {
@@ -1554,7 +1577,7 @@ div.tab {
           box-shadow: 1px 1px 5px rgba(188,189,170,1);
   border-radius: 5px;
   max-width: 98%;
-  line-height: 1.8em;
+  line-height: 1.6em;
 }
 
 .konferenspris p {
