@@ -11,17 +11,28 @@
 <!-- MENY (för mat) -->
 <div class="matmeny">
 <section class='boxsection'>
-  <div class='leftbox' style="background-color: #3e0909;">
-        <div class='boxwidth'>
+
+
+  <div class='leftbox2'>
+
+      <div class='boxwidth'> <!--constrains box content width-->
+
+        <div class="box_line_green"></div>
 
             <h2 class='page_rubrik'><?php the_field('meny'); ?></h2>
-            <p>• <?php the_field('matratt1'); ?></p>
-            <p>• <?php the_field('matratt2'); ?></p>
-            <p>• <?php the_field('matratt3'); ?></p>
-            <p>• <?php the_field('matratt4'); ?></p>
-            <p>• <?php the_field('matratt5'); ?></p>
-        </div>
-  </div>
+            <p class='matratter'>
+            <?php the_field('matratt1'); ?><br><br>
+            <?php the_field('matratt2'); ?><br><br>
+            <?php the_field('matratt3'); ?><br><br>
+            <?php the_field('matratt4'); ?><br><br>
+            <?php the_field('matratt5'); ?>
+            </p>
+
+          <div class="box_line_green_flip"></div>
+
+      </div>
+
+    </div>
 
       <?php
       $large = 'large';
@@ -110,7 +121,13 @@
             <?php } ?>
         <?php } ?>
 
-</div> <!-- end of contentmargins -->
+<br>
+<br>
+<br>
+
+<div class="line2_green"></div>
+
+<br>
 
 <?php
 if( have_posts() ) {
@@ -120,7 +137,6 @@ if( have_posts() ) {
 
 <!-- PUBKVÄLL -->
 <div class="pubkvall">
-      <div class='contentwidth'>
 
         <div class="pubgalleri">
           <?php the_field('pubgalleri');?>
@@ -132,12 +148,13 @@ if( have_posts() ) {
           <p><b><?php the_field('pubtid'); ?></b></p>
         </div>
 
-      </div>
 </div>
 <?php
 }
 }
  ?>
+
+</div> <!-- end of contentmargins -->
 
  <?php
  $src3 = get_template_directory_uri() . "/javascript/tabs.js";

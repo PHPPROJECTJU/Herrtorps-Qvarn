@@ -34,7 +34,14 @@ if( $query->have_posts() ) {
                 the_post_thumbnail( 'grid_thumbnail' );
                 ?>
                     <div class='overlay'>
-                      <h3><?php the_field('aktivitet'); ?></h3>
+
+                      <div class='thumb_text'>
+                          <div class="box_line_white"></div>
+                          <h3><?php the_field('aktivitet'); ?></h3>
+                          <div class="box_line_white_flip"></div>
+                      </div>
+
+
                     </div>
               </div>
           </a>

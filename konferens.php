@@ -26,6 +26,9 @@
   </div>
 </div>
 
+<br>
+<div class="line2_green"></div>
+
   <div class="konferensformular">
     <h1><?php the_field("intresserad") ?></h1>
 

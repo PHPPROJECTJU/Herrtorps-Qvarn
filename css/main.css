@@ -142,7 +142,9 @@ input:focus, textarea:focus {
   margin: 50px auto 0 auto;
 }
 
-.box_line_green, .box_line_beige, .box_line_green_flip, .box_line_beige_flip {
+.box_line_green, .box_line_beige,
+.box_line_green_flip, .box_line_beige_flip,
+.box_line_white, .box_line_white_flip {
   width: 50%;
   max-width: 130px;
   height: 35px;
@@ -159,13 +161,16 @@ input:focus, textarea:focus {
   background-image: url(../img/1x/new_4_be.png);
 }
 
-
-.box_line_green_flip, .box_line_beige_flip {
-  transform: scaleY(-1);
+.box_line_white, .box_line_white_flip {
+  background-image: url(../img/1x/new_4_w.png);
 }
 
-
-
+.box_line_green_flip,
+.box_line_beige_flip,
+.box_line_white_flip {
+  transform: scaleY(-1);
+}
+}
 
 
 /*--header---------------*/
@@ -651,18 +656,27 @@ max-width: 300px;
 
 .akt_grid_item .overlay {
   opacity: 1;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb_text {
+    margin: 0 auto;
+    display: inline;
+    position: absolute;
+    width: inherit;
 }
 
 .akt_grid_item h3 {
   text-align: center;
   width: 100%;
-  padding-top: calc(50% - 11px);
   color: #fff;
   font-family: 'Korinna';
   font-style: normal;
   letter-spacing: 0.8px;
-  display: inline;
-  position: absolute;
+
 }
 
 /*--single: aktivitet---*/
@@ -685,12 +699,11 @@ max-width: 300px;
 
 /*-- page: kök & café --*/
 
-.matmeny>p {
-  margin-bottom: 0px;
+.matratter {
+  text-align: center;
 }
 
 .pubkvall {
-  margin-bottom: 60px;
   overflow: hidden;
 }
 
@@ -1197,7 +1210,6 @@ li.current-menu-parent>a{
 /*Kök café*/
 
 .pubkvall {
-  margin-bottom: 100px;
 }
 
 /*aktiviteter*/
@@ -1674,22 +1686,19 @@ hr {
 
 .akt_grid_item:hover .overlay {
   opacity: 1;
-}
-
-.akt_grid_item h3 {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .akt_grid_item:hover h3 {
   text-align: center;
   width: 100%;
-  padding-top: calc(50% - 11px);
   color: #fff;
   font-family: 'Korinna';
   font-style: normal;
   letter-spacing: 0.8px;
-  display: inline;
-  position: absolute;
+  display: block;
 }
 
 /*-- page:single.php --*/
