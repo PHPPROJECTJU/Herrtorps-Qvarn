@@ -15,21 +15,6 @@
       </div>
 
       <div class='footerobject'>
-        <p>
-          <?php
-          if (get_locale() == 'sv_SE') {
-            dynamic_sidebar('footer-3');
-          } else {
-            dynamic_sidebar('footer-4');
-          }
-          ?>
-        </p>
-        <a target ='_blank' href='https://www.facebook.com/HerrtorpsQvarn'><span id='fb_logo'></span></a>
-        <div class="line_beige"></div>
-      </div>
-
-
-      <div class='footerobject'>
         <div id='footerform'>
 
           <?php
@@ -40,6 +25,19 @@
           }
           ?>
        </div>
+      </div>
+
+      <div class='footerobject'>
+        <p>
+          <?php
+          if (get_locale() == 'sv_SE') {
+            dynamic_sidebar('footer-3');
+          } else {
+            dynamic_sidebar('footer-4');
+          }
+          ?>
+        </p>
+        <a target ='_blank' href='https://www.facebook.com/HerrtorpsQvarn'><span id='fb_logo'></span></a>
       </div>
 
   </div>

@@ -93,6 +93,25 @@ input:focus, textarea:focus {
   margin-bottom: 20px;
 }
 
+/*cookie notice*/
+
+.cookie-notice-container{
+  background-color: #1c2b19;
+}
+
+#cookie-notice .button.bootstrap {
+  background-color: transparent;
+  text-decoration: underline;
+  background-image: none;
+  box-shadow: none;
+  border: none;
+  font-size: 1em;
+}
+
+#cookie-notice .button.bootstrap:hover {
+  background-color: transparent;
+}
+
 /*--ornaments-------------*/
 
 .line1_green {
@@ -136,8 +155,8 @@ header{
 header nav {
     height: inherit;
     background-color: #1c2b19;
-    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.5);
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 30px rgba(90,69,59,0.5);
+            box-shadow: 0 0 30px rgba(90,69,59,0.5);
     position: fixed;
     top: 0px;
     left: 0px;
@@ -157,11 +176,12 @@ header nav {
 .menuleft{
   float:none;
   display: none;
+  height: 100vh;
   list-style-type: none;
   background-color: #222;
   margin-top: 32px;
-  -webkit-box-shadow: 0px 30px 30px rgba(0,0,0,0.5);
-          box-shadow: 0px 30px 30px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 30px 30px rgba(90,69,59,0.5);
+          box-shadow: 0px 30px 30px rgba(90,69,59,0.5);
 }
 
 .menuleft li{
@@ -278,8 +298,8 @@ position: absolute;
 right: 75px;
 top: 50px;
 padding: 15px;
--webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+-webkit-box-shadow: 2px 2px 10px rgba(90,69,59, 0.3);
+        box-shadow: 2px 2px 10px rgba(90,69,59, 0.3);
 display: none;
 }
 
@@ -567,16 +587,22 @@ display: none;
 
 .akt_grid {
   overflow: hidden;
-  width: 240px;
   margin: 0 auto;
+  max-width: 960px;
 }
 
 .akt_grid_item {
-  float: left;
-  width: 300px;
-  height: 300px;
+width: 100%;
+height: 320px;
+max-width: 300px;
   position: relative;
   padding: 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.akt_grid_item img {
+  width: 100%;
 }
 
 .akt_thumbnail {
@@ -590,7 +616,7 @@ display: none;
   position: absolute;
   top: 10px;
   left: 10px;
-  height: calc(100% - 20px);
+  height: 300px;
   width: calc(100% - 20px);
   opacity: 0;
   -webkit-transition: .3s ease;
@@ -628,9 +654,7 @@ display: none;
 }
 
 .historie_img {
-  height: 200px;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -690,7 +714,7 @@ display: none;
   font-size: 16px;
   line-height: 14px;
   text-transform: uppercase;
-  padding: 16px 25px 10px 25px;
+  padding: 16px 25px 14px 25px;
   cursor: pointer;
   margin: 0 auto;
   -webkit-transition: 0.2s;
@@ -762,7 +786,7 @@ display: none;
 }
 
 .kontaktformular input[type='submit'] {
-  padding: 12px 30px 5px 30px;
+  padding: 12px 30px 10px 30px;
   text-transform: uppercase;
   font-family: 'Korinna';
   font-size: 14px;
@@ -796,7 +820,7 @@ display: none;
 }
 
 #footerform input[type='submit'] {
-  padding: 12px 30px 5px 30px;
+  padding: 12px 30px 10px 30px;
   text-transform: uppercase;
   font-family: 'Korinna';
   font-size: 14px;
@@ -816,7 +840,7 @@ display: none;
 
 #footerform input[type='submit']:hover {
   background-color: #ede7cb;
-  color: #1c2b19;
+  color: #D0C9B3;
 }
 
 .wpcf7 input, .wpcf7 textarea {
@@ -831,8 +855,8 @@ display: none;
 /*--footer-----------------*/
 
 footer {
-  background-color: #1c2b19;
-  padding: 15px 10px;
+  background-color: #D0C9B3;
+  padding: 15px 10px 75px 10px;
   overflow: hidden;
 }
 
@@ -845,12 +869,12 @@ footer {
   padding: 30px 30px 0px 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #afa5a0;
+  color: #a2957f;
   font-weight: 300;
 }
 
 .textwidget a {
-  color: #afa5a0;
+  color: #a2957f;
 }
 
 #fb_logo {
@@ -965,16 +989,9 @@ li.current-menu-parent>a{
 
 @media (min-width: 540px) {
   .akt_grid{
-    width: 480px;
     margin: 0 auto;
   }
 
-  .historie_img {
-    height: 300px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin-bottom: 30px;
-  }
 
 }
 /*=====================================640PX========================================*/
@@ -1156,9 +1173,21 @@ li.current-menu-parent>a{
   margin-bottom: 100px;
 }
 
+/*aktiviteter*/
+
+
+.akt_grid_item {
+  float: left;
+  width: 50%;
+  height: auto;
+  position: relative;
+  padding: 10px;
+  margin: 0;
+}
+
 /*---footer-----*/
 footer {
-  padding: 15px 30px 0px 15px;
+  padding: 15px 30px 15px 15px;
 }
 
 .footerobject {
@@ -1167,7 +1196,6 @@ footer {
   padding: 30px 30px 10px 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #afa5a0;
   font-weight: 300;
 }
 
@@ -1255,12 +1283,6 @@ div.tab {
   background-size: 18%;
 }
 
-.historie_img {
-  height: 400px;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  margin-bottom: 30px;
-}
 
 }
 
@@ -1303,7 +1325,7 @@ div.tab {
     width: 220px;
     height: 123px;
     top: 10px;
-    left: calc(50% - 100px);
+    left: calc(50% - 106px);
   }
 
   .logoslim {
@@ -1315,8 +1337,9 @@ div.tab {
 
   .menu {
     padding: 28px 0;
-    max-width: 900px;
+    max-width: 960px;
     width: 78%;
+    padding-right: 1%;
   }
 
   .sub-menu {
@@ -1335,6 +1358,7 @@ div.tab {
     -webkit-box-shadow: none;
             box-shadow: none;
     width: 100%;
+    height: auto;
   }
 
   .menu li:nth-child(3) {
@@ -1397,8 +1421,8 @@ div.tab {
     display: none;
     position: absolute;
     left: 0;
-    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 2px 2px 10px rgba(90,69,59, 0.3);
+            box-shadow: 2px 2px 10px rgba(90,69,59, 0.3);
   }
 
   .sub-menu li{
@@ -1613,12 +1637,15 @@ hr {
 
 /*-- page:aktivitet --*/
 
+.akt_grid_item {
+  width: 33%;
+}
+
 .akt_grid_item .overlay {
   opacity: 0;
 }
 
 .akt_grid{
-  width: 720px;
   margin: 0 auto;
 }
 
@@ -1651,12 +1678,6 @@ hr {
   max-width: 30%;
 }
 
-.historie_img {
-  height: 450px;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  margin-bottom: 30px;
-}
 
 /* PUB */
 
@@ -1696,8 +1717,27 @@ hr {
 }
 
 .akt_grid{
-  width: 960px;
   margin: 0 auto;
 }
+
+}
+
+/*=====================================1500PX========================================*/
+
+@media (min-width: 1500px) {
+
+.menu {
+  max-width: 1100px;
+  width: 70%;
+
+}
+
+  .logofull {
+    width: 260px;
+    height: 160px;
+    top: 2px;
+    left: calc(50% - 130px);
+  }
+
 
 }

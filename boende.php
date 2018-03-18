@@ -83,7 +83,18 @@ if( $query->have_posts() ) {
 <br>
 
   <div class='btncontainer'>
-    <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_green'>Boka rum</button></a>
+    <a target="_blank" href="<?php the_field('lank');?>"><button class='outlinebtn_green'>
+
+      <?php
+      if (get_locale() == 'sv_SE') {
+        echo "Till bokning";
+      }//end of swe language check
+      if (get_locale() == 'en_GB') {
+        echo "Booking";
+       }//end of eng language check
+       ?>
+
+    </button></a>
   </div>
 
 </div>

@@ -33,17 +33,17 @@ if( $query->have_posts() ) {
         </div>
 
           <?php
-            $mediumlarge = 'medium_large';
+            $large = 'large';
             $bild = get_field('bild');
-            $mlbild = $bild['sizes'][ $mediumlarge ];
-            $width = $bild['sizes'][ $mediumlarge . '-width' ];
-            $height = $bild['sizes'][ $mediumlarge . '-height' ];
+            $largebild = $bild['sizes'][ $large ];
+            $width = $bild['sizes'][ $large . '-width' ];
+            $height = $bild['sizes'][ $large . '-height' ];
           ?>
 
           <div class="historiebild">
             <?php
                if ($bild) { ?>
-              <div class='historie_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
+              <img class='historie_img' src='<?php echo $largebild ?>'/>
             <?php } ?>
           </div>
 
