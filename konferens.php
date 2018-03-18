@@ -30,7 +30,7 @@
 <div class="line2_green"></div>
 
   <div class="konferensformular">
-    <h1><?php the_field("intresserad") ?></h1>
+    <h2 style='text-align: center; margin-bottom: 25px;'><?php the_field("intresserad") ?></h2>
 
     <!-- https://stackoverflow.com/questions/29118772/how-to-determine-the-current-language-of-a-wordpress-page-when-using-polylang -->
       <div class='kontaktformular'>
