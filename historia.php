@@ -53,6 +53,10 @@ if( $query->have_posts() ) {
 
       </section>
 
+      <br>
+      <div class="line2_green"></div>
+      <br>
+
     <?php }
 }
 ?>

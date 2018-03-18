@@ -2,8 +2,8 @@
 #FAF8F1
 #e3ddcb
 .
-"mörkbeige" på grön backgrund
-#a2957f
+"mörkbeige"
+#7c7465
 */
 
 @font-face {
@@ -192,6 +192,7 @@ header nav {
     top: 0px;
     left: 0px;
     width: 100%;
+    z-index: 200;
 }
 
 .menu {
@@ -374,7 +375,7 @@ display: none;
   width: 100%;
   background-color: #1c2b19;
   color: #bcb595;
-  padding: 15px;
+  padding: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   /*background-image: url(../img/1x/ornament-corner-7.png), url(../img/1x/ornament-corner-8.png);
@@ -389,7 +390,7 @@ display: none;
   width: 100%;
   background-color: #D0C9B3;
   color: #1c2b19;
-  padding: 15px;
+  padding: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   /*background-image: url(../img/1x/ornament-corner-green-7.png), url(../img/1x/ornament-corner-green-8.png);
@@ -907,12 +908,12 @@ footer {
   padding: 30px 30px 0px 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #a2957f;
+  color: #7c7465;
   font-weight: 300;
 }
 
 .textwidget a {
-  color: #a2957f;
+  color: #7c7465;
 }
 
 #fb_logo {
@@ -951,6 +952,7 @@ div.tab {
     font-family: 'Korinna';
     width: 100%;
     border: none;
+    background-color: transparent;
     outline: none;
     cursor: pointer;
     margin: auto;
@@ -960,11 +962,24 @@ div.tab {
     padding: 10px 16px;
 }
 
-/* Create an active/current tablink class */
 .tablinks.active {
-    border-top: 2px #FCDD7A solid;
-    border-bottom: 2px #FCDD7A solid;
+  position: relative;
 }
+
+/* Create an active/current tablink class */
+.tablinks.active::before {
+  content: "";
+  background: url(../img/1x/new_4_be.png) 0 0 repeat;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 160px;
+  height: 30px;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 80px);
+}
+
 
 /* Style the tab content */
 .tabcontent {
@@ -1130,6 +1145,7 @@ li.current-menu-parent>a{
   float: left;
   width: 50%;
   background-size: 18%;
+  padding: 15px;
   background-position: left 15px bottom 15px, right 15px top 15px;
 }
 
@@ -1142,6 +1158,7 @@ li.current-menu-parent>a{
   float: right;
   width: 50%;
   background-size: 18%;
+  padding: 15px;
   background-position: left 15px bottom 15px, right 15px top 15px;
 }
 
@@ -1248,10 +1265,28 @@ footer {
 }
 
 /* Change background color of buttons on hover */
+
+.tablinks.active {
+  background: url(../img/1x/new_4_gr.png) 0 0 repeat;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: static;
+}
+
+.tablinks.active::before {
+  display: none;
+}
+
+.tablinks.active:hover {
+  background: url(../img/1x/new_4_gr.png) 0 0 repeat;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .tablinks:hover {
-    /*background-color: #ddd;*/
-    border-top: 2px #eee solid;
-    border-bottom: 2px #eee solid;
+  background: url(../img/1x/new_4_be.png) 0 0 repeat;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 div.tab {
@@ -1444,7 +1479,7 @@ div.tab {
   .menu li a{
     font-size: 12px;
     font-family: 'Korinna';
-    font-size: 14px;
+    font-size: 13px;
     padding: 0;
     padding-top: 4px;
     display: block;
@@ -1761,7 +1796,10 @@ hr {
 .menu {
   max-width: 1100px;
   width: 70%;
+}
 
+.menu li a {
+  font-size: 14px;
 }
 
   .logofull {

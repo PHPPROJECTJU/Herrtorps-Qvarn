@@ -173,7 +173,9 @@ if ($matches == 0) {
 
   echo "<br/>";
 }
-
+?>
+<div class="box_line_beige" style='height: 30px;'></div>
+<?php
   if (get_locale() == 'sv_SE') {
     echo "<a href='/kontakt'>Se alla öppettider</a>";
   }//end of swe language check

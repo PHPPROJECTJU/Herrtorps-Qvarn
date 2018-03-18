@@ -32,15 +32,19 @@ if( $query->have_posts() ) {
         </section>
 
         <section class='boxsection'>
+
           <div class='leftbox'>
 
-              <!-- <div class="corner1_beige"></div> -->
-
               <div class='boxwidth'> <!--constrains box content width-->
+                <div class="box_line_beige"></div>
+
                 <h2><?php the_field('rubrik'); ?></h2>
                 <p><?php the_field('text'); ?></p>
+
+                  <div class="box_line_beige_flip"></div>
               </div>
             </div>
+
 
             <?php
                   $large = 'large';
@@ -65,6 +69,8 @@ if( $query->have_posts() ) {
 <?php } ?>
 <section class='lightsection'>
     <div class='contentwidth'>
+      <br>
+      <br>
       <div class="line1_green"></div>
     </div>
 </section>

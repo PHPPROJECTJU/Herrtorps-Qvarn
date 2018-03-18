@@ -55,9 +55,14 @@ if( $query->have_posts() ) {
           </div>
       </section>
 
+      <br>
+
+      <div class="line2_green"></div>
+
     <?php }
 }
 ?>
 </div>
+      <br>
 
 <?php get_footer(); ?>
