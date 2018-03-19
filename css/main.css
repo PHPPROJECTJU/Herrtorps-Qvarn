@@ -186,8 +186,8 @@ header{
 header nav {
     height: inherit;
     background-color: #1c2b19;
-    -webkit-box-shadow: 0 0 30px rgba(90,69,59,0.5);
-            box-shadow: 0 0 30px rgba(90,69,59,0.5);
+    -webkit-box-shadow: 0 0 30px rgba(33,25,20,0.5);
+            box-shadow: 0 0 30px rgba(33,25,20,0.5);
     position: fixed;
     top: 0px;
     left: 0px;
@@ -260,7 +260,7 @@ header nav {
 .headerimage img {
   width: 100%;
   height: 100%;
-  margin-top: -25px;
+  margin-top: 45px;
   margin-bottom: -5px;
 }
 
@@ -736,11 +736,17 @@ max-width: 300px;
 }
 
 .boendeicon {
-  height: 32px;
-  width: 32px;
+  height: 26px;
+  width: 26px;
   display: inline-block;
   float: left;
-  margin-right: 10px;
+  margin-right: 8px;
+}
+
+#window {
+  height: 24px;
+  width: 24px;
+  padding-top: 1px;
 }
 
 
@@ -1127,7 +1133,7 @@ li.current-menu-parent>a{
   }
 
   .headerimage img {
-    margin-top: -50px;
+    margin-top: 35px;
   }
 
 
@@ -1522,7 +1528,7 @@ div.tab {
   }
 
   .headerimage img {
-    margin-top: -100px;
+    margin-top: -40px;
   }
 
   .extras {

@@ -85,7 +85,7 @@
 
 </div>
 
-<div class='oppettider'>
+<div class='oppettider'id='oppettider'>
 
 <div class='oppetmargins'>
 

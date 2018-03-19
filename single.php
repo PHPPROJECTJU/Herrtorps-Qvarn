@@ -23,7 +23,7 @@ if( have_posts() ) {
           ?>
 
           <div class="aktivitet">
-              <div class="contentwidth">
+              <div class="contentmargins">
                   <div class="aktivitet-box">
                       <h2 class='page_rubrik'><?php the_field('aktivitet'); ?></h2>
                       <p class="single-paragraf"><?php the_field('beskrivning'); ?></p>

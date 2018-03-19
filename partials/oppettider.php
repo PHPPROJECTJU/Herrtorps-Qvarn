@@ -177,10 +177,10 @@ if ($matches == 0) {
 <div class="box_line_beige" style='height: 30px;'></div>
 <?php
   if (get_locale() == 'sv_SE') {
-    echo "<a href='/kontakt'>Se alla öppettider</a>";
+    echo "<a href='/kontakt#oppettider'>Se alla öppettider</a>";
   }//end of swe language check
   if (get_locale() == 'en_GB') {
-  echo "<a href='/en/contact-english/'>All opening hours</a>";
+  echo "<a href='/en/contact-english#oppettider/'>All opening hours</a>";
    }//end of eng language check
 
 
