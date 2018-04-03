@@ -206,13 +206,20 @@ foreach($categories as $category) {
           echo the_field('namn');
         ?></td>
         <td><?php
-          echo the_field('fran');
+        $fran = get_field('fran');
+        $fran = date_create($fran);
+        $fran = date_format($fran,'j/n');
+        echo $fran;
 
           $till = get_field('till');
+          $till = date_create($till);
+          $till = date_format($till,'j/n');
 
-          if ($till) {
+          $period = get_field('period');
+
+          if ($period) {
             echo "-";
-            echo the_field('till');
+            echo $till;
           }
 
         ?></td>

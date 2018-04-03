@@ -81,9 +81,10 @@ function dropDown(){
        $stangningstid2 = get_field('stangningstid2');
 
 /*kolla vilket datum vi är på nu*/
-       $curmonth = date("m");
+       $curmonth = date("n");
        $curday = date("j");
        $curdate = $curday . "/" . $curmonth;
+
 
 /*vald månad får vi ut genom att ta allt som kommer efter / i $fran och $till*/
        $franmanad = substr($fran, strpos($fran, '/')+1);
@@ -95,10 +96,17 @@ function dropDown(){
 
 
 
-         if (($curmonth >= $franmanad) && ($curmonth <= $tillmanad) && ($curday >= $frandatum) && ($curday <= $tilldatum)) {
+         if (($curmonth >= $franmanad) && ($curmonth <= $tillmanad) && ($curday <= $tilldatum)) {
 
                echo "<h3>".$titel."</h3>";
                echo "<p>";
+
+
+               echo $frandatum . "/" . $franmanad;
+               echo "-";
+               echo  $tilldatum . "/" . $tillmanad;
+               echo "<br>";
+
 
           if (get_locale() == 'sv_SE') {
                echo "Öppet ";
@@ -138,6 +146,11 @@ function dropDown(){
                echo "<br/>";
 
                $matches++;
+
+               if ($matches = 1) {
+                 break;
+               }
+
            }
            elseif ($fran == $curdate) {
 

@@ -26,6 +26,17 @@
   </div>
 </div>
 
+<?php
+
+if (get_field('konferens-notis')) {
+  echo "<h4>";
+  the_field('konferens-notis');
+  echo "</h4>";
+  echo "<br><br>";
+}
+
+ ?>
+
 <br>
 <div class="line2_green"></div>
 

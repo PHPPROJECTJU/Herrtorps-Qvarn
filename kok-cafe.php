@@ -21,11 +21,7 @@
 
             <h2 class='page_rubrik'><?php the_field('meny'); ?></h2>
             <p class='matratter'>
-            <?php the_field('matratt1'); ?><br><br>
-            <?php the_field('matratt2'); ?><br><br>
-            <?php the_field('matratt3'); ?><br><br>
-            <?php the_field('matratt4'); ?><br><br>
-            <?php the_field('matratt5'); ?>
+            <?php the_field('meny-text'); ?><br><br>
             </p>
 
           <div class="box_line_green_flip"></div>

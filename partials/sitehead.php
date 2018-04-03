@@ -9,7 +9,7 @@
                     <div id="clock" onclick="clickClock(this)"></div>
 
                     <div id='oppetdropdown'>
-                        <?php require('oppettider.php') ?>
+                        <?php require('oppettider2.php') ?>
                     </div>
 
             <div id="hamburger" onclick="openNav(this)" title="Menu">&#9776;</div>
