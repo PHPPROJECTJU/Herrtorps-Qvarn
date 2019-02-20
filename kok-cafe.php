@@ -87,6 +87,7 @@ if( have_posts() ) {
   $mediumlarge = 'medium_large';
 
   $cafebild = get_field('cafebild');
+  $cafeurl = $cafebild['url'];
 
   $lbild = $cafebild['sizes'][ $large ];
   $width = $cafebild['sizes'][ $large . '-width' ];
@@ -94,7 +95,8 @@ if( have_posts() ) {
 
   if ($cafebild) {
     ?>
-    <div class='cafebild' style='background-image: url("<?php echo  $lbild;?>");'>
+    <div class='cafebild'>
+    <img src='<?php echo $cafeurl ?>'>
       <?php if (get_field('cafebildtext')) {
         ?>
         <p class='bildtext'><?php the_field('cafebildtext'); ?></p>
