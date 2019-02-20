@@ -45,11 +45,11 @@ if( $query->have_posts() ) {
 
 
               <?php
-                $mediumlarge = 'medium_large';
-                $bild = get_field('bild');
-                $mlbild = $bild['sizes'][ $mediumlarge ];
-                $width = $bild['sizes'][ $mediumlarge . '-width' ];
-                $height = $bild['sizes'][ $mediumlarge . '-height' ];
+                // $mediumlarge = 'medium_large';
+                // $bild = get_field('bild');
+                // $mlbild = $bild['sizes'][ $mediumlarge ];
+                // $width = $bild['sizes'][ $mediumlarge . '-width' ];
+                // $height = $bild['sizes'][ $mediumlarge . '-height' ];
               ?>
 
               <div class="tabbild">
@@ -60,14 +60,7 @@ if( $query->have_posts() ) {
 
               <div class="tabtext">
                   <h2 class="page_rubrik"><?php echo $rumstyp ?></h2>
-                  <ul class="icons">
-                      <li>
-                        <img src="<?php echo  get_template_directory_uri();?>/img/1x/new_bed.png" class='boendeicon' alt='Bäddar' /><p><?php the_field('baddar'); ?></p>
-                      </li>
-                      <li>
-                        <img src="<?php echo  get_template_directory_uri();?>/img/1x/new_win.png" class='boendeicon' id='window' alt='Utsikt' /><p><?php the_field('utsikt'); ?></p>
-                      </li>
-                  </ul>
+  
                   <p><?php the_field('beskrivning'); ?></p>
 
                   <p><?php the_field('pris'); ?></p>

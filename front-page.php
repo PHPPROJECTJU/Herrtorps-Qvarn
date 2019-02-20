@@ -61,9 +61,15 @@
                             ?>
                             <div class='rightbox' style='background-image: url("<?php echo  $lbild;?>");'>
                           <?php }
+
+                          
+
+                          if (get_field('nyhetsbild-bildtext')) {
+                            ?>
+                            <p class='bildtext'><?php the_field('nyhetsbild-bildtext'); ?></p>
+                            <?php
+                          }
                           ?>
-
-
                         </div>
                       </section>
 
@@ -101,9 +107,14 @@
                             ?>
                             <div class='rightbox2' style='background-image: url("<?php echo  $lbild2;?>");'>
                           <?php }
+
+
+                          if (get_field('nyhetsbild-bildtext-2')) {
+                            ?>
+                            <p class='bildtext'><?php the_field('nyhetsbild-bildtext-2'); ?></p>
+                            <?php
+                          }
                           ?>
-
-
                         </div>
                         <div class='leftbox2'>
 

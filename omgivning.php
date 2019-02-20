@@ -37,7 +37,13 @@ if( $query->have_posts() ) {
           <div class="omgivningbild">
           <?php
              if ($bild) { ?>
-            <div class='omgivning_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
+            <div class='omgivning_img' style='background-image: url("<?php echo $mlbild;?>");'>
+              <?php if (get_field('bildtext')) {
+                ?>
+                <p class='bildtext'><?php the_field('bildtext'); ?></p>
+                <?php
+              } ?>
+            </div>
             <?php } ?>
 
           </div>

@@ -22,7 +22,10 @@
             <h2 class='page_rubrik'><?php the_field('meny'); ?></h2>
             <p class='matratter'>
             <?php the_field('meny-text'); ?><br><br>
+            <a href="<?php the_field('nedladdningsbar_meny'); ?>" download><?php the_field('nedladdning_text');  ?></a>
             </p>
+
+
 
           <div class="box_line_green_flip"></div>
 
@@ -44,6 +47,11 @@
         ?>
         <div class='rightbox' style='background-image: url("<?php echo  $lbild;?>");'>
       <?php }
+      if (get_field('bildtext')) {
+        ?>
+        <p class='bildtext'><?php the_field('bildtext'); ?></p>
+        <?php
+      }
       ?>
     </div>
 
@@ -55,67 +63,7 @@
 <!-- HÖGTID -->
 <!--code taken and modified from https://www.w3schools.com/howto/howto_js_tabs.asp 2 dec 2017-->
 <div class='contentmargins'>
-  <?php
-      $args = array(
-        'post_type' => 'hogtidpost',
-        'posts_per_page' => -1
-      );
 
-      $query = new WP_Query( $args );
-  ?>
-
-  <div class="tab">
-    <h2 class='page_rubrik'>Högtider</h2>
-    <?php //funkar inte! the_field('hogtid'); ?>
-
-  <?php // gets the name for each tab and later on creates a tab (btn) with each name
-      if( $query->have_posts() ) {
-         while ( $query->have_posts() ) {
-           $query->the_post();
-           $hogtid = get_field('namn');
-  ?>
-
-  <button class="tablinks" id="defaultOpen" onclick="hogtidTab(event, '<?php echo $hogtid;?>')"><?php echo $hogtid;?></button>
-
-  <?php } //endwhile
-  } //endif
-  ?>
-
-  </div>
-
-  <?php
-
-    if( $query->have_posts() ) {
-       while ( $query->have_posts() ) {
-         $query->the_post();
-         $hogtid = get_field('namn');
-         ?>
-
-                <div id="<?php echo $hogtid;?>" class="tabcontent">
-
-                  <?php
-                    $mediumlarge = 'medium_large';
-                    $bild = get_field('bild');
-                    $mlbild = $bild['sizes'][ $mediumlarge ];
-                    $width = $bild['sizes'][ $mediumlarge . '-width' ];
-                    $height = $bild['sizes'][ $mediumlarge . '-height' ];
-                  ?>
-
-                  <div class="tabbild">
-                  <?php
-                     if ($bild) { ?>
-                    <div class='tab_img' style='background-image: url("<?php echo $mlbild;?>");'></div>
-                  <?php } ?>
-                  </div>
-
-                  <div class="tabtext">
-                      <h3><?php echo $hogtid ?></h3>
-                      <p><?php the_field('beskrivning'); ?></p>
-                  </div>
-                </div>
-
-            <?php } ?>
-        <?php } ?>
 
 <br>
 <br>
@@ -130,6 +78,37 @@ if( have_posts() ) {
    while ( have_posts() ) {
      the_post();
 ?>
+
+<!-- Cafe -->
+<div class="cafe">
+
+  <?php
+  $large = 'large';
+  $mediumlarge = 'medium_large';
+
+  $cafebild = get_field('cafebild');
+
+  $lbild = $cafebild['sizes'][ $large ];
+  $width = $cafebild['sizes'][ $large . '-width' ];
+  $height = $cafebild['sizes'][ $large . '-height' ];
+
+  if ($cafebild) {
+    ?>
+    <div class='cafebild' style='background-image: url("<?php echo  $lbild;?>");'>
+      <?php if (get_field('cafebildtext')) {
+        ?>
+        <p class='bildtext'><?php the_field('cafebildtext'); ?></p>
+        <?php
+      } ?>
+    </div>
+  <?php }?>
+
+        <div class="cafetext">
+          <h2 class='page_rubrik'><?php the_field('caferubrik'); ?></h2>
+          <p><?php the_field('cafebeskrivning'); ?></p>
+        </div>
+
+</div>
 
 <!-- PUBKVÄLL -->
 <div class="pubkvall">

@@ -56,7 +56,7 @@ $src2 = get_template_directory_uri() . "/javascript/flexibility.js";
 
 </footer>
 <div id='blackfooter'>
-    <p>© Herrtorps Qvarn <?php echo date(Y); ?></p>
+    <p>© Herrtorps Qvarn <?php echo date('Y'); ?></p>
 </div>
 
 <?php wp_footer() ?>

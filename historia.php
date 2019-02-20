@@ -44,7 +44,12 @@ if( $query->have_posts() ) {
             <?php
                if ($bild) { ?>
               <img class='historie_img' src='<?php echo $largebild ?>'/>
-            <?php } ?>
+            <?php }
+             if (get_field('bildtext')) {
+              ?>
+              <p class='bildtext'><?php the_field('bildtext'); ?></p>
+              <?php
+            } ?>
           </div>
 
         <div class="historiatext-lang">

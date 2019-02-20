@@ -61,6 +61,11 @@ if( $query->have_posts() ) {
               <div class='rightbox' style='background-image: url("<?php echo  $lbild;?>");'>
             <?php }
             ?>
+            <?php if (get_field('bildtext')) {
+              ?>
+              <p class='bildtext'><?php the_field('bildtext'); ?></p>
+              <?php
+            } ?>
           </div>
         </section>
 
